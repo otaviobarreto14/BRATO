@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
+  <class name="VitimaEntity" table="vitima">
+    <id name="IdVitima" column="ID_VITIMA">
+      <generator class="identity" />
+    </id>
+    <property name="DataNasc" column="DATA_NASC" not-null="true" />
+    <property name="TipoFerimento" column="TIPO_FERIMENTO" not-null="true" />
+    <property name="Remocao" column="REMOCAO" not-null="false" />
+    <many-to-one name="IdBrat" class="BratEntity" column="ID_BRAT" not-null="true" />
+    <many-to-one name="IdPessoa" class="PessoaEntity" column="ID_PESSOA" not-null="true" />
+  </class>
+</hibernate-mapping>

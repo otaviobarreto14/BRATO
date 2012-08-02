@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
+  <class name="ImpactoEntity" table="impacto">
+    <id name="IdVeiculo" column="ID_VEICULO">
+      <generator class="sequence"><param name="sequence">SEQ_impacto</param></generator>
+    </id>
+    <many-to-one name="IdVeiculo" class="VeiculoEntity" column="ID_VEICULO" not-null="true" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,4 @@
+12:10:10.343 [4] INFO  NHibernate.Cfg.Environment - NHibernate 3.3.0.4000 (3.3.0.4000)
+12:10:10.468 [4] INFO  NHibernate.Cfg.Environment - hibernate-configuration section not found in application configuration file
+12:10:10.468 [4] INFO  NHibernate.Cfg.Environment - Bytecode provider name : lcg
+12:10:10.468 [4] INFO  NHibernate.Cfg.Environment - Using reflection optimizer

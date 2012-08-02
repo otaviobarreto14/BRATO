@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Brato.Entities.AvariaEntity" Collapsed="true">
+    <Position X="1" Y="1" Width="3" />
+    <TypeIdentifier>
+      <FileName>AvariaEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdVeiculo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.BairroEntity" Collapsed="true">
+    <Position X="3" Y="1" Width="3" />
+    <TypeIdentifier>
+      <FileName>BairroEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdMunicipio" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.BratEntity" Collapsed="true">
+    <Position X="5" Y="1" Width="3" />
+    <TypeIdentifier>
+      <FileName>BratEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdEndereco" />
+      <Property Name="Matricula" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.ComplementoEntity" Collapsed="true">
+    <Position X="7" Y="1" Width="3" />
+    <TypeIdentifier>
+      <FileName>ComplementoEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.EnderecoEntity" Collapsed="true">
+    <Position X="9" Y="1" Width="3" />
+    <TypeIdentifier>
+      <FileName>EnderecoEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdComplemento" />
+      <Property Name="IdLogradouro" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.FuncaoEntity" Collapsed="true">
+    <Position X="1" Y="3" Width="3" />
+    <TypeIdentifier>
+      <FileName>FuncaoEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.ImpactoEntity" Collapsed="true">
+    <Position X="3" Y="3" Width="3" />
+    <TypeIdentifier>
+      <FileName>ImpactoEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdVeiculo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.LogradouroEntity" Collapsed="true">
+    <Position X="5" Y="3" Width="3" />
+    <TypeIdentifier>
+      <FileName>LogradouroEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdBairro" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.MotoristaEntity" Collapsed="true">
+    <Position X="7" Y="3" Width="3" />
+    <TypeIdentifier>
+      <FileName>MotoristaEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdBrat" />
+      <Property Name="IdPessoa" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.MunicipioEntity" Collapsed="true">
+    <Position X="9" Y="3" Width="3" />
+    <TypeIdentifier>
+      <FileName>MunicipioEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Uf" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.PerfilEntity" Collapsed="true">
+    <Position X="1" Y="5" Width="3" />
+    <TypeIdentifier>
+      <FileName>PerfilEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.PessoaEntity" Collapsed="true">
+    <Position X="3" Y="5" Width="3" />
+    <TypeIdentifier>
+      <FileName>PessoaEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdEndereco" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.PolicialEntity" Collapsed="true">
+    <Position X="5" Y="5" Width="3" />
+    <TypeIdentifier>
+      <FileName>PolicialEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdPerfil" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.RlPerfilFuncaoEntity" Collapsed="true">
+    <Position X="7" Y="5" Width="3" />
+    <TypeIdentifier>
+      <FileName>RlPerfilFuncaoEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdFuncao" />
+      <Property Name="IdPerfil" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.TestemunhaEntity" Collapsed="true">
+    <Position X="9" Y="5" Width="3" />
+    <TypeIdentifier>
+      <FileName>TestemunhaEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdBrat" />
+      <Property Name="IdPessoa" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.UfEntity" Collapsed="true">
+    <Position X="1" Y="7" Width="3" />
+    <TypeIdentifier>
+      <FileName>UfEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.VeiculoEntity" Collapsed="true">
+    <Position X="3" Y="7" Width="3" />
+    <TypeIdentifier>
+      <FileName>VeiculoEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdBrat" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Brato.Entities.VitimaEntity" Collapsed="true">
+    <Position X="5" Y="7" Width="3" />
+    <TypeIdentifier>
+      <FileName>VitimaEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdBrat" />
+      <Property Name="IdPessoa" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

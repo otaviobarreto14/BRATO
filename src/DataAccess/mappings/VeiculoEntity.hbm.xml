@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
+  <class name="VeiculoEntity" table="veiculo">
+    <id name="IdVeiculo" column="ID_VEICULO">
+      <generator class="identity" />
+    </id>
+    <property name="NomeProprietario" column="NOME_PROPRIETARIO" not-null="true" />
+    <property name="TipoVeiculo" column="TIPO_VEICULO" not-null="true" />
+    <property name="Placa" column="PLACA" not-null="true" />
+    <property name="Fabricante" column="FABRICANTE" not-null="true" />
+    <property name="Modelo" column="MODELO" not-null="true" />
+    <property name="Ano" column="ANO" not-null="true" />
+    <property name="Cor" column="COR" not-null="true" />
+    <many-to-one name="IdBrat" class="BratEntity" column="ID_BRAT" not-null="true" />
+  </class>
+</hibernate-mapping>

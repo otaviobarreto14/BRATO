@@ -1,0 +1,490 @@
+﻿div.cabecalho-formulario
+{
+    width: 720px;
+}
+
+div.barra-formulario
+{
+    width: 720px;
+}
+
+div.barra-formulario input, div.barra-formulario button
+{
+    height: 26px;
+    width: 80px;
+}
+
+div.formulario
+{
+    padding: 25px;
+    width: 720px;
+}
+
+div.formulario .item-form
+{
+    display: inline-block;
+    float: left;
+    padding-bottom: 6px;
+}
+
+div.formulario .item-form .titulo-item
+{
+    display: block;
+    font-weight: bold;
+}
+
+div.formulario .inteiro
+{
+    width: 720px;
+}
+div.formulario .nove-decimos
+{
+    width: 648px;
+}
+div.formulario .oito-nonos
+{
+    width: 640px;
+}
+div.formulario .sete-oitavos
+{
+    width: 630px;
+}
+div.formulario .cinco-sextos
+{
+    width: 600px;
+}
+div.formulario .quatro-quintos
+{
+    width: 576px;
+}
+div.formulario .sete-nonos
+{
+    width: 560px;
+}
+div.formulario .tres-quartos
+{
+    width: 540px;
+}
+div.formulario .sete-decimos
+{
+    width: 504px;
+}
+div.formulario .dois-tercos
+{
+    width: 480px;
+}
+div.formulario .cinco-oitavos
+{
+    width: 450px;
+}
+div.formulario .tres-quintos
+{
+    width: 432px;
+}
+div.formulario .cinco-nonos
+{
+    width: 400px;
+}
+div.formulario .metade
+{
+    width: 360px;
+}
+div.formulario .quatro-nonos
+{
+    width: 320px;
+}
+div.formulario .dois-quintos
+{
+    width: 288px;
+}
+div.formulario .tres-oitavos
+{
+    width: 270px;
+}
+div.formulario .terco
+{
+    width: 240px;
+}
+div.formulario .tres-decimos
+{
+    width: 216px;
+}
+div.formulario .quarto
+{
+    width: 180px;
+}
+div.formulario .dois-nonos
+{
+    width: 160px;
+}
+div.formulario .quinto
+{
+    width: 144px;
+}
+div.formulario .sexto
+{
+    width: 120px;
+}
+div.formulario .oitavo
+{
+    width: 90px;
+}
+div.formulario .nono
+{
+    width: 80px;
+}
+div.formulario .decimo
+{
+    width: 72px;
+}
+
+.controle-item input, .controle-item select, .controle-item textarea
+{
+    border: solid 1px;
+    padding: 2px;
+    width: 100%;
+}
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+/* Usado no elemento que agrupa os items do formulário */
+div.formItems
+{
+    font-family: Arial, Verdana;
+    font-size: 11px;
+    padding: 25px;
+    width: 700px;
+}
+
+/* Usado automaticamente pelo primeiro fieldset após um div */
+div.formItems > div.formItem + fieldset.formItem
+{
+    margin-top: 9px;
+}
+
+/* Usado em fieldsets de formulário */
+div.formItems > fieldset.formItem
+{
+    border: solid 1px #eaeaea;
+    display: inline-block;
+    float: left;
+    margin: 0 1% 9px 0;
+    padding: 5px 0 0 0;
+}
+
+/* Usado automaticamente pelos legends de um fieldset de formulário */
+div.formItems > fieldset.formItem > legend
+{
+    font-weight: bold;
+}
+
+/* Usado para ocupar uma linha inteira do formulário com um fieldset */
+div.formItems > fieldset.inteiro
+{
+    width: 98.8%;
+}
+
+/* Usado para ocupar metade de uma linha do formulário com um fieldset */
+div.formItems > fieldset.metade
+{
+    width: 48.7%;
+}
+
+/* Usado para divs dentro do fieldset do formulário */
+div.formItems > fieldset.formItem > div.formItem
+{
+    padding-bottom: 9px;
+}
+
+/* Usado para ajustar os divs e spans dos itens do fieldset do formulário */
+div.formItems > fieldset.formItem > div.formItem > div, div.formItems > fieldset.formItem > div.formItem > span
+{
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+/* Usado para ocupar uma linha inteira do formulário */
+div.formItems div.inteiro
+{
+    width: 98%;
+}
+
+/* Usado para ocupar 4/5 de uma linha do formulário */
+div.formItems div.quatroQuintos
+{
+    width: 78%;
+}
+
+/* Usado para ocupar 3/4 de uma linha do formulário */
+div.formItems div.tresQuartos
+{
+    width: 73%;
+}
+
+/* Usado para ocupar 2/3 de uma linha do formulário */
+div.formItems div.doisTercos
+{
+    width: 64.6%;
+}
+
+/* Usado para ocupar 3/5 de uma linha do formulário */
+div.formItems div.tresQuintos
+{
+    width: 58%;
+}
+
+/* Usado para ocupar metade de uma linha do formulário */
+div.formItems div.metade
+{
+    width: 48%;
+}
+
+/* Usado para ocupar 2/5 de uma linha do formulário */
+div.formItems div.doisQuintos
+{
+    width: 38%;
+}
+
+/* Usado para ocupar 1/3 de uma linha do formulário */
+div.formItems div.terco
+{
+    width: 31.0%;
+}
+
+/* Usado para ocupar 1/4 de uma linha do formulário */
+div.formItems div.quarto
+{
+    width: 23%;
+}
+
+/* Usado para ocupar 1/5 de uma linha do formulário */
+div.formItems div.quinto
+{
+    width: 18%;
+}
+
+/* Usado para ocupar 1/6 de uma linha do formulário */
+div.formItems div.sexto
+{
+    width: 14.6%;
+}
+
+div.formItems div.oitavo
+{
+    width: 10.5%;
+}
+
+/* Usado em cada item do formulário */
+div.formItems div.formItem
+{
+    display: inline-block;
+    float: left;
+    margin: 0 2% 0 0;
+    padding: 5px 0 0 0;
+}
+
+/* Usado como título do item do formulário */
+div.formItems div.formItem > span
+{
+    display: block;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Formatação automática dos campos do formulário */
+div.formItems div.formItem input, div.formItems div.formItem select, div.formItems div.formItem textarea
+{
+    border: solid 1px #eaeaea;
+    width: 100%;
+    margin: 0px;
+    padding: 3px;
+}
+div.formItems div.formItem a
+{
+    display: inline-block;
+    float: left;
+}
+
+/* Formatação automática dos campos select do formulário */
+div.formItems div.formItem select
+{
+    padding: 2px;
+}
+
+/* Formatação automática dos campos checkbox do formulário */
+div.formItems div.formItem input[type="checkbox"]
+{
+    border-style: none;
+    width: auto;
+}
+#tabs
+{
+    width: 800px;
+}
+
+/* Aparência dos links com formato de botão */
+a.buttonStyle
+{
+    padding: 0.4em 1em 0.4em 20px;
+    position: relative;
+    text-decoration: none;
+    background: url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) repeat-x scroll 50% 50% #F6F6F6;
+    border: 1px solid #DDDDDD;
+    color: #06667E;
+    font-weight: bold;
+    outline: medium none;
+}
+
+a.buttonStyle:hover
+{
+    border: 1px solid #06667E;
+    background: #dddddd url(images/ui-bg_highlight-soft_25_dddddd_1x100.png) 50% 50% repeat-x;
+    font-weight: bold;
+    color: #954A4D;
+    outline: none;
+}
+
+a.buttonStyle .ui-icon
+{
+    background-image: url(images/ui-icons_666666_256x240.png);
+    left: 0.2em;
+    margin: -8px 5px 0 0;
+    position: absolute;
+    top: 50%;
+}
+
+a.disabledButtonStyle
+{
+    padding: 0.4em 1em 0.4em 20px;
+    position: relative;
+    text-decoration: none;
+    background: url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) repeat-x scroll 50% 50% #999999;
+    border: 1px solid #DDDDDD;
+    color: #CCCCCC;
+    font-weight: bold;
+    outline: medium none;
+}
+
+a.disabledButtonStyle .ui-icon
+{
+    background-image: url(images/ui-icons_666666_256x240.png);
+    left: 0.2em;
+    margin: -8px 5px 0 0;
+    position: absolute;
+    top: 50%;
+}
+
+a.disabledButtonStyle:hover
+{
+    cursor: text;
+}
+/***********************************************************/
+
+div.full input
+{
+    width: 477px;
+}
+div.full
+{
+    padding-right: 25px;
+    width: 100%;
+}
+div.half
+{
+    width: 225px;
+}
+div.fourpart, span.fourpart
+{
+    width: 100px;
+}
+div.thirdpart
+{
+    width: 141px;
+}
+.mine #contatos th
+{
+    background-color: #eaeaea;
+}
+#contatos td, #contatos th
+{
+    border: solid 1px #eaeaea;
+    border-collapse: collapse;
+    padding: 3px;
+    width: 140px;
+}
+
+#contatos tr td input
+{
+    border-style: none;
+    padding: 0px;
+    width: 100%;
+}
+
+
+/******************************/
+.fieldsetfull
+{
+    padding: 8px;
+    width: 826px;
+    height: auto;
+}
+
+div.fieldsetsmall
+{
+    padding: 8px;
+    width: 200px;
+}
+
+
+div.radio input
+{
+    width: 15px;
+}
+/*
+fieldset
+{
+	border: solid 1px #eaeaea;
+	padding: 8px;
+}*/
+.fieldsetsThirdpart
+{
+    float: left;
+    height: 120px;
+    width: 200px;
+}
+
+.fieldsetHalf
+{
+    padding: 8px;
+    width: 300px;
+    height: 120px;
+}
+.fieldsetMetade
+{
+    width: 368px;
+    height: 110px;
+}
+div.clear
+{
+    clear: both;
+}
+textarea
+{
+    border: solid 1px #eaeaea;
+}
+
+.reqSexto
+{
+    color: Red;
+    float: right;
+    margin: -15% -13%;
+}
+.reqInteiro
+{
+    color: Red;
+    float: right;
+    margin: -2%;
+}

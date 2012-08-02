@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+    <property name="dialect">
+      NHibernate.Dialect.MsSql2005Dialect
+    </property>
+    <property name="connection.driver_class">
+      NHibernate.Dialect.MsSql2005Dialect
+    </property>
+    <property name="connection.connection_string">
+      Server=localhost;Database=brato;Uid=root;Pwd=1234;
+    </property>
+    <property name="current_session_context_class">
+      web
+    </property>
+    <mapping assembly="Brato.DataAccess" />
+  </session-factory>
+</hibernate-configuration>

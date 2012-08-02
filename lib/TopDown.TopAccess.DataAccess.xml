@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TopDown.TopAccess.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:TopDown.TopAccess.DataAccess.TopAccessDaoInstaller">
+            <summary>
+            Instalador de classes especializadas para acesso a dados do TopAccess.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.DataAccess.TopAccessDaoInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Instala no DI Container as classes especializadas disponíveis no assembly.
+            </summary>
+            <param name="container">DI Container de objetos.</param>
+            <param name="store">Configuração do DI Container.</param>
+        </member>
+        <member name="T:TopDown.TopAccess.DataAccess.FuncaoDao">
+            <summary>
+            Classe de acesso a dados a Funções.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.DataAccess.FuncaoDao.#ctor">
+            <summary>
+            Construtor padrão sem parâmetros.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.DataAccess.FuncaoDao.ObterFuncoesOrdenadas(System.Int32)">
+            <summary>
+            Obtém o conjunto de funções com ordenação absoluta.
+            </summary>
+            <param name="codModulo">Código do módulo.</param>
+            <remarks>
+            Utilizado para construir menus e dropddowns para seleção de função-pai.
+            </remarks>
+        </member>
+        <member name="M:TopDown.TopAccess.DataAccess.FuncaoDao.ObterMaiorNivel(System.Collections.Generic.IEnumerable{TopDown.TopAccess.Entities.FuncaoEntity})">
+            <summary>
+            Dado um conjunto de funções, retorna o valor do maior nível.
+            </summary>
+            <param name="funcoes">Conjunto de funções a pesquisar.</param>
+        </member>
+        <member name="M:TopDown.TopAccess.DataAccess.FuncaoDao.ObterMaiorNumeroDeFilhos(System.Collections.Generic.IEnumerable{TopDown.TopAccess.Entities.FuncaoEntity})">
+            <summary>
+            Dado um conjunto de funções, retorna o valor do maior número de funções filhas agrupadas no mesmo pai.
+            </summary>
+            <param name="funcoes">Conjunto de funções a pesquisar.</param>
+        </member>
+    </members>
+</doc>

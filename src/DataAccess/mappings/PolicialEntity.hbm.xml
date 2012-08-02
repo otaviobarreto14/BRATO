@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
+  <class name="PolicialEntity" table="policial">
+    <id name="Matricula" column="MATRICULA">
+      <generator class="sequence"><param name="sequence">SEQ_policial</param></generator>
+    </id>
+    <property name="Nome" column="NOME" not-null="true" />
+    <property name="Batalhao" column="BATALHAO" not-null="true" />
+    <property name="Senha" column="SENHA" not-null="true" />
+    <property name="Status" column="STATUS" not-null="true" />
+    <many-to-one name="IdPerfil" class="PerfilEntity" column="ID_PERFIL" not-null="true" />
+  </class>
+</hibernate-mapping>

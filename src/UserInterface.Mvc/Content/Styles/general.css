@@ -1,0 +1,368 @@
+﻿body
+{
+	font-family: Arial, Verdana;
+	font-size: 11px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* * *
+ * Formata o final da página
+ * * */
+div.rodapePagina
+{
+	clear: both;
+	display: block;
+	margin: 5px;
+}
+
+/* * *
+ * Formata o cabeçalho
+ * * */
+#header
+{
+	background-image: url("../Images/PLASA.jpg");
+	background-position: 10px;
+	background-color: white;
+	background-repeat: no-repeat;
+	border-bottom: solid 2px green;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: 0px;
+	padding: 10px 0 10px 0;
+	position: fixed;
+	text-align: right;
+	top: 0px;
+	width: 100%;
+	z-index: 2000;
+}
+
+/* ****** *
+ * Formata o texto do cabeçalho
+ * ****** */
+#header span
+{
+	padding-right: 10px;
+}
+
+/* ** *
+ * Formata qualquer elemento <ul> dentro do elemento #dock
+ * ** */
+#dock ul, #dock li
+{
+	list-style: none;
+	padding: 0px 0px 0px 5px;
+	margin: 0px 0px 0px 0px;
+}
+
+/* *
+ * Formata o elemento #dock
+ * */
+#dock
+{
+	background-color: #B1D5B1;
+	height: 100%;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 55px;
+	z-index: 100;
+}
+
+/* ************ *
+ * Formata qualquer elemento <li> com a classe "menuItems" dentro do elemento #dock 
+ * Esses elementos representam os items de menu.
+ * ************ */
+#dock li.menuItems
+{
+	font-size: 12px;
+	margin: 0px; /*overflow: auto scroll; 	overflow-x: hidden;*/
+	padding: 0px;
+}
+
+#dock li.menuItems ul
+{
+	font-weight: bold;
+	margin-bottom: 7px;
+	font-size: 0.95em;
+}
+
+#dock li.menuItems a
+{
+	font-weight: normal;
+}
+
+/* ********* *
+ * Formata qualquer elemento <li> com a classe "header" dentro do elemento #dock 
+ * Esses elementos representam o cabeçalho do menu.
+ * ********* */
+#dock li.header
+{
+	background-color: #007701;
+	border: solid 1px #007701;
+	color: White;
+	height: 15px;
+	padding: 5px;
+}
+
+/* **** *
+ * Formata somente os filhos diretos <li> dentro do elemento #dock
+ * Esses elementos representam as abas no dock.
+ * **** */
+#dock li.aba
+{
+	background-color: #6BB3BF;
+	height: 60px;
+	margin: 0 0 2px 0;
+	padding: 0px;
+	width: 40px;
+}
+
+/* ********* *
+ * Formata somente os filhos diretos <ul> de uma aba de menu <li>
+ * ********* */
+#dock li.aba > ul
+{
+	background-color: #B1D5B1;
+	border: solid 1px #B1D5B1;
+	display: none;
+	left: -180px;
+	margin-top: -1px;
+	padding: 0px;
+	position: absolute;
+	top: 0px;
+	width: 180px;
+	z-index: -1;
+}
+
+/* *************** *
+ * Formata os filhos diretos <ul> de uma aba de menu <li> (quando em hover)
+ * *************** */
+#dock li.aba:hover > ul
+{
+	display: block;
+}
+
+#dock li.aba ul.docked
+{
+	display: block;
+	z-index: -2;
+}
+
+#dock li.aba ul.docked, #dock li.aba ul.free
+{
+	margin-left: 0px;
+}
+.dock, .undock
+{
+	float: right;
+	color: White;
+}
+
+.undock
+{
+	display: none;
+}
+
+#content
+{
+	margin: 10px 0 0 60px;
+	padding-top: 55px;
+	*padding-top: 65px;
+}
+
+#dock #acesso
+{
+	background-image: url(../img/acesso.jpg);
+}
+
+#dock #relatorios
+{
+	background-image: url(../img/relatorios.jpg);
+}
+
+#dock #comercial
+{
+	background-image: url(../img/comercial.jpg);
+}
+
+input[type="text"]
+{
+	border: solid 1px #eaeaea;
+	padding: 3px;
+}
+
+input.textboxGrande
+{
+	width: 280px;
+}
+
+input.textboxMedio
+{
+	width: 170px;
+}
+
+input.textboxPequeno
+{
+	width: 120px;
+}
+
+table.tableForm td.label
+{
+	text-align: right;
+}
+
+h1
+{
+	font-size: 22px;
+}
+
+tr.contatoTemplate
+{
+	display: none;
+}
+
+.titulo
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -22px 35px;
+	padding: 25px 0 0px 10px;
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+}
+.titulo2
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -22px 222px;
+	padding: 25px 0 0 10px;
+	position: fixed;
+	z-index: 22;
+	width: 100%;
+}
+.cadastro
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -15px 400px;
+	padding: 10px 10px 10px 10px;
+	/*position: fixed;*/
+	position:relative;
+	z-index: 22;
+}
+.cadastro2
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -15px 605px;
+	padding: 10px 10px 10px 10px;
+	position: fixed;
+	z-index: 22;
+}
+.tituloFormulario
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -29px 37px;
+	padding: 22px 0 10px 45px;
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+}
+.tituloFormulario2
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -29px 220px;
+	padding: 22px 0 0 45px;
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+}
+.alterar
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -15px 400px;
+	*margin: -12px 400px;
+	padding: 10px 10px 10px 10px;
+	position: fixed;
+	*position: relative;
+	z-index: 22;
+}
+.alterar2
+{
+	background-color: #ffffff;
+	clear: both;
+	float: left;
+	height: 33px;
+	left: 0px;
+	margin: -15px 605px;
+	*margin: -12px 400px;
+	padding: 10px 10px 10px 10px;
+	position: fixed;
+	*position: relative;
+	z-index: 22;
+}
+p.title
+{
+	visibility: hidden;
+	height: 25px;
+}
+.tituloFormulario3
+{
+	clear: both;
+	margin: 8px 0 0 0;
+	float: left;
+	height: 33px;
+	padding: 4px 0 0 17px;
+	width: 300px;
+}
+.ListButton
+{
+	position: fixed;
+	margin: -50px 0 0 325px;
+	z-index: 25;
+}
+
+.textTransform
+{
+    text-transform: capitalize;
+}
+
+div.radioButtonList
+{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+div.radioButtonList > input[type=radio]
+{
+    display: inline;
+}

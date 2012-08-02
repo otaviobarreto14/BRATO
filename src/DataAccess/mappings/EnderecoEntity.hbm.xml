@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
+  <class name="EnderecoEntity" table="endereco">
+    <id name="IdEndereco" column="ID_ENDERECO">
+      <generator class="identity" />
+    </id>
+    <property name="Numero" column="NUMERO" not-null="false" />
+    <many-to-one name="IdComplemento" class="ComplementoEntity" column="ID_COMPLEMENTO" not-null="false" />
+    <many-to-one name="IdLogradouro" class="LogradouroEntity" column="ID_LOGRADOURO" not-null="true" />
+  </class>
+</hibernate-mapping>

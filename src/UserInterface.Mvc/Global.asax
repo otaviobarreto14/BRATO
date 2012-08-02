@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="Brato.UserInterface.MvcApplication" Language="C#" %>

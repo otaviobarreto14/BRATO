@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A87F1390-E200-416C-9053-0F07799021E4}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Brato.UserInterface</RootNamespace>
+    <AssemblyName>Brato.UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ControllersInstaller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TopDown.TopAccess.BusinessRules, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3d171b2b8fede783, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TopDown.TopAccess.BusinessRules.dll</HintPath>
+    </Reference>
+    <Reference Include="TopDown.TopAccess.Entities, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3d171b2b8fede783, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TopDown.TopAccess.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="TopDown.TopFramework.BusinessRules, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23ab9dcb7dbe87d5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TopDown.TopFramework.BusinessRules.dll</HintPath>
+    </Reference>
+    <Reference Include="TopDown.TopFramework.Common, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23ab9dcb7dbe87d5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TopDown.TopFramework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="TopDown.TopFramework.Entities, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23ab9dcb7dbe87d5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TopDown.TopFramework.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="TopDown.TopFramework.WebUserInterfaceHelper, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TopDown.TopFramework.WebUserInterfaceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\DataAccess\hibernate.cfg.xml">
+      <Link>hibernate.cfg.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Global.asax" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\uploadify.swf" />
+    <Content Include="Content\Web.config" />
+    <Content Include="Content\Images\1.jpg" />
+    <Content Include="Content\Images\2.jpg" />
+    <Content Include="Content\Images\4.jpg" />
+    <Content Include="Content\Images\5.jpg" />
+    <Content Include="Content\Images\6.jpg" />
+    <Content Include="Content\Images\8.jpg" />
+    <Content Include="Content\Images\9.jpg" />
+    <Content Include="Content\Images\cancel.png" />
+    <Content Include="Content\Images\PLASA.jpg" />
+    <Content Include="Content\Images\Processando.gif" />
+    <Content Include="Content\Styles\forms.css" />
+    <Content Include="Content\Styles\general.css" />
+    <Content Include="Content\Styles\JqAlerta.css" />
+    <Content Include="Content\Styles\jquery-ui-1.8.7.custom.css" />
+    <Content Include="Content\Styles\jquery.alerts.css" />
+    <Content Include="Content\Styles\ui.jqgrid.css" />
+    <Content Include="Content\Styles\uploadify.css" />
+    <Content Include="Content\Styles\images\help.gif" />
+    <Content Include="Content\Styles\images\important.gif" />
+    <Content Include="Content\Styles\images\info.gif" />
+    <Content Include="Content\Styles\images\title.gif" />
+    <Content Include="Content\Styles\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_100_fef5eb_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_25_aad1aa_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_70_f8f8f8_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="Content\Styles\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Content\Styles\images\ui-bg_highlight-hard_75_fff0a5_1x100.png" />
+    <Content Include="Content\Styles\images\ui-bg_inset-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\Styles\images\ui-icons_ec8e0c_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Styles\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Common.Master" />
+    <Content Include="Views\Shared\Edit.aspx" />
+    <Content Include="Views\Shared\Form.aspx" />
+    <Content Include="Views\Shared\Head.ascx" />
+    <Content Include="Views\Shared\List.aspx" />
+    <Content Include="Views\Shared\LoginView.ascx" />
+    <Content Include="Views\Shared\Menu.ascx" />
+    <Content Include="Views\Shared\MenuHeader.ascx" />
+    <Content Include="Views\Shared\New.aspx" />
+    <Content Include="Views\Shared\Toolbar.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessRules\BusinessRules.csproj">
+      <Project>{fab8d370-b82a-4d0e-ba3c-b15e9afa6e5a}</Project>
+      <Name>BusinessRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{8cc7aaa4-b2e9-4269-bfd7-7c77a67c3346}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5396</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+  </PropertyGroup>
+</Project>

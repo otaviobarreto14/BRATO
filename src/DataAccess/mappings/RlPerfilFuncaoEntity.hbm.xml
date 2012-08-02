@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
+  <class name="RlPerfilFuncaoEntity" table="rl_perfil_funcao">
+    <id name="IdPerfil" column="ID_PERFIL">
+      <generator class="sequence"><param name="sequence">SEQ_rl_perfil_funcao</param></generator>
+    </id>
+    <many-to-one name="IdFuncao" class="FuncaoEntity" column="ID_FUNCAO" not-null="true" />
+    <many-to-one name="IdPerfil" class="PerfilEntity" column="ID_PERFIL" not-null="true" />
+  </class>
+</hibernate-mapping>
