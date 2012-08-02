@@ -1,0 +1,6 @@
+BRATO
+=====
+
+Projeto de Conclusão de Curso - BRATO (Boletim de Registro de Acidente de Transito Online).
+
+TODA E QUALQUER ALTERAÇÃO FEITA NOS FONTES DEVE SER REGISTRADA NESTE ARQUIVO:
