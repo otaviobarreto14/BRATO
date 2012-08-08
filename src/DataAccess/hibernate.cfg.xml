@@ -2,11 +2,12 @@
 <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
   <session-factory>
     <property name="dialect">
-      NHibernate.Dialect.MsSql2005Dialect
+      NHibernate.Dialect.MySQLDialect
     </property>
     <property name="connection.driver_class">
-      NHibernate.Dialect.MsSql2005Dialect
+      NHibernate.Driver.MySqlDataDriver
     </property>
+    
     <property name="connection.connection_string">
       Server=localhost;Database=brato;Uid=root;Pwd=1234;
     </property>
