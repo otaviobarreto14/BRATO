@@ -4,7 +4,7 @@
     <id name="IdTestemunha" column="ID_TESTEMUNHA">
       <generator class="identity" />
     </id>
-    <many-to-one name="IdBrat" class="BratEntity" column="ID_BRAT" not-null="true" />
-    <many-to-one name="IdPessoa" class="PessoaEntity" column="ID_PESSOA" not-null="true" />
+    <many-to-one name="Brat" class="BratEntity" column="ID_BRAT" not-null="true" />
+    <many-to-one name="Pessoa" class="PessoaEntity" column="ID_PESSOA" not-null="true" />
   </class>
 </hibernate-mapping>

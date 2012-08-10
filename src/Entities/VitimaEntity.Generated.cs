@@ -11,8 +11,6 @@ namespace Brato.Entities
 
         [EntityId]
         public virtual System.UInt32 IdVitima { get; set; }
-        [EntityId]
-        public virtual System.UInt32 IdBrat { get; set; }
 
         #endregion
 
@@ -21,15 +19,15 @@ namespace Brato.Entities
         [Required(ErrorMessage = "O campo 'DataNasc' ? obrigat?rio.")]
         [DisplayName("DataNasc")]
         public virtual DateTime DataNasc { get; set; }
-        
+
         [Required(ErrorMessage = "O campo 'TipoFerimento' ? obrigat?rio.")]
         [DisplayName("TipoFerimento")]
         public virtual System.UInt16 TipoFerimento { get; set; }
-        
+
         [StringLength(150, ErrorMessage = "O campo 'Remocao' suporta no m?ximo 150 caracteres.")]
         [DisplayName("Remocao")]
         public virtual string Remocao { get; set; }
-        
+
         #endregion
 
         #region " Relacionamentos "

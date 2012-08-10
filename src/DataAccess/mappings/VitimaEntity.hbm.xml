@@ -7,7 +7,7 @@
     <property name="DataNasc" column="DATA_NASC" not-null="true" />
     <property name="TipoFerimento" column="TIPO_FERIMENTO" not-null="true" />
     <property name="Remocao" column="REMOCAO" not-null="false" />
-    <many-to-one name="IdBrat" class="BratEntity" column="ID_BRAT" not-null="true" />
-    <many-to-one name="IdPessoa" class="PessoaEntity" column="ID_PESSOA" not-null="true" />
+    <many-to-one name="Brat" class="BratEntity" column="ID_BRAT" not-null="true" />
+    <many-to-one name="Pessoa" class="PessoaEntity" column="ID_PESSOA" not-null="true" />
   </class>
 </hibernate-mapping>

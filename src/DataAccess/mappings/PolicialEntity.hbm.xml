@@ -2,7 +2,7 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
   <class name="PolicialEntity" table="policial">
     <id name="Matricula" column="MATRICULA">
-      <generator class="sequence"><param name="sequence">SEQ_policial</param></generator>
+      <generator class="identity" />
     </id>
     <property name="Nome" column="NOME" not-null="true" />
     <property name="Batalhao" column="BATALHAO" not-null="true" />

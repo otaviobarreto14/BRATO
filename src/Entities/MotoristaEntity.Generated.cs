@@ -11,8 +11,6 @@ namespace Brato.Entities
 
         [EntityId]
         public virtual System.UInt32 IdMotorista { get; set; }
-        [EntityId]
-        public virtual System.UInt32 IdBrat { get; set; }
 
         #endregion
 

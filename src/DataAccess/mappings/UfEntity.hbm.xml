@@ -2,7 +2,7 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
   <class name="UfEntity" table="uf">
     <id name="Uf" column="UF">
-      <generator class="sequence"><param name="sequence">SEQ_uf</param></generator>
+      <generator class="identity" />
     </id>
   </class>
 </hibernate-mapping>

@@ -11,6 +11,6 @@
     <property name="Modelo" column="MODELO" not-null="true" />
     <property name="Ano" column="ANO" not-null="true" />
     <property name="Cor" column="COR" not-null="true" />
-    <many-to-one name="IdBrat" class="BratEntity" column="ID_BRAT" not-null="true" />
+    <many-to-one name="Brat" class="BratEntity" column="ID_BRAT" not-null="true" />
   </class>
 </hibernate-mapping>

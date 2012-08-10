@@ -9,9 +9,8 @@ namespace Brato.Entities
     {
         #region " Identificador da classe "
 
-        [EntityId]
         public virtual System.UInt16 IdPerfil { get; set; }
-        [EntityId]
+
         public virtual System.UInt16 IdFuncao { get; set; }
 
         #endregion

@@ -2,7 +2,7 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Brato.Entities" namespace="Brato.Entities">
   <class name="PerfilEntity" table="perfil">
     <id name="IdPerfil" column="ID_PERFIL">
-      <generator class="sequence"><param name="sequence">SEQ_perfil</param></generator>
+      <generator class="identity" />
     </id>
     <property name="Descricao" column="DESCRICAO" not-null="true" />
   </class>
