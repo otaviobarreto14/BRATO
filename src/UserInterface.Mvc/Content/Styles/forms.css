@@ -1,151 +1,4 @@
-﻿div.cabecalho-formulario
-{
-    width: 720px;
-}
-
-div.barra-formulario
-{
-    width: 720px;
-}
-
-div.barra-formulario input, div.barra-formulario button
-{
-    height: 26px;
-    width: 80px;
-}
-
-div.formulario
-{
-    padding: 25px;
-    width: 720px;
-}
-
-div.formulario .item-form
-{
-    display: inline-block;
-    float: left;
-    padding-bottom: 6px;
-}
-
-div.formulario .item-form .titulo-item
-{
-    display: block;
-    font-weight: bold;
-}
-
-div.formulario .inteiro
-{
-    width: 720px;
-}
-div.formulario .nove-decimos
-{
-    width: 648px;
-}
-div.formulario .oito-nonos
-{
-    width: 640px;
-}
-div.formulario .sete-oitavos
-{
-    width: 630px;
-}
-div.formulario .cinco-sextos
-{
-    width: 600px;
-}
-div.formulario .quatro-quintos
-{
-    width: 576px;
-}
-div.formulario .sete-nonos
-{
-    width: 560px;
-}
-div.formulario .tres-quartos
-{
-    width: 540px;
-}
-div.formulario .sete-decimos
-{
-    width: 504px;
-}
-div.formulario .dois-tercos
-{
-    width: 480px;
-}
-div.formulario .cinco-oitavos
-{
-    width: 450px;
-}
-div.formulario .tres-quintos
-{
-    width: 432px;
-}
-div.formulario .cinco-nonos
-{
-    width: 400px;
-}
-div.formulario .metade
-{
-    width: 360px;
-}
-div.formulario .quatro-nonos
-{
-    width: 320px;
-}
-div.formulario .dois-quintos
-{
-    width: 288px;
-}
-div.formulario .tres-oitavos
-{
-    width: 270px;
-}
-div.formulario .terco
-{
-    width: 240px;
-}
-div.formulario .tres-decimos
-{
-    width: 216px;
-}
-div.formulario .quarto
-{
-    width: 180px;
-}
-div.formulario .dois-nonos
-{
-    width: 160px;
-}
-div.formulario .quinto
-{
-    width: 144px;
-}
-div.formulario .sexto
-{
-    width: 120px;
-}
-div.formulario .oitavo
-{
-    width: 90px;
-}
-div.formulario .nono
-{
-    width: 80px;
-}
-div.formulario .decimo
-{
-    width: 72px;
-}
-
-.controle-item input, .controle-item select, .controle-item textarea
-{
-    border: solid 1px;
-    padding: 2px;
-    width: 100%;
-}
-
-.field-validation-error
+﻿.field-validation-error
 {
     color: #ff0000;
 }
@@ -155,8 +8,14 @@ div.formItems
     font-family: Arial, Verdana;
     font-size: 11px;
     padding: 25px;
+    padding-top: 0;
     width: 700px;
+    margin:0 auto;
 }
+
+/* Usado para definir tamanho da combo de paginação da grid */
+div.formItems .ui-jqgrid .ui-pg-selbox {width: 45px;}
+div > .ui-jqgrid .ui-pg-selbox {width: 45px;}
 
 /* Usado automaticamente pelo primeiro fieldset após um div */
 div.formItems > div.formItem + fieldset.formItem
@@ -209,6 +68,7 @@ div.formItems > fieldset.formItem > div.formItem > div, div.formItems > fieldset
 div.formItems div.inteiro
 {
     width: 98%;
+
 }
 
 /* Usado para ocupar 4/5 de uma linha do formulário */
@@ -251,6 +111,7 @@ div.formItems div.doisQuintos
 div.formItems div.terco
 {
     width: 31.0%;
+    
 }
 
 /* Usado para ocupar 1/4 de uma linha do formulário */
@@ -271,9 +132,19 @@ div.formItems div.sexto
     width: 14.6%;
 }
 
+div.formItems div.setimo
+{
+    width: 12.2%;
+}
+
 div.formItems div.oitavo
 {
     width: 10.5%;
+}
+
+div.formItems div.nono
+{
+    width: 9.5%;
 }
 
 /* Usado em cada item do formulário */
@@ -325,62 +196,6 @@ div.formItems div.formItem input[type="checkbox"]
     width: 800px;
 }
 
-/* Aparência dos links com formato de botão */
-a.buttonStyle
-{
-    padding: 0.4em 1em 0.4em 20px;
-    position: relative;
-    text-decoration: none;
-    background: url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) repeat-x scroll 50% 50% #F6F6F6;
-    border: 1px solid #DDDDDD;
-    color: #06667E;
-    font-weight: bold;
-    outline: medium none;
-}
-
-a.buttonStyle:hover
-{
-    border: 1px solid #06667E;
-    background: #dddddd url(images/ui-bg_highlight-soft_25_dddddd_1x100.png) 50% 50% repeat-x;
-    font-weight: bold;
-    color: #954A4D;
-    outline: none;
-}
-
-a.buttonStyle .ui-icon
-{
-    background-image: url(images/ui-icons_666666_256x240.png);
-    left: 0.2em;
-    margin: -8px 5px 0 0;
-    position: absolute;
-    top: 50%;
-}
-
-a.disabledButtonStyle
-{
-    padding: 0.4em 1em 0.4em 20px;
-    position: relative;
-    text-decoration: none;
-    background: url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) repeat-x scroll 50% 50% #999999;
-    border: 1px solid #DDDDDD;
-    color: #CCCCCC;
-    font-weight: bold;
-    outline: medium none;
-}
-
-a.disabledButtonStyle .ui-icon
-{
-    background-image: url(images/ui-icons_666666_256x240.png);
-    left: 0.2em;
-    margin: -8px 5px 0 0;
-    position: absolute;
-    top: 50%;
-}
-
-a.disabledButtonStyle:hover
-{
-    cursor: text;
-}
 /***********************************************************/
 
 div.full input
@@ -467,7 +282,7 @@ fieldset
     width: 368px;
     height: 110px;
 }
-div.clear
+.clear
 {
     clear: both;
 }
@@ -487,4 +302,60 @@ textarea
     color: Red;
     float: right;
     margin: -2%;
+}
+
+/*  ERROS FORMULARIO  */
+div.formtip
+{
+	width: 1px;
+	cursor: pointer;
+}
+td.left.error
+{
+	background-image: url('../Form/error-left.png');
+	background-repeat: no-repeat;
+	width: 37px;
+	min-width: 37px;
+	height: 39px;
+	min-height: 39px;
+}
+td.center.error
+{
+	background-image: url('../Form/error-center.png');
+	background-repeat: repeat-x;
+	text-align: center;
+	width: 100%;
+	white-space: nowrap;
+}
+div.error.text
+{
+	margin-top: -4px;
+	padding: 0px 10px 0px 10px;
+	color: #fff;
+	font-family: Calibri;
+	font-style: italic;
+	font-size: 13px;
+	text-shadow: #363636 1px 1px 0px;
+	text-shadow: 1px 1px 0px #363636;
+}
+td.right.error
+{
+	background-image: url('../Form/error-right.png');
+	background-repeat: no-repeat;
+	width: 14px;
+	min-width: 14px;
+	height: 39px;
+	min-height: 39px;
+}
+input.control-align-left
+{
+    text-align: left !important;
+}
+input.control-align-center
+{
+    text-align: center !important;
+}
+input.control-align-rigth
+{
+    text-align: right !important;
 }
