@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="Controllers\BratController.cs" />
     <Compile Include="Controllers\ControllersInstaller.cs" />
+    <Compile Include="Models\ConsultarBratModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
