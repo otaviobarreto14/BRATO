@@ -569,6 +569,8 @@
     <Content Include="Scripts\uniform\uniform.aristo.css\uniform.aristo.css" />
     <Content Include="Scripts\validation\validation.js" />
     <Content Include="Scripts\validation\validation.pt-br.js" />
+    <Content Include="Views\Brat\ConPolicial.aspx" />
+    <Content Include="Views\Brat\IncPolicial.aspx" />
     <Content Include="Views\Brat\Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -606,7 +608,9 @@
     <Content Include="Content\Styles\images\ui-icons_ec8e0c_256x240.png" />
     <Content Include="Content\Styles\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\Styles\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\Common.Master" />
     <Content Include="Views\Shared\Edit.aspx" />

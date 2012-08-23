@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8cc7aaa4-b2e9-4269-bfd7-7c77a67c3346}</ProjectGuid>
+    <ProjectGuid>{8CC7AAA4-B2E9-4269-BFD7-7C77A67C3346}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Brato.Entities</RootNamespace>
@@ -79,6 +79,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>BratEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="BratoEnumerators.cs" />
     <Compile Include="ComplementoEntity.cs" />
     <Compile Include="ComplementoEntity.Generated.cs">
       <AutoGen>True</AutoGen>
