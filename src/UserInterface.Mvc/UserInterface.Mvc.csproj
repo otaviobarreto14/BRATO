@@ -39,7 +39,10 @@
   <ItemGroup>
     <Compile Include="Controllers\BratController.cs" />
     <Compile Include="Controllers\ControllersInstaller.cs" />
-    <Compile Include="Models\ConsultarBratModel.cs" />
+    <Compile Include="Models\ConsultarBratModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ConsultarPolicialModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
