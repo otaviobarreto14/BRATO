@@ -30,6 +30,13 @@
     <div class="formItem inteiro">
         <%= Html.DropDownList("Logradouro")%>
     </div>
+<<<<<<< HEAD
+=======
+    <span>Numero:</span>
+    <div class="formItem inteiro">
+        <%= Html.TextBoxFor(model => model.IdEndereco.Numero, new { size = "10", MaxLength = "7" })%>
+    </div>
+>>>>>>> 1320ec130c201324370b82adceb169f9cc99598d
     <span>*Data do Acidente:</span>
     <div class="formItem inteiro">
         <%= Html.TextBoxFor(model => model.DataAcidente, new { size = "15", MaxLength = "10" })%>
@@ -73,6 +80,10 @@
     <br />
     <input type="button" id="AddBrat" value="Incluir Brat" style="width: 120px; height: 24px;
         text-align: center" />
+<<<<<<< HEAD
     <input type="button" id="CancelarBrat" value="Cancelar" style="width: 120px; height: 24px;
+=======
+    <input type="button" id="RemBrat" value="Remover Brat" style="width: 120px; height: 24px;
+>>>>>>> 1320ec130c201324370b82adceb169f9cc99598d
         text-align: center" />
 </asp:Content>

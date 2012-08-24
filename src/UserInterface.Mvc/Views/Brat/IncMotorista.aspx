@@ -76,9 +76,15 @@
     </div>
     <br />
     <br />
+<<<<<<< HEAD
     <input type="button" id="AddMotorista" value="Adicionar Motorista" style="width: 125px; height: 24px;
         text-align: center; margin-left:800px" />
     <input type="button" id="RemMotorista" value="Remover Motorista" style="width: 125px; height: 24px;
+=======
+    <input type="button" id="AddMotorista" value="Incluir Motorista" style="width: 120px; height: 24px;
+        text-align: center; margin-left:800px" />
+    <input type="button" id="RemMotorista" value="Remover Motorista" style="width: 120px; height: 24px;
+>>>>>>> 1320ec130c201324370b82adceb169f9cc99598d
         text-align: center; margin-left:inherit" />
     <br />
     <span>GRID</span>

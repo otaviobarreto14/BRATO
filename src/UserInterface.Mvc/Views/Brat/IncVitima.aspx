@@ -60,7 +60,11 @@
     </div>
     <br />
     <br />
+<<<<<<< HEAD
     <input type="button" id="AddVitima" value="Adicionar Vítima" style="width: 120px; height: 24px;
+=======
+    <input type="button" id="AddVitima" value="Incluir Vítima" style="width: 120px; height: 24px;
+>>>>>>> 1320ec130c201324370b82adceb169f9cc99598d
         text-align: center; margin-left:800px" />
     <input type="button" id="RemVitima" value="Remover Vítima" style="width: 120px; height: 24px;
         text-align: center; margin-left:inherit" />
