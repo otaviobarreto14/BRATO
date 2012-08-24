@@ -48,11 +48,7 @@
     </div>
     <br />
     <br />
-<<<<<<< HEAD
     <input type="button" id="AddVeiculo" value="Adicionar Veículo" style="width: 120px;
-=======
-    <input type="button" id="AddVeiculo" value="Incluir Veículo" style="width: 120px;
->>>>>>> 1320ec130c201324370b82adceb169f9cc99598d
         height: 24px; text-align: center; margin-left: 800px" />
     <input type="button" id="RemVeiculo" value="Remover Veículo" style="width: 120px;
         height: 24px; text-align: center; margin-left: inherit" />

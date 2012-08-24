@@ -49,12 +49,7 @@
     </div>
     <br />
     <br />
-<<<<<<< HEAD
     <input type="button" id="AddTestemunha" value="Adicionar Testemunha" style="width: 140px; height: 24px;
-=======
-    <input type="button" id="AddTestemunha" value="Incluir Testemunha" style="width: 140px; height: 24px;
->>>>>>> 1320ec130c201324370b82adceb169f9cc99598d
-        text-align: center; margin-left:760px" />
     <input type="button" id="RemTestemunha" value="Remover Testemunha" style="width: 140px; height: 24px;
         text-align: center; margin-left:inherit" />
     <br />
