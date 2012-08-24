@@ -13,5 +13,9 @@ namespace Brato.UserInterface.Controllers
             return View();
         }
 
+        public ActionResult ConPolicial()
+        {
+            return View();
+        }
     }
 }
