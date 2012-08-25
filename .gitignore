@@ -1,7 +1,7 @@
-/src/*.suo/*.*
-/src/BusinessRules/bin/*.*
-/src/BusinessRules/obj/*.*
-/src/DataAccess/bin/*.*
-/src/DataAccess/obj/*.*
+/src/*.suo
+/src/BusinessRules/bin/**/*
+/src/BusinessRules/obj/**/*
+/src/DataAccess/bin/**/*
+/src/DataAccess/obj/**/*
 
 
