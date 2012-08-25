@@ -21,8 +21,6 @@ namespace Brato.Entities
 {
     public enum BatalhaoEnum
     {
-        [Description("Selecione um Item")]
-        _SemBatalhao = 0,
         [Description("2º Batalhão")]
         _2BPM = 1,
         [Description("3º Batalhão")]
@@ -106,8 +104,6 @@ namespace Brato.Entities
 
     public enum PerfilEnum
     {
-        [Description("Selecione um Item")]
-        _SemPerfil = 0,
         [Description("Administrador")]
         _Administrador = 1,
         [Description("Policial")]
@@ -116,8 +112,6 @@ namespace Brato.Entities
 
     public enum CondTempoEnum
     {
-        [Description("Selecione um Item")]
-        _SemCondTempo = 0,
         [Description("Bom")]
         _Bom = 1,
         [Description("Nublado")]
@@ -128,8 +122,6 @@ namespace Brato.Entities
 
     public enum SinalizacaoEnum
     {
-        [Description("Selecione um Item")]
-        _SemSelecao = 0,
         [Description("Boa")]
         _Boa = 1,
         [Description("Deficiente")]
@@ -140,8 +132,6 @@ namespace Brato.Entities
 
     public enum TipoAcidenteEnum
     {
-        [Description("Selecione um Item")]
-        _SemTipoAcidente = 0,
         [Description("Atropelamento")]
         _Atropelamento = 1,
         [Description("Abalroamento")]
@@ -158,8 +148,6 @@ namespace Brato.Entities
 
     public enum CircunstanciaEnum
     {
-        [Description("Selecione um Item")]
-        _SemCircunstacia = 0,
         [Description("Sem Vítima")]
         _SemVitima = 1,
         [Description("Com Vítima(s)")]
@@ -168,8 +156,6 @@ namespace Brato.Entities
 
     public enum SexoEnum
     {
-        [Description("Selecione um Item")]
-        _SemSexo = 0,
         [Description("Masculino")]
         _Masculino = 1,
         [Description("Feminino")]
@@ -178,8 +164,6 @@ namespace Brato.Entities
 
     public enum EstadoCivilEnum
     {
-        [Description("Selecione um Item")]
-        _SemEstadoCivil = 0,
         [Description("Solteiro(a)")]
         _Solteiro = 1,
         [Description("Casado(a)")]
@@ -194,8 +178,6 @@ namespace Brato.Entities
 
     public enum CategoriaCNH
     {
-        [Description("Selecione um Item")]
-        _SemCategoriaCNH = 0,
         [Description("A")]
         _A = 1,
         [Description("B")]
@@ -218,8 +200,6 @@ namespace Brato.Entities
 
     public enum FerimentosEnum
     {
-        [Description("Selecione um Item")]
-        _SemFerimentos = 0,
         [Description("Leve(s)")]
         _Leve = 1,
         [Description("Grave(s)")]
@@ -228,32 +208,43 @@ namespace Brato.Entities
         _Fatal = 3
     }
 
-    public class EnumeratorHelper
+    public class EnumHelper
     {
-        public EnumeratorHelper()
+        
+        public static IEnumerable<KeyValuePair<int, string>> GetList<T>()
         {
-
+            var arrayValues = (int[])(Enum.GetValues(typeof(T)).Cast<int>());
+            List<KeyValuePair<int, string>> lst = null;
+            for (int i = 0; i < arrayValues.Length; i++)
+            {
+                if (lst == null)
+                    lst = new List<KeyValuePair<int, string>>();
+                int value = arrayValues[i];
+                string name = GetEnumDescription<T>((value));
+                lst.Add(new KeyValuePair<int, string>(value, name));
+            }
+            return lst;
         }
 
-        //public IList<KeyValuePair<int, string>> GetEnumList(Enum enumerador)
-        //{
-        //    PropertyInfo[] propriedades = enumerador.GetType().GetProperties();
-        //    IList<KeyValuePair<int, string>> lista = new List<KeyValuePair<int, string>>();
-        //    foreach (var prop in propriedades)
-        //    {
-        //        int valor = (int)prop.GetValue(prop, null);
-        //        DescriptionAttribute[] attributes = (DescriptionAttribute[])prop.GetCustomAttributes(typeof(DescriptionAttribute), false);
-        //        string desc = string.Empty;
-        //        if (attributes != null && attributes.Length > 0)
-        //            desc = attributes[0].Description;
-        //        else
-        //            desc = prop.ToString();
+        public static string GetEnumDescription<TEnum>(int value)
+        {
+            return GetEnumDescription((Enum)(object)((TEnum)(object)value));
+        }
 
-        //        KeyValuePair<int, string> item = new KeyValuePair<int, string>(valor, desc);
-        //        lista.Add(item);
-        //    }
+        public static string GetEnumDescription(Enum value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
 
-        //    return lista;
-        //}
+            DescriptionAttribute[] attributes =
+                (DescriptionAttribute[])fi.GetCustomAttributes(
+                typeof(DescriptionAttribute),
+                false);
+
+            if (attributes != null &&
+                attributes.Length > 0)
+                return attributes[0].Description;
+            else
+                return value.ToString();
+        }
     }
 }

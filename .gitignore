@@ -8,3 +8,4 @@
 /src/UserInterface.Mvc/bin/**/*
 /src/UserInterface.Mvc/Bin/**/*
 /src/UserInterface.Mvc/obj/**/*
+/src/UserInterface.Mvc/Logs/**/*

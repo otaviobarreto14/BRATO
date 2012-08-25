@@ -12,7 +12,24 @@
 
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.Entities.PolicialEntity>" %>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
+    <script src="/Scripts/jquery.jqDropDownList-1.0.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+
+        });
+    </script>
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+    <%
+        IList<SelectListItem> lst = new List<SelectListItem>();
+        var enumItems = EnumHelper.GetList<BatalhaoEnum>();
+        foreach (var enumitem in enumItems)
+        {
+            SelectListItem item = new SelectListItem() { Value = enumitem.Key.ToString(), Text = enumitem.Value };
+            lst.Add(item);
+        }
+    %>
     <span>*Matrícula:</span>
     <div class="formItem inteiro">
         <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
@@ -23,11 +40,11 @@
     </div>
     <span>*Batalhão:</span>
     <div class="formItem inteiro">
-        <%= Html.DropDownListFor(model => model.Batalhao, null) %>
+        <%= Html.DropDownListFor(model => model.Batalhao, lst, "Selecione", null) %>
     </div>
     <span>*Perfil:</span>
     <div class="formItem inteiro">
-        <%= Html.DropDownListFor(model => model.IdPerfil, null) %>
+        <%//Html.DropDownListFor(model => model.IdPerfil, null) %>
     </div>
     <span>*Senha:</span>
     <div class="formItem inteiro">
