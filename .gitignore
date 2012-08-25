@@ -9,5 +9,6 @@
 /src/Entities/obj/**/*
 
 /src/UserInterface.Mvc/bin/**/*
+/src/UserInterface.Mvc/Bin/**/*
 /src/UserInterface.Mvc/obj/**/*
 
