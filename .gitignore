@@ -1,14 +1,10 @@
 /src/*.suo
 /src/BusinessRules/bin/**/*
 /src/BusinessRules/obj/**/*
-
 /src/DataAccess/bin/**/*
 /src/DataAccess/obj/**/*
-
 /src/Entities/bin/**/*
 /src/Entities/obj/**/*
-
 /src/UserInterface.Mvc/bin/**/*
 /src/UserInterface.Mvc/Bin/**/*
 /src/UserInterface.Mvc/obj/**/*
-
