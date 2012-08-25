@@ -21,23 +21,30 @@
     <!-- Funçoes -->
     <script src="/Scripts/js-functions.js" type="text/javascript"></script>
     <style type="text/css">
+        #corpo
+        {
+            width: 85%;
+            height: 85%;
+            margin-left: 7.5%;
+        }
+        .buttons
+        {
+            margin: 1px;
+        }
         .btnLink
         {
             padding: 0px 20px;
             text-decoration: none;
             position: relative;
             font-size: 18px;
-            width: 140px;
+            width: 150px;
             text-align: center;
+            margin: 5px;
         }
-        #conteudo
+        #content
         {
-            border: 1px solid;
-            clear: both;
-            height: 85%;
-            margin-left: 7.5%;
-            width: 85%;
-            height: 85%;
+            background-color: #99CAF0;
+            height: 100%;
         }
     </style>
     <script type="text/javascript">
@@ -66,19 +73,17 @@
     <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server" />
 </head>
 <body>
-    <div>
+    <div id="corpo">
         <div class="controleAcesso inteiro" style="background-color: Gray; height: 80px;">
             <h2>
-                BRATO - Boletim de Registro de Acidentes de Trânsito Online<a href="#" id="btnLogin" class="ui-state-default ui-corner-all btnLink"
-                style="float: right; width: 50px;">Login</a></h2>
+                BRATO - Boletim de Registro de Acidentes de Trânsito Online<a href="#" id="btnLogin"
+                    class="ui-state-default ui-corner-all btnLink" style="float: right; width: 50px;">Login</a></h2>
             RESERVADO PARA LOGO - Header
         </div>
         <div class="formItem inteiro">
         </div>
         <div class="menu inteiro">
-            <a href="#" id="btnBrat" class="ui-state-default ui-corner-all btnLink" style="float: none;">
-                Consultar BRAT</a> <a href="#" id="´btnRelatorio" class="ui-state-default ui-corner-all btnLink"
-                    style="float: none;">Relatórios</a>
+            <% Html.RenderPartial("Menu"); %>
         </div>
         <br style="clear: both;" />
         <div id="content">

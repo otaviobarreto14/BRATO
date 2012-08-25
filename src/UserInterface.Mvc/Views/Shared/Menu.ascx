@@ -1,11 +1,8 @@
-﻿<%@ Import Namespace="System.Linq" %>
-<%@ Import Namespace="TopDown.TopFramework.Common" %>
-<%@ Import Namespace="TopDown.TopFramework.BusinessRules.Security.Authorization" %>
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
-<ul id="dock">
-    <%
-        IAuthorizer authorizer = CommonContainer.Resolve<IAuthorizer>();
-        foreach (ModuloEntity modulo in authorizer.GetModules(Page.User.Identity.Name))
-            Html.RenderPartial("MenuHeader", modulo);        
-    %>
-</ul>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<div class="buttons">
+    <a href="#" id="btnBrat" class="ui-state-default ui-corner-all btnLink" style="float: left;">
+        Consultar BRAT</a> <a href="#" id="´btnRelatorio" class="ui-state-default ui-corner-all btnLink"
+            style="float: left;">Relatórios</a> <a href="#" id="btnCadastrarPolicial" class="ui-state-default ui-corner-all btnLink"
+                style="float: left;">Cadastrar Policial</a> <a href="#" id="btnRegistrarBrat" class="ui-state-default ui-corner-all btnLink"
+                    style="float: left;">Registrar BRAT</a>
+</div>
