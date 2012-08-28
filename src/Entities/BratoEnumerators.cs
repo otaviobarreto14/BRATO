@@ -4,9 +4,6 @@ TipoVeiculo [Carro, Motocicleta, Caminhão, Ônibus]
 Fabricante [Chevrolet, Fiat, Ford, Honda e etc.]
 Modelo [Corsa, Uno, Fiesta, City e etc.]
 Cor [Preto, Branco, Cinza, Prata e etc.]
-
-NO MODO RELATÓRIO TODOS OS ENUMS DEVEM CONTER NO ITEM 0 "TODOS" E NÃO "SELECIONE ..."
-CRIAR UMA INTELIGENCIA PARA RECONHECER EM QUE MODO O ENUM ESTA SENDO CHAMADO
 */
 
 
