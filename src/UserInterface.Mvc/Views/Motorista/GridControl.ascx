@@ -11,17 +11,17 @@
             url: '',
             colNames: [
                 'Nome',
-                'Matricula',
-                'Batalhão',
-                'Perfil',
-                'Status'
+                'Sexo',
+                'CNH',
+                'Data Nascimento',
+                'Estado Civil'
             ],
             colModel: [
                 { name: 'Nome', width: nameWidth },
-                { name: 'Matricula' },
-                { name: 'Batalhao' },
-                { name: 'Perfil' },
-                { name: 'Status' }
+                { name: 'Sexo' },
+                { name: 'Cnh' },
+                { name: 'DtNasc' },
+                { name: 'EstadoCivil' }
             ],
             sortname: 'Nome'
         }).navGrid(
@@ -34,16 +34,7 @@
                     window.location = '<%= Url.Action("New")%>';
                 }
             }
-        ).navButtonAdd('#pager', {
-            caption: "",
-            title: "Ativar/Desativar Policial",
-            buttonicon: "ui-icon-locked",
-            onClickButton: function () {
-                //TODO:Bloquear ou Desbloquear Policial
-                alert("Bloqueia Policial");
-            },
-            position: "first"
-        });
+        );
     });
 </script>
 <table id="grid">

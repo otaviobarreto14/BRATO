@@ -55,7 +55,7 @@
             Buscar</a>
     </div>
     <br style="clear: both;" />
-    <div class="formItem inteiro" style="clear: both;">
+    <div class="formItem inteiro" id="divGrid" style="clear: both;">
         <% Html.RenderPartial("GridControl"); %>
     </div>
 </asp:Content>
