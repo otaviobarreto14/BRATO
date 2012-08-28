@@ -4,5 +4,6 @@
         Consultar BRAT</a> <a href="#" id="´btnRelatorio" class="ui-state-default ui-corner-all btnLink"
             style="float: left;">Relatórios</a> <a href="/Policial/IncPolicial" id="btnCadastrarPolicial" class="ui-state-default ui-corner-all btnLink"
                 style="float: left;">Cadastrar Policial</a> <a href="#" id="btnRegistrarBrat" class="ui-state-default ui-corner-all btnLink"
-                    style="float: left;">Registrar BRAT</a>
+                    style="float: left;">Registrar BRAT</a> <a href="/Policial/ConPolicial" id="btnConsultarPolicial" class="ui-state-default ui-corner-all btnLink"
+                    style="float: left;">Consultar Policial</a>
 </div>

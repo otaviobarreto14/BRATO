@@ -574,14 +574,14 @@
     <Content Include="Scripts\uniform\uniform.aristo.css\uniform.aristo.css" />
     <Content Include="Scripts\validation\validation.js" />
     <Content Include="Scripts\validation\validation.pt-br.js" />
-    <Content Include="Views\Brat\ConPolicial.aspx" />
+    <Content Include="Views\Policial\ConPolicial.aspx" />
     <Content Include="Views\Brat\IncBrat.aspx" />
     <Content Include="Views\Brat\IncVeiculo.aspx" />
     <Content Include="Views\Brat\IncTestemunha.aspx" />
     <Content Include="Views\Brat\IncVitima.aspx" />
     <Content Include="Views\Brat\IncMotorista.aspx" />
-    <Content Include="Views\Brat\IncPolicial.aspx" />
     <Content Include="Views\Brat\Index.aspx" />
+    <Content Include="Views\Policial\GridControl.ascx" />
     <Content Include="Views\Policial\IncPolicial.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
