@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TopDown.TopFramework.Entities</name>
+    </assembly>
+    <members>
+        <member name="T:TopDown.TopFramework.Entities.BaseObject">
+            <summary>
+            Classe base para simplificar a comparação de objetos.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseObject.Equals(System.Object)">
+            <summary>
+            Determina se um objeto é igual a outro.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseObject.GetHashCode">
+            <summary>
+            Função Hash para um determinado tipo.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseObject.HasSameObjectSignatureAs(TopDown.TopFramework.Entities.BaseObject)">
+            <summary>
+            Verifica se um objeto possui a mesma assinatura (conjunto de propriedades) de outro.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseObject.GetSignatureProperties">
+            <summary>
+            Obtém o conjunto de propriedades de um objeto.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseObject.GetTypeUnproxied">
+            <summary>
+            Obtém o tipo por baixo do proxy.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseObject.GetTypeSpecificSignatureProperties">
+            <summary>
+            Quando implementado, fornece uma assinatura personalizada a ser comparada.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.Entities.BaseEntity">
+            <summary>
+            Classe base para entidades de negócio.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.Entities.IEntity">
+            <summary>
+            Interface base para entidades de negócio.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.IEntity.IsNew">
+            <summary>
+            Quando implementado indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.IEntity.GetIdProperty">
+            <summary>
+            Quando implementado obtém o tipo do identificador referente a instância atual.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.IEntity.GetIdValue">
+            <summary>
+            Quando implementado obtém o valor do identificador referente a instância atual.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.IEntity.ValidationErrors">
+            <summary>
+            Erros de validação da entidade.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseEntity.GetTypeSpecificSignatureProperties">
+            <summary>
+            Fornece uma assinatura personalizada a ser comparada.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseEntity.IsNew">
+            <summary>
+            Indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseEntity.GetIdProperty">
+            <summary>
+            Obtém o tipo do identificador referente a instância atual.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.BaseEntity.GetIdValue">
+            <summary>
+            Obtém o valor do identificador referente a instância atual.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.BaseEntity.ValidationErrors">
+            <summary>
+            Erros de validação da entidade.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.Entities.MenuItem">
+            <summary>
+            Classe representativa de menu para web.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.MenuItem.Path">
+            <summary>
+            Caminho do item do menu
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.MenuItem.Title">
+            <summary>
+            Título a ser exibido no menu
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.MenuItem.Order">
+            <summary>
+            Ordem de exibição do item do menu
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.MenuItem.Parent">
+            <summary>
+            Menu pai.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.MenuItem.Children">
+            <summary>
+            Itens filhos.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.Entities.AuditableEntity">
+            <summary>
+            Classe base para entidades de negócio auditáveis.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.AuditableEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.AuditableEntity.CodUsuarioAtu">
+            <summary>
+            Login do usuário que efetuou a última alteração.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.Entities.AuditableEntity.DtAtu">
+            <summary>
+            Data e hora da última atualização.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.Entities.IEntityFilter`1.ToExpression">
+            <summary>
+            Quando implementado, converte um filtro em uma expressão lambda.
+            </summary>
+        </member>
+    </members>
+</doc>

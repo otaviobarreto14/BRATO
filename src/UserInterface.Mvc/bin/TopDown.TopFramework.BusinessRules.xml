@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TopDown.TopFramework.BusinessRules</name>
+    </assembly>
+    <members>
+        <member name="T:TopDown.TopFramework.BusinessRules.BaseRules">
+            <summary>
+            Classe base para regras de negócio.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.IRules">
+            <summary>
+            Interface base para classes de negócio.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules.Flush">
+            <summary>
+            Persiste as modificações da sessão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules.Clear">
+            <summary>
+            Limpa as modificações da sessão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules.Close">
+            <summary>
+            Fecha a sessão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules.BeginTransaction">
+            <summary>
+            Inicia uma transação na sessão corrente.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules.Commit">
+            <summary>
+            Confirma a transação da sessão corrente.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules.Rollback">
+            <summary>
+            Cancela a transação da sessão corrente.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules.#ctor(TopDown.TopFramework.DataAccess.IDao)">
+            <summary>
+            Construtor protegido que configura o objeto de acesso a dados utilizado.
+            </summary>
+            <param name="dao">Objeto de acesso a dados.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules.Flush">
+            <summary>
+            Persiste as modificações da sessão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules.Clear">
+            <summary>
+            Limpa as modificações da sessão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules.Close">
+            <summary>
+            Fecha a sessão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules.BeginTransaction">
+            <summary>
+            Inicia uma transação na sessão corrente.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules.Commit">
+            <summary>
+            Confirma a transação da sessão corrente.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules.Rollback">
+            <summary>
+            Cancela a transação da sessão corrente.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopFramework.BusinessRules.BaseRules.Dao">
+            <summary>
+            Objeto de acesso a dados utilizado pela regra de negócio.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.BaseRules`1">
+            <summary>
+            Classe base para regras de negócio, fortemente tipada para entidades de negócio.
+            </summary>
+            <typeparam name="T">Tipo da entidade.</typeparam>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.IRules`1">
+            <summary>
+            Interface base para classes de negócio, fortemente tipada para entidades de negócio.
+            </summary>
+            <typeparam name="T">Tipo da entidade.</typeparam>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Merge(`0)">
+            <summary>
+            Copia as propriedades de uma instância transiente para uma entidade eventualmente carregada com o mesmo identificador.
+            </summary>
+            <remarks>
+            Se a entidade ainda não estiver carregada, esta será carregada antes da atualização;
+            </remarks>
+            <param name="entity">Entidade que será atualizada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Persist(`0)">
+            <summary>
+            Persiste a entidade na sessão.
+            </summary>
+            <param name="entity">Entidade que será atualizada ou criada</param>
+            <remarks>
+            Similar ao Create ou CreateOrUpdate, adiciona uma possivelmente nova entidade à sessão, 
+            mas não gera um INSERT ou um UPDATE imediatamente e portanto a entidade não recebe um identificador gerado pela base de dados, 
+            este apenas será obtido no flush;
+            </remarks>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Replicate(`0)">
+            <summary>
+            Copia uma instância de uma sessão para outra sobrescrevendo a instância existente
+            </summary>
+            <param name="entity">Entidade que será atualizada ou criada</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Linq">
+            <summary>
+            Provê as funcionalidades do Linq.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Count">
+            <summary>
+            Conta quantas entidades existem no repositório de dados.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Conta quantas entidades existem no repositório de dados que satisfazem o critério de filtro.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.GetAll">
+            <summary>
+            Obtém uma lista de entidades, ordenadas conforme a ordenação padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.GetAll``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            Obtém uma lista de todas as entidades do repositório de dados, ordenadas conforme a expressão Lambda.
+            </summary>
+            <param name="orderBy">Expressão Lambda retornando os campos da ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <example>
+            Ordenando pela propriedade "CategoryName"
+            <code>rules.GetAll(p => p.CategoryName);</code>
+            Ordenando pelas propriedades "Name" e "LastName"
+            <code>rules.GetAll(u => new { u.Name, u.LastName });</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.FindAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <example>
+            Filtrando pela propriedade "Idade", onde seu valor é maior ou igual a 18.
+            <code>rules.FindAll(c => c.Idade >= 18);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.FindAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Nome do campo usado na ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome".
+            <code>dao.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.FindAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Nome do campo usado na ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <param name="pageIndex">Índice da página solicitada, começando em 1.</param>
+            <param name="pageSize">Tamanho da página de dados.</param>
+            <param name="totalFound">Quantidade total de registros existentes no repositório de dados.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome".
+            <code>dao.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.FindAll``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Expressão Lambda retornando os campos da ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome".
+            <code>rules.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.FindAll``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Expressão Lambda retornando os campos da ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <param name="pageIndex">Índice da página solicitada, começando em 1.</param>
+            <param name="pageSize">Tamanho da página de dados.</param>
+            <param name="totalFound">Quantidade total de registros existentes no repositório de dados.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome", trazendo somente a primeira página com 5 registros.
+            <code>dao.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome 1, 5);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Create(`0)">
+            <summary>
+            Inclui uma nova entidade no repositório de dados.
+            </summary>
+            <param name="entity">Nova entidade que será incluída.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Create(`0,System.Boolean)">
+            <summary>
+            Inclui uma nova entidade na sessão e pergunta se deve persistir.
+            </summary>
+            <param name="entity">Nova entidade que será incluída.</param>
+            <param name="flush">Indica se deve persistir a entidade.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Update(`0)">
+            <summary>
+            Atualiza os dados de uma entidade já existente no repositório de dados.
+            </summary>
+            <param name="entity">Entidade que será atualizada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Delete(`0)">
+            <summary>
+            Exclui uma entidade do repositório de dados.
+            </summary>
+            <param name="entity">Entidade que será excluída.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Delete(`0,System.Boolean)">
+            <summary>
+            Exclui uma entidade do repositório de dados.
+            </summary>
+            <param name="entity">Entidade que será excluída.</param>
+            <param name="useTransaction">Indica se deve persistir com transação.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Refresh(`0)">
+            <summary>
+            Atualiza o estado da entidade com o repositório de dados.
+            </summary>
+            <param name="entity">Entidade que terá o estado atualizado.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`1.Validate(`0)">
+            <summary>
+            Valida a entidade.
+            </summary>
+            <param name="entity">Entidade a ser validada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.#ctor(System.Boolean)">
+            <summary>
+            Construtor onde se especifica se o objeto vai utilizar uma nova sessão.
+            </summary>
+            <param name="useNewContext">Indica se deseja uma nova sessão.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.#ctor(TopDown.TopFramework.DataAccess.IDao{`0})">
+            <summary>
+            Construtor protegido que configura o objeto de acesso a dados utilizado.
+            </summary>
+            <param name="dao">Objeto de acesso a dados.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Merge(`0)">
+            <summary>
+            Copia as propriedades de uma instância transiente para uma entidade eventualmente carregada com o mesmo identificador.
+            </summary>
+            <remarks>
+            Se a entidade ainda não estiver carregada, esta será carregada antes da atualização;
+            </remarks>
+            <param name="entity">Entidade que será atualizada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Persist(`0)">
+            <summary>
+            Persiste a entidade na sessão.
+            </summary>
+            <param name="entity">Entidade que será atualizada ou criada</param>
+            <remarks>
+            Similar ao Create ou CreateOrUpdate, adiciona uma possivelmente nova entidade à sessão, 
+            mas não gera um INSERT ou um UPDATE imediatamente e portanto a entidade não recebe um identificador gerado pela base de dados, 
+            este apenas será obtido no flush;
+            </remarks>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Replicate(`0)">
+            <summary>
+            Copia uma instância de uma sessão para outra sobrescrevendo a instância existente
+            </summary>
+            <param name="entity">Entidade que será atualizada ou criada</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Linq">
+            <summary>
+            Provê as funcionalidades do Linq.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Count">
+            <summary>
+            Conta quantas entidades existem no repositório de dados.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Conta quantas entidades existem no repositório de dados que satisfazem o critério de filtro.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Any">
+            <summary>
+            Verifica se existem entidades existem no repositório de dados.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Conta quantas entidades existem no repositório de dados que satisfazem o critério de filtro.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.GetAll">
+            <summary>
+            Obtém uma lista de entidades, ordenadas conforme a ordenação padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.GetAll``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            Obtém uma lista de todas as entidades do repositório de dados, ordenadas conforme a expressão Lambda.
+            </summary>
+            <param name="orderBy">Expressão Lambda retornando os campos da ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <example>
+            Ordenando pela propriedade "CategoryName"
+            <code>rules.GetAll(p => p.CategoryName);</code>
+            Ordenando pelas propriedades "Name" e "LastName"
+            <code>rules.GetAll(u => new { u.Name, u.LastName });</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.FindAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <example>
+            Filtrando pela propriedade "Idade", onde seu valor é maior ou igual a 18.
+            <code>rules.FindAll(c => c.Idade >= 18);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.FindAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Nome do campo usado na ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome".
+            <code>dao.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.FindAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Nome do campo usado na ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <param name="pageIndex">Índice da página solicitada, começando em 1.</param>
+            <param name="pageSize">Tamanho da página de dados.</param>
+            <param name="totalFound">Quantidade total de registros existentes no repositório de dados.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome".
+            <code>dao.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.FindAll``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Expressão Lambda retornando os campos da ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome".
+            <code>rules.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.FindAll``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Busca todas as entidades que satisfaçam a expressão Lambda de filtro, 
+            ordenando conforme a expressão Lambda de ordenação.
+            </summary>
+            <param name="where">Expressão Lambda retornando a condição de filtro.</param>
+            <param name="orderBy">Expressão Lambda retornando os campos da ordenação.</param>
+            <param name="descending">Indica se a ordenação será decrescente.</param>
+            <param name="pageIndex">Índice da página solicitada, começando em 1.</param>
+            <param name="pageSize">Tamanho da página de dados.</param>
+            <param name="totalFound">Quantidade total de registros existentes no repositório de dados.</param>
+            <example>
+            Filtrando pela propriedade "DataNascimento", onde o mês é igual ao corrente 
+            e ordenando pela propriedade "Nome", trazendo somente a primeira página com 5 registros.
+            <code>dao.FindAll(c => c.DataNascimento.Month == DateTime.Now.Month, c => c.Nome 1, 5);</code>
+            </example>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Create(`0)">
+            <summary>
+            Inclui uma nova entidade no repositório de dados.
+            </summary>
+            <param name="entity">Nova entidade que será incluída.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Create(`0,System.Boolean)">
+            <summary>
+            Inclui uma nova entidade na sessão e pergunta se deve persistir.
+            </summary>
+            <param name="entity">Nova entidade que será incluída.</param>
+            <param name="flush">Indica se deve persistir a entidade.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Update(`0)">
+            <summary>
+            Atualiza os dados de uma entidade já existente no repositório de dados.
+            </summary>
+            <param name="entity">Entidade que será atualizada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Delete(`0)">
+            <summary>
+            Exclui uma entidade do repositório de dados.
+            </summary>
+            <param name="entity">Entidade que será excluída.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Delete(`0,System.Boolean)">
+            <summary>
+            Exclui uma entidade do repositório de dados.
+            </summary>
+            <param name="entity">Entidade que será excluída.</param>
+            <param name="useTransaction">Indica se deve persistir com transação.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Refresh(`0)">
+            <summary>
+            Atualiza o estado da entidade com o repositório de dados.
+            </summary>
+            <param name="entity">Entidade que terá o estado atualizado.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`1.Validate(`0)">
+            <summary>
+            Valida a entidade.
+            </summary>
+            <param name="entity">Entidade a ser validada.</param>
+            <remarks>
+            Método utilizado para validações de negócio além dos DataAnnotations da Entidade.
+            </remarks>
+        </member>
+        <member name="P:TopDown.TopFramework.BusinessRules.BaseRules`1.Dao">
+            <summary>
+            Objeto de acesso a dados utilizado pela regra de negócio.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.BaseRules`2">
+            <summary>
+            Classe base para regras de negócio, fortemente tipada para entidades de negócio, 
+            onde se conhece o tipo do identificador.
+            </summary>
+            <typeparam name="T">Tipo da entidade.</typeparam>
+            <typeparam name="K">Tipo do identificador da entidade</typeparam>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.IRules`2">
+            <summary>
+            Interface base para classes de negócio, fortemente tipada para entidades de negócio, 
+            onde se conhece o tipo do identificador.
+            </summary>
+            <typeparam name="T">Tipo da entidade.</typeparam>
+            <typeparam name="K">Tipo do identificador da entidade</typeparam>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`2.GetById(`1)">
+            <summary>
+            Obtém uma entidade do repositório de dados mediante um identificador.
+            </summary>
+            <param name="id">Identificador da entidade desejada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`2.Load(`1)">
+            <summary>
+            Carrega minimamente uma entidade para a sessão mediante um identificador.
+            </summary>
+            <remarks>
+            Utilizado para construir relacionamentos ou fazer filtros baseando-se em relacionamentos.
+            </remarks>
+            <param name="id">Identificador da entidade desejada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`2.DeleteById(`1)">
+            <summary>
+            Exclui uma entidade do repositório de dados mediante um identificador.
+            </summary>
+            <param name="id">Identificador da entidade que será excluída.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.IRules`2.ValidateUnique``1(`0,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Valida se o valor de uma determinada propriedade é único em todo o repositório.
+            </summary>
+            <param name="entity">Entidade com os valores a serem verificados.</param>
+            <param name="func">Expressão contendo o campo a ser verificado.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`2.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`2.#ctor(System.Boolean)">
+            <summary>
+            Construtor onde se especifica se o objeto vai utilizar uma nova sessão.
+            </summary>
+            <param name="useNewContext">Indica se deseja uma nova sessão.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`2.#ctor(TopDown.TopFramework.DataAccess.IDao{`0,`1})">
+            <summary>
+            Construtor protegido que configura o objeto de acesso a dados utilizado.
+            </summary>
+            <param name="dao">Objeto de acesso a dados.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`2.GetById(`1)">
+            <summary>
+            Obtém uma entidade do repositório de dados mediante um identificador.
+            </summary>
+            <param name="id">Identificador da entidade desejada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`2.Load(`1)">
+            <summary>
+            Carrega minimamente uma entidade para a sessão mediante um identificador.
+            </summary>
+            <remarks>
+            Utilizado para construir relacionamentos ou fazer filtros baseando-se em relacionamentos.
+            </remarks>
+            <param name="id">Identificador da entidade desejada.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`2.DeleteById(`1)">
+            <summary>
+            Exclui uma entidade do repositório de dados mediante um identificador.
+            </summary>
+            <param name="id">Identificador da entidade que será excluída.</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRules`2.ValidateUnique``1(`0,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Valida se o valor de uma determinada propriedade é único em todo o repositório.
+            </summary>
+            <param name="entity">Entidade com os valores a serem verificados.</param>
+            <param name="func">Expressão contendo o campo a ser verificado.</param>
+        </member>
+        <member name="P:TopDown.TopFramework.BusinessRules.BaseRules`2.Dao">
+            <summary>
+            Objeto de acesso a dados utilizado pela regra de negócio.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.Security.Authentication.LoginAttempt">
+            <summary>
+            Enumerador para descrever o retorno do processo de autenticação.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.LoginAttempt.Unsuccessful">
+            <summary>
+            Usuário ou senha incorretos.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.LoginAttempt.Blocked">
+            <summary>
+            Usuário bloqueado por excesso de tentativas sem sucesso.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.LoginAttempt.Successful">
+            <summary>
+            Usuário autenticado com sucesso.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.LoginAttempt.MayChangePassword">
+            <summary>
+            Usuário deve trocar a senha, mas não é obrigado.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.LoginAttempt.MustChangePassword">
+            <summary>
+            Usuário é obrigado a trocar a senha.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.LoginAttempt.Unsecure">
+            <summary>
+            Senha está no formato incorreto.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.Security.Authorization.PermissionType">
+            <summary>
+            Enumerador para descrever os tipos de permissão existentes.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authorization.PermissionType.Inclusao">
+            <summary>
+            Permissão para incluir novos registros.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authorization.PermissionType.Atualizacao">
+            <summary>
+            Permissão para alterar registros.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authorization.PermissionType.Exclusao">
+            <summary>
+            Permissão para excluir registros.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authorization.PermissionType.Consulta">
+            <summary>
+            Permissão para ler registros.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authorization.PermissionType.Especial">
+            <summary>
+            Permissão especial.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.Security.Authentication.IAuthenticator.LogOn(System.String,System.String)">
+            <summary>
+            Efetua o procedimento de LogOn no sistema.
+            </summary>
+            <param name="username">Nome do usuário</param>
+            <param name="password">Hash SHA1 da senha</param>
+            <returns>Retorna true se o procedimento for bem sucedido.</returns>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.Security.Authentication.IAuthenticator.ChangePassword(System.String,System.String,System.String)">
+            <summary>
+            Troca a senha do usuário
+            </summary>
+            <param name="username">Nome do usuário</param>
+            <param name="oldPassword">Hash SHA1 da senha antiga</param>
+            <param name="newPassword">Hash SHA1 da nova senha</param>
+            <returns>Retorna true se a operação foi bem-sucedida.</returns>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.Security.Authentication.IAuthenticator.SendNewPassword(System.String)">
+            <summary>
+            Envia uma nova senha para o usuário.
+            </summary>
+            <param name="username">Nome do usuário</param>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.Security.Authentication.ChangePasswordAttempt">
+            <summary>
+            Enumerador para descrever o retorno do processo de troca de senha.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.ChangePasswordAttempt.Successful">
+            <summary>
+            A senha trocada com sucesso.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.ChangePasswordAttempt.Unsuccessful">
+            <summary>
+            A senha não foi trocada.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.ChangePasswordAttempt.Blocked">
+            <summary>
+            A senha não foi trocada e foi bloqueada.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopFramework.BusinessRules.Security.Authentication.ChangePasswordAttempt.Unsecure">
+            <summary>
+            A senha está no formato incorreto.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.Security.Authorization.IAuthorizer">
+            <summary>
+            Interface base para classes autorizadoras.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.Security.Authorization.IAuthorizer.Authorize(System.String,System.String,System.String)">
+            <summary>
+            Quando implementado, verifica se o usuário possui autorização para acessar a função desejada.
+            </summary>
+            <param name="userName">Nome do usuário.</param>
+            <param name="controllerName">Nome do controller a ser autorizado.</param>
+            <param name="actionName">Nome da action em lower case.</param>
+            <returns>Retorna true se o usuário tem permissão de acessar a action do controller.</returns>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.Security.Authorization.IAuthorizer.GetMenuTree(System.String,System.Object)">
+            <summary>
+            Quando implementado, obtém a árvore do menu contendo somente as funções autorizadas para o usuário especificado.
+            </summary>
+            <param name="userName">Nome do usuário</param>
+            <param name="moduleId">Identificador do módulo agrupador.</param>
+            <returns>Quando implementado, deve retornar o menu do usuário relativo ao módulo informado.</returns>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.Security.Authorization.IAuthorizer.GetFunctionTitle(System.String,System.String)">
+            <summary>
+            Quando implementado, obtém o nome da função referente à página.
+            </summary>
+            <param name="controllerName">Nome do controller da página</param>
+            <param name="actionName">Nome da action da página</param>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.Security.Authorization.IAuthorizer.GetModules(System.String)">
+            <summary>
+            Quando implementado, obtém a lista de módulos disponíveis para o usuário.
+            </summary>
+            <param name="userName">Nome do usuário</param>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.RulesManager">
+            <summary>
+            Classe que gerencia as operações realizadas dentro de um contexto.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.RulesManager.Start">
+            <summary>
+            Inicia os processos necessários ao negócio.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.RulesManager.Finish">
+            <summary>
+            Finaliza as operações do contexto.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.RulesManager.CreateByEntity``1">
+            <summary>
+            Obtém uma classe de negócios que manipule a entidade solicitada.
+            </summary>
+            <typeparam name="T">Entidade que será manipulada.</typeparam>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.RulesManager.CreateByEntity``1(System.Boolean)">
+            <summary>
+            Obtém uma classe de negócios que manipule a entidade solicitada.
+            </summary>
+            <typeparam name="T">Entidade que será manipulada.</typeparam>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.RulesManager.CreateByEntity``2">
+            <summary>
+            Obtém uma classe de negócios que manipule a entidade solicitada.
+            </summary>
+            <typeparam name="T">Entidade que será manipulada.</typeparam>
+            <typeparam name="K">Tipo do identificador da entidade.</typeparam>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.RulesManager.CreateByEntity``2(System.Boolean)">
+            <summary>
+            Obtém uma classe de negócios que manipule a entidade solicitada.
+            </summary>
+            <typeparam name="T">Entidade que será manipulada.</typeparam>
+            <typeparam name="K">Tipo do identificador da entidade.</typeparam>
+        </member>
+        <member name="T:TopDown.TopFramework.BusinessRules.BaseRulesInstaller">
+            <summary>
+            Instalador de objetos de negócio básicos.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopFramework.BusinessRules.BaseRulesInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Instala os objetos de negócio básicos.
+            </summary>
+            <param name="container"></param>
+            <param name="store"></param>
+        </member>
+    </members>
+</doc>
