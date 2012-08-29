@@ -577,7 +577,6 @@
     <Content Include="Scripts\uniform\uniform.aristo.css\uniform.aristo.css" />
     <Content Include="Scripts\validation\validation.js" />
     <Content Include="Scripts\validation\validation.pt-br.js" />
-    <Content Include="Views\Brat\IncTestemunha.aspx" />
     <Content Include="Views\Motorista\GridControl.ascx" />
     <Content Include="Views\Policial\ConPolicial.aspx" />
     <Content Include="Views\Brat\IncBrat.aspx" />
