@@ -583,8 +583,8 @@
     <Content Include="Views\Motorista\GridControl.ascx" />
     <Content Include="Views\Policial\ConPolicial.aspx" />
     <Content Include="Views\Brat\IncBrat.aspx" />
-    <Content Include="Views\Relatorio\RelAnalitico.aspx" />
     <Content Include="Views\Relatorio\RelGerencial.aspx" />
+    <Content Include="Views\Relatorio\RelAnalitico.aspx" />
     <Content Include="Views\Veiculo\GridControl.ascx" />
     <Content Include="Views\Veiculo\IncVeiculo.aspx" />
     <Content Include="Views\Testemunha\GridControl.ascx" />

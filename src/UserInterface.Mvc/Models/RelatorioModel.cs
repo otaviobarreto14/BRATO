@@ -13,24 +13,32 @@ namespace Brato.UserInterface.Models
 
         }
         #region Localidade
-
         public string UF { get; set; }
         public string Município { get; set; }
         public string Bairro { get; set; }
         public string Logradouro { get; set; }
-
         #endregion
+
+        #region Acidente
         public CondTempoEnum CondicaoTempo { get; set; }
         public SinalizacaoEnum Sinalizacao { get; set; }
-        public CircunstanciaEnum Circunstancia { get; set; }
         public TipoAcidenteEnum TipoAcidente { get; set; }
-        public int Idade { get; set; }
-        public SexoEnum Sexo { get; set; }
+        public CircunstanciaEnum Circunstancia { get; set; }
         public bool ComVitimas { get; set; }
-        public FerimentosEnum Ferimentos { get; set; }
+        public int IdadeVitima { get; set; }
+        public SexoEnum SexoVitima { get; set; }        
+        public FerimentosEnum FerimentosVitima { get; set; }
+        #endregion
+
+        #region Veiculo
+        public string TipoVeiculo { get; set; }
+        public string Fabricante { get; set; }
+        public string Modelo { get; set; }
         //3.6.	Tipo de Veiculo {Todos, Carro, Motocicleta, Caminhão, Ônibus};
         //3.7.	Fabricante {Todos, Chevrolet, Fiat, Ford, Honda e etc.};
         //3.8.	Modelo {Todos, Corsa, Uno, Fiesta, City e etc.};
+        #endregion
+
         #region Motorista
         public int IdadeMotorista { get; set; }
         public SexoEnum SexoMotorista { get; set; }

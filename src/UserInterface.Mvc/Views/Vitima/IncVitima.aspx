@@ -13,7 +13,7 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <% var lstSexo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SexoEnum>();
-       var lstEstadoCivil = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<EstadoCivilEnum>(); %>
+       var lstTipoAcidente = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoAcidenteEnum>(); %>
     <span>*Nome:</span>
     <div class="formItem inteiro">
         <%= Html.TextBoxFor(model => model.Pessoa.Nome, new { size = "60", MaxLength = "50" })%>
@@ -56,7 +56,7 @@
     </div>
     <span>*Ferimentos:</span>
     <div class="formItem inteiro">
-        <%// Html.DropDownListFor(model => model.TipoFerimento, null)%>
+        <% Html.DropDownListFor(model => model.TipoFerimento, lstTipoAcidente, "Selecione", null)%>
     </div>
     <span>*Removido Para:</span>
     <div class="formItem inteiro">
