@@ -23,7 +23,7 @@ namespace Brato.UserInterface.Models
         public CondTempoEnum CondicaoTempo { get; set; }
         public SinalizacaoEnum Sinalizacao { get; set; }
         public CircunstanciaEnum Circunstancia { get; set; }
-        //3.4.	Tipo de Acidente {Todos, Atropelamento, Abalroamento, Capotamento, Tombamento, Choque, Colisão};
+        public TipoAcidenteEnum TipoAcidente { get; set; }
         public int Idade { get; set; }
         public SexoEnum Sexo { get; set; }
         public bool ComVitimas { get; set; }
