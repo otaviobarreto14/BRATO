@@ -41,12 +41,15 @@
     <Compile Include="Controllers\ControllersInstaller.cs" />
     <Compile Include="Controllers\MotoristaController.cs" />
     <Compile Include="Controllers\PolicialController.cs" />
+    <Compile Include="Controllers\RelatorioController.cs" />
     <Compile Include="Controllers\TestemunhaController.cs" />
+    <Compile Include="Controllers\VeiculoController.cs" />
     <Compile Include="Controllers\VitimaController.cs" />
     <Compile Include="Models\ConsultarBratModel.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\ConsultarPolicialModel.cs" />
+    <Compile Include="Models\RelatorioModel.cs" />
     <Compile Include="WebUserInterfaceHelper\DropDownListHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -580,7 +583,9 @@
     <Content Include="Views\Motorista\GridControl.ascx" />
     <Content Include="Views\Policial\ConPolicial.aspx" />
     <Content Include="Views\Brat\IncBrat.aspx" />
-    <Content Include="Views\Brat\IncVeiculo.aspx" />
+    <Content Include="Views\Relatorio\RelAnalitico.aspx" />
+    <Content Include="Views\Veiculo\GridControl.ascx" />
+    <Content Include="Views\Veiculo\IncVeiculo.aspx" />
     <Content Include="Views\Testemunha\GridControl.ascx" />
     <Content Include="Views\Vitima\IncVitima.aspx" />
     <Content Include="Views\Motorista\IncMotorista.aspx" />
