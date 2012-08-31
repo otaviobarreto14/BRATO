@@ -69,7 +69,7 @@
             </div>
             <span>Sexo:</span>
             <div class="formItem inteiro">
-                <%= Html.DropDownListFor(model => model.Sexo, lstSexo, "Todos", null)%>
+                <%= Html.DropDownListFor(model => model.SexoVitima, lstSexo, "Todos", null)%>
             </div>
             <span>Ferimentos:</span>
             <div class="formItem inteiro">
