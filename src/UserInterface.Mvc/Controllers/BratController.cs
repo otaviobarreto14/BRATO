@@ -13,8 +13,12 @@ namespace Brato.UserInterface.Controllers
             return View();
         }
 
-        public ActionResult ConPolicial()
+        public ActionResult IncBrat()
         {
+            ViewData["UF"] = (new List<SelectListItem>());
+            ViewData["Municipio"] = (new List<SelectListItem>());
+            ViewData["Bairro"] = (new List<SelectListItem>());
+            ViewData["Logradouro"] = (new List<SelectListItem>());
             return View();
         }
     }

@@ -24,7 +24,7 @@
         #corpo
         {
             width: 85%;
-            height: 85%;
+            height: 100%;
             margin-left: 7.5%;
         }
         .buttons
@@ -44,7 +44,9 @@
         #content
         {
             background-color: #99CAF0;
-            height: 100%;
+            height: 80%;
+            overflow: hidden;
+            overflow-y: auto;
         }
     </style>
     <script type="text/javascript">
@@ -74,18 +76,17 @@
 </head>
 <body>
     <div id="corpo">
-        <div class="controleAcesso inteiro" style="background-color: Gray; height: 80px;">
+        <div class="controleAcesso inteiro" style="background-color: Gray; height: 15%;">
             <h2>
-                BRATO - Boletim de Registro de Acidentes de Trânsito Online<a href="#" id="btnLogin"
-                    class="ui-state-default ui-corner-all btnLink" style="float: right; width: 50px;">Login</a></h2>
+                BRATO - Boletim de Registro de Acidentes de Trânsito Online<a href="/Acesso/Login"
+                    id="btnLogin" class="ui-state-default ui-corner-all btnLink" style="float: right;
+                    width: 50px;">Login</a></h2>
             RESERVADO PARA LOGO - Header
         </div>
-        <div class="formItem inteiro">
-        </div>
-        <div class="menu inteiro">
+        <div class="menu" style="height: 5%">
             <% Html.RenderPartial("Menu"); %>
+            <div class="clear"></div>
         </div>
-        <br style="clear: both;" />
         <div id="content">
             <div id="conteudo">
                 <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
@@ -99,6 +100,7 @@
                 </asp:ContentPlaceHolder>
             </div>
         </div>
+        <div class="clear"></div>
     </div>
 </body>
 </html>
