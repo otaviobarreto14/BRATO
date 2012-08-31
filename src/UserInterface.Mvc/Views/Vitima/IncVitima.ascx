@@ -9,55 +9,78 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Brato.Entities.VitimaEntity>" %>
 <% var lstSexo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SexoEnum>();
    var lstTipoAcidente = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoAcidenteEnum>(); %>
-<span>*Nome:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.Nome, new { size = "60", MaxLength = "50" })%>
+<div>
+    <span>*Nome:</span>
+    <div class="formItem inteiro">
+        <%= Html.TextBoxFor(model => model.Pessoa.Nome, new { size = "60", MaxLength = "50" })%>
+    </div>
 </div>
-<span>*UF:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("UF")%>
+<div>
+    <span>*UF:</span>
+    <div class="formItem inteiro">
+        <%= Html.DropDownList("UF")%>
+    </div>
 </div>
-<span>*Município:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("Municipio")%>
+<div>
+    <span>*Município:</span>
+    <div class="formItem inteiro">
+        <%= Html.DropDownList("Municipio")%>
+    </div>
 </div>
-<span>*Bairro:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("Bairro")%>
+<div>
+    <span>*Bairro:</span>
+    <div class="formItem inteiro">
+        <%= Html.DropDownList("Bairro")%>
+    </div>
 </div>
-<span>*Logradouro:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("Logradouro")%>
+<div>
+    <span>*Logradouro:</span>
+    <div class="formItem inteiro">
+        <%= Html.DropDownList("Logradouro")%>
+    </div>
 </div>
-<span>Numero:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.Numero, new { size = "10", MaxLength = "7" })%>
+<div>
+    <span>Numero:</span>
+    <div class="formItem inteiro">
+        <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.Numero, new { size = "10", MaxLength = "7" })%>
+    </div>
 </div>
-<span>Complemento:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.IdComplemento.Descricao, new { size = "60", MaxLength = "50" })%>
+<div>
+    <span>Complemento:</span>
+    <div class="formItem inteiro">
+        <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.IdComplemento.Descricao, new { size = "60", MaxLength = "50" })%>
+    </div>
 </div>
-<span>*Data Nasc.:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.DataNasc, new { size = "15", MaxLength = "10" })%>
+<div>
+    <span>*Data Nasc.:</span>
+    <div class="formItem inteiro">
+        <%= Html.TextBoxFor(model => model.DataNasc, new { size = "15", MaxLength = "10" })%>
+    </div>
 </div>
-<span>*Sexo:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownListFor(model => model.Pessoa.Sexo, lstSexo, "Selecione", null)%>
+<div>
+    <span>*Sexo:</span>
+    <div class="formItem inteiro">
+        <%= Html.DropDownListFor(model => model.Pessoa.Sexo, lstSexo, "Selecione", null)%>
+    </div>
 </div>
-<span>CPF:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.Cpf, new { size = "20", MaxLength = "11" })%>
+<div>
+    <span>CPF:</span>
+    <div class="formItem inteiro">
+        <%= Html.TextBoxFor(model => model.Pessoa.Cpf, new { size = "20", MaxLength = "11" })%>
+    </div>
 </div>
-<span>*Ferimentos:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownListFor(model => model.TipoFerimento, lstTipoAcidente, "Selecione", null)%>
+<div>
+    <span>*Ferimentos:</span>
+    <div class="formItem inteiro">
+        <%= Html.DropDownListFor(model => model.TipoFerimento, lstTipoAcidente, "Selecione", null)%>
+    </div>
 </div>
-<span>*Removido Para:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Remocao, new { size = "50", MaxLength = "50" })%>
+<div>
+    <span>*Removido Para:</span>
+    <div class="formItem inteiro">
+        <%= Html.TextBoxFor(model => model.Remocao, new { size = "50", MaxLength = "50" })%>
+    </div>
 </div>
-<br />
-<div class="formItem inteiro" id="divGrid" style="clear: both;">
+<div class="formItem inteiro" style="clear: both;">
     <% Html.RenderPartial("GridControl"); %>
 </div>

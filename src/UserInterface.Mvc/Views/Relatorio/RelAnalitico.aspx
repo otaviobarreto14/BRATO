@@ -17,7 +17,7 @@
         return false;
     })
     .next()
-      .addClass("ui-accordion-content  ui-helper-reset ui-widget-content ui-corner-bottom")
+      .addClass("ui-accordion-content  ui-helper-reset ui-widget-content ui-corner-bottom ui-corner-top")
       .hide();
         });
     </script>

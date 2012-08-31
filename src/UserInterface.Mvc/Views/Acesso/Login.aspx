@@ -23,20 +23,24 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-    <div class="formItem inteiro">
-        <span>Matricula:</span>
-        <div class="formItem quarto">
-            <%= Html.TextBoxFor(model => model.Matricula, new { size = "15", MaxLength = "15" })%>
-        </div>
-    </div>
-    <div class="formItem inteiro">
-        <span>Senha:</span>
-        <div class="formItem quarto">
-            <%= Html.PasswordFor(model => model.Senha, new { size = "24", MaxLength = "24" })%>
-        </div>
-    </div>
-    <div class="formItem quarto">
-        <a href="#" id="buscar" class="ui-state-default ui-corner-all" style="float: left;">
-            Entrar</a>
+    <div style="margin: 15%;">
+        <fieldset>
+            <div class="formItem inteiro">
+                <span>Matricula:</span>
+                <div class="formItem quarto">
+                    <%= Html.TextBoxFor(model => model.Matricula, new { size = "15", MaxLength = "15" })%>
+                </div>
+            </div>
+            <div class="formItem inteiro">
+                <span>Senha:</span>
+                <div class="formItem quarto">
+                    <%= Html.PasswordFor(model => model.Senha, new { size = "24", MaxLength = "24" })%>
+                </div>
+            </div>
+            <div class="formItem quarto">
+                <a href="#" id="buscar" class="ui-state-default ui-corner-all" style="float: left;">
+                    Entrar</a>
+            </div>
+        </fieldset>
     </div>
 </asp:Content>

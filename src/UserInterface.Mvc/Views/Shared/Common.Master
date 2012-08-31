@@ -78,9 +78,7 @@
     <div id="corpo">
         <div class="controleAcesso inteiro" style="background-color: Gray; height: 15%;">
             <h2>
-                BRATO - Boletim de Registro de Acidentes de Trânsito Online<a href="/Acesso/Login"
-                    id="btnLogin" class="ui-state-default ui-corner-all btnLink" style="float: right;
-                    width: 50px;">Login</a></h2>
+                BRATO - Boletim de Registro de Acidentes de Trânsito Online</h2>
             RESERVADO PARA LOGO - Header
         </div>
         <div class="menu" style="height: 5%">

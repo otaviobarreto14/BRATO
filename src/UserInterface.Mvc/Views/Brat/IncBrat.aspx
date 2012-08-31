@@ -10,6 +10,10 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.Entities.BratEntity>" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
+    <link href="/Content/Styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/grid.locale-pt-br.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.jqGrid-default.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
             // Tabs
@@ -37,71 +41,77 @@
             <li><a href="#tabTestemunhas">Testemunhas</a></li>
         </ul>
         <div id="tabBrat">
-            <div class="formItem inteiro" style="margin-left: 800px">
-                <span>Número do BRAT:</span>
-                <%= Html.TextBoxFor(model => model.NumBrat, new { size = "10", MaxLength = "10" })%>
+            <div class="formItems">
+                <div class="formItem inteiro" style="margin-left: 800px">
+                    <span>Número do BRAT:</span>
+                    <%= Html.TextBoxFor(model => model.NumBrat, new { size = "10", MaxLength = "10" })%>
+                </div>
+                <div class="formItem inteiro">
+                    <div class="formItem quarto">
+                        <span>*UF:</span>
+                        <div>
+                            <%= Html.DropDownList("UF")%></div>
+                    </div>
+                    <div class="formItem quarto">
+                        <span>*Município:</span>
+                        <div>
+                            <%= Html.DropDownList("Municipio")%></div>
+                    </div>
+                    <div class="formItem quarto">
+                        <span>*Bairro:</span>
+                        <%= Html.DropDownList("Bairro")%>
+                    </div>
+                    <div class="formItem quarto">
+                        <span>*Logradouro:</span>
+                        <%= Html.DropDownList("Logradouro")%>
+                    </div>
+                </div>
+                <span>*Data do Acidente:</span>
+                <div class="formItem inteiro">
+                    <%= Html.TextBoxFor(model => model.DataAcidente, new { size = "15", MaxLength = "10" })%>
+                </div>
+                <span>*Hora do Acidente:</span>
+                <div class="formItem inteiro">
+                    <%= Html.TextBoxFor(model => model.HoraAcidente, new { size = "15", MaxLength = "8" })%>
+                </div>
+                <span>*Cond. do Tempo:</span>
+                <div class="formItem inteiro">
+                    <%= Html.DropDownListFor(model => model.CondTempo, lstCondTempo, "Selecione", null)%>
+                </div>
+                <span>*Sinalização:</span>
+                <div class="formItem inteiro">
+                    <%= Html.DropDownListFor(model => model.TipoSinalizacao, lstSinalizacao, "Selecione", null)%>
+                </div>
+                <span>*Tipo de Acidente:</span>
+                <div class="formItem inteiro">
+                    <%= Html.DropDownListFor(model => model.TipoAcidente, lstTipoAcidente, "Selecione", null)%>
+                </div>
+                <span>*Circunstância:</span>
+                <div class="formItem inteiro">
+                    <%= Html.DropDownListFor(model => model.Circunstancia, lstCirc, "Selecione", null)%>
+                </div>
+                <span>*Descrição do Acidente:</span>
+                <div class="formItem inteiro">
+                    <%= Html.TextAreaFor(model => model.Descricao, null)%>
+                </div>
+                <span>Foto do Acidente:</span>
+                <div class="formItem inteiro">
+                    <%= Html.TextBoxFor(model => model.FotoAcidente)%>
+                </div>
+                <span>Croqui do Acidente:</span>
+                <div class="formItem inteiro">
+                    <%= Html.TextAreaFor(model => model.Croqui, null)%>
+                </div>
+                <div class="formItem inteiro">
+                    <%= Html.HiddenFor(model => model.Matricula, null)%>
+                </div>
+                <br />
+                <br />
+                <input type="button" id="AddBrat" value="Incluir Brat" style="width: 120px; height: 24px;
+                    text-align: center" />
+                <input type="button" id="CancelarBrat" value="Cancelar" style="width: 120px; height: 24px;
+                    text-align: center" />
             </div>
-            <span>*UF:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownList("UF")%>
-            </div>
-            <span>*Município:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownList("Municipio")%>
-            </div>
-            <span>*Bairro:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownList("Bairro")%>
-            </div>
-            <span>*Logradouro:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownList("Logradouro")%>
-            </div>
-            <span>*Data do Acidente:</span>
-            <div class="formItem inteiro">
-                <%= Html.TextBoxFor(model => model.DataAcidente, new { size = "15", MaxLength = "10" })%>
-            </div>
-            <span>*Hora do Acidente:</span>
-            <div class="formItem inteiro">
-                <%= Html.TextBoxFor(model => model.HoraAcidente, new { size = "15", MaxLength = "8" })%>
-            </div>
-            <span>*Cond. do Tempo:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownListFor(model => model.CondTempo, lstCondTempo, "Selecione", null)%>
-            </div>
-            <span>*Sinalização:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownListFor(model => model.TipoSinalizacao, lstSinalizacao, "Selecione", null)%>
-            </div>
-            <span>*Tipo de Acidente:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownListFor(model => model.TipoAcidente, lstTipoAcidente, "Selecione", null)%>
-            </div>
-            <span>*Circunstância:</span>
-            <div class="formItem inteiro">
-                <%= Html.DropDownListFor(model => model.Circunstancia, lstCirc, "Selecione", null)%>
-            </div>
-            <span>*Descrição do Acidente:</span>
-            <div class="formItem inteiro">
-                <%= Html.TextAreaFor(model => model.Descricao, null)%>
-            </div>
-            <span>Foto do Acidente:</span>
-            <div class="formItem inteiro">
-                <%= Html.TextBoxFor(model => model.FotoAcidente)%>
-            </div>
-            <span>Croqui do Acidente:</span>
-            <div class="formItem inteiro">
-                <%= Html.TextAreaFor(model => model.Croqui, null)%>
-            </div>
-            <div class="formItem inteiro">
-                <%= Html.HiddenFor(model => model.Matricula, null)%>
-            </div>
-            <br />
-            <br />
-            <input type="button" id="AddBrat" value="Incluir Brat" style="width: 120px; height: 24px;
-                text-align: center" />
-            <input type="button" id="CancelarBrat" value="Cancelar" style="width: 120px; height: 24px;
-                text-align: center" />
         </div>
         <div id="tabMotoristas">
             <% Html.RenderAction("IncMotorista", "Motorista"); %>
