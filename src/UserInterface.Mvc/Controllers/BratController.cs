@@ -21,5 +21,6 @@ namespace Brato.UserInterface.Controllers
             ViewData["Logradouro"] = (new List<SelectListItem>());
             return View();
         }
+
     }
 }

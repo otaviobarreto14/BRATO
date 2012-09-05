@@ -13,43 +13,71 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.Entities.PolicialEntity>" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
+    <style type="text/css">
+        #botao
+        {
+            padding: 0px 20px;
+            text-decoration: none;
+            position: relative;
+            font-size: 18px;
+            width: 100px;
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('#botao').hover(
+					function () { $(this).addClass('ui-state-hover'); },
+					function () { $(this).removeClass('ui-state-hover'); }
+				);
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <%
         var lstBatalhao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<BatalhaoEnum>();
         var lstPerfil = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<PerfilEnum>();
     %>
-    <span>*Matrícula:</span>
-    <div class="formItem inteiro">
-        <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
+    <div class="formItems">
+        <div class="formItem inteiro">
+            <div class="formItem quarto">
+                <span>*Matrícula</span>
+                <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
+            </div>
+        </div>
+        <div class="formItem inteiro">
+            <div class="formItem doisTercos">
+                <span>*Nome</span>
+                <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
+            </div>
+            <div class="formItem quarto">
+                <span>*Batalhão</span>
+                <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null)%>
+            </div>
+        </div>
+        <div class="formItem inteiro">
+            <div class="formItem quarto">
+                <span>*Perfil</span>
+                <%= Html.DropDownListFor(model => model.IdPerfil, lstPerfil, "Selecione", null)%>
+            </div>
+            <div class="formItem quarto">
+                <span>*Senha</span>
+                <%= Html.PasswordFor(model => model.Senha, new { size = "20", MaxLength = "8" })%>
+            </div>
+            <div class="formItem quarto">
+                <span>*Confirmar Senha</span><%= Html.Password("ConfSenha")%>
+            </div>
+            <div class="formItem quarto">
+                <%= Html.HiddenFor(model => model.Status) %>
+            </div>
+        </div>
+
+        <div class="formItem inteiro">
+            <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: left;">
+                Salvar Dados</a> 
+            <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: left;">
+                Cancelar Dados</a>
+        </div>
     </div>
-    <span>*Nome:</span>
-    <div class="formItem inteiro">
-        <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
-    </div>
-    <span>*Batalhão:</span>
-    <div class="formItem inteiro">
-        <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null)%>
-    </div>
-    <span>*Perfil:</span>
-    <div class="formItem inteiro">
-        <%= Html.DropDownListFor(model => model.IdPerfil, lstPerfil, "Selecione", null)%>
-    </div>
-    <span>*Senha:</span>
-    <div class="formItem inteiro">
-        <%= Html.PasswordFor(model => model.Senha, new { size = "20", MaxLength = "8" })%>
-    </div>
-    <span>*Confirmar Senha:</span>
-    <div class="formItem inteiro">
-        <%= Html.Password("ConfSenha")%>
-    </div>
-    <div class="formItem inteiro">
-        <%= Html.HiddenFor(model => model.Status) %>
-    </div>
-    <br />
-    <br />
-    <input type="button" id="Salvar" value="Salvar Dados" style="width: 120px; height: 24px;
-        text-align: center" />
-    <input type="button" id="Cancelar" value="Cancelar Dados" style="width: 120px; height: 24px;
-        text-align: center" />
 </asp:Content>

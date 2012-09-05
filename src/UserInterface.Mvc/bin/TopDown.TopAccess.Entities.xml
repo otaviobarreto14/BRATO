@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TopDown.TopAccess.Entities</name>
+    </assembly>
+    <members>
+        <member name="T:TopDown.TopAccess.Entities.ModuloEntity">
+            <summary>
+            Classe que representa um módulo do sistema.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.ModuloEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.ModuloEntity.IsNew">
+            <summary>
+            Indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ModuloEntity.CodModulo">
+            <summary>
+            Identificador para um módulo.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ModuloEntity.NomModulo">
+            <summary>
+            Nome do módulo.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ModuloEntity.NumOrdem">
+            <summary>
+            Número de ordenação.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopAccess.Entities.TipoFuncao">
+            <summary>
+            Enumera os tipos de função.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopAccess.Entities.TipoFuncao.Menu">
+            <summary>
+            Funcionalidade aparece no menu.
+            </summary>
+        </member>
+        <member name="F:TopDown.TopAccess.Entities.TipoFuncao.Funcao">
+            <summary>
+            Funcionalidade interna, não disponível externamente pelo menu.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopAccess.Entities.UsuarioEntity">
+            <summary>
+            Classe que representa um usuário do sistema.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.UsuarioEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.CodUsuario">
+            <summary>
+            Identificador do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.Bloqueado">
+            <summary>
+            Informa se o usuário está bloqueado.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.TrocarSenha">
+            <summary>
+            Informa se o usuário deve trocar a senha.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.SenhaInicial">
+            <summary>
+            Informa se o usuário está com a senha inicial.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.NomUsuario">
+            <summary>
+            Nome do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.TxtSenha">
+            <summary>
+            Hash da senha do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.TelUsuario">
+            <summary>
+            Telefone do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.TxtEmail">
+            <summary>
+            E-mail do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.DtAlteracaoSenha">
+            <summary>
+            Última data de alteração de senha.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.DtBloqueio">
+            <summary>
+            Data e hora em que o usuário foi bloqueado.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.DtCadastro">
+            <summary>
+            Data do cadastro inicial do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.DtSenhaGerada">
+            <summary>
+            Data em que a senha foi automaticamente gerada.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.DtUltimaTentativaErro">
+            <summary>
+            Data e hora da última tentativa sem sucesso de autenticação.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.IndBloqueio">
+            <summary>
+            Indicador de bloqueio do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.IndSenhaInicial">
+            <summary>
+            Indicador de uso da senha automaticamente gerada.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.IndTrocaSenha">
+            <summary>
+            Indicador de obrigatoriedade de troca de senha.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.QtdTentativas">
+            <summary>
+            Quantidade de vezes que o usuário tentou se autenticar sem sucesso.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.TxtLocalUsuario">
+            <summary>
+            Local do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.TipoUsuario">
+            <summary>
+            Tipo do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.UsuarioEntity.Perfis">
+            <summary>
+            Perfis aos quais o usuário pertence.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopAccess.Entities.TipoUsuarioEntity">
+            <summary>
+            Classe que representa um tipo de usuário.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.TipoUsuarioEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.TipoUsuarioEntity.IsNew">
+            <summary>
+            Indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.TipoUsuarioEntity.CodTipoUsuario">
+            <summary>
+            Identificador do tipo do usuário
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.TipoUsuarioEntity.NomTipoUsuario">
+            <summary>
+            Nome descritivo do tipo do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.TipoUsuarioEntity.TxtPrgMsgIni">
+            <summary>
+            Texto para mensagem inicial.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.TipoUsuarioEntity.Perfis">
+            <summary>
+            Perfis relacionados ao tipo do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.TipoUsuarioEntity.Usuarios">
+            <summary>
+            Usuários relacionados ao tipo do usuário.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopAccess.Entities.PerfilEntity">
+            <summary>
+            Classe que representa um perfil de usuário.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.PerfilEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.PerfilEntity.IsNew">
+            <summary>
+            Indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.PerfilEntity.CodPerfil">
+            <summary>
+            Identificador do perfil do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.PerfilEntity.NomPerfil">
+            <summary>
+            Nome descritivo do perfil do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.PerfilEntity.Usuarios">
+            <summary>
+            Usuários relacionados ao perfil.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.PerfilEntity.TiposUsuario">
+            <summary>
+            Tipos de usuários relacionados ao perfil.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopAccess.Entities.FuncaoEntity">
+            <summary>
+            Classe que representa uma funcionalidade do sistema.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.FuncaoEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.FuncaoEntity.IsNew">
+            <summary>
+            Indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.CodFuncao">
+            <summary>
+            Identificador de uma funcionalidade.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.IndDisponivel">
+            <summary>
+            Indicador se a funcionalidade está disponível.
+            </summary>
+            <remarks>
+            Valores possíveis são 'S' ou 'N'. Em formulários, prefira utilizar a propriedade 'Disponivel'.
+            </remarks>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.Disponivel">
+            <summary>
+            Indicador se a funcionalidade está disponível.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.IndNivelFuncao">
+            <summary>
+            Nível hierárquico da função.
+            </summary>
+            <remarks>
+            Utilizado para a renderização do menu.
+            </remarks>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.IndSeparador">
+            <summary>
+            Indicador se a função é um separador de menu.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.IndTipoFuncao">
+            <summary>
+            Indicador do tipo de função.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.NomExecutavel">
+            <summary>
+            Nome do executável relacionado à função.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.NumOrdem">
+            <summary>
+            Número de ordenação.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.TxtDiretorio">
+            <summary>
+            Pasta do executável.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.TxtTituloFuncao">
+            <summary>
+             Título da função.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.TxtTituloMenu">
+            <summary>
+            Título para exibição no menu.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.IsLeaf">
+            <summary>
+            Indica se a função é uma folha da árvore.
+            </summary>
+            <remarks>Propriedade não-mapeada.</remarks>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.AbsoluteOrder">
+            <summary>
+            Ordem absoluta da função, levando em conta o módulo, a função pai, o nível e a ordenação.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.ExibirNoMenu">
+            <summary>
+            Indica se a função é exibida no menu.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.FuncaoPai">
+            <summary>
+            Funcionalidade pai.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.Modulo">
+            <summary>
+            Módulo relacionado à funcionalidade.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.FuncaoEntity.FuncoesFilhas">
+            <summary>
+            Coleção de funções filhas, que possuem a instância atual como função pai.
+            </summary>
+            <remarks>Propriedade não-mapeada.</remarks>
+        </member>
+        <member name="T:TopDown.TopAccess.Entities.AutorizacaoPerfilEntity">
+            <summary>
+            Classe que representa uma autorização para um perfil de usuário.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.AutorizacaoPerfilEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.AutorizacaoPerfilEntity.IsNew">
+            <summary>
+            Indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.AutorizacaoPerfilEntity.CodAutorizacaoPerfil">
+            <summary>
+            Identificador de uma autorização para um perfil.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.AutorizacaoPerfilEntity.IndAutoriza">
+            <summary>
+            Indica se o perfil possui autorização para a função.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.AutorizacaoPerfilEntity.Funcao">
+            <summary>
+            Funcionalidade relacionada à autorização do perfil.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.AutorizacaoPerfilEntity.Perfil">
+            <summary>
+            Perfil sendo autorizado.
+            </summary>
+        </member>
+        <member name="T:TopDown.TopAccess.Entities.ParametroSegurancaEntity">
+            <summary>
+            Classe que representa os parâmetros do controle de acesso.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.ParametroSegurancaEntity.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:TopDown.TopAccess.Entities.ParametroSegurancaEntity.IsNew">
+            <summary>
+            Indica se a entidade ainda não foi persistida.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ParametroSegurancaEntity.CodParametroSeguranca">
+            <summary>
+            Identificador de um parâmetro de segurança.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ParametroSegurancaEntity.QtdDiasExpiracao">
+            <summary>
+            Quantidade de dias para a expiração da senha.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ParametroSegurancaEntity.QtdDiasLimiteTroca">
+            <summary>
+            Quantidade de dias para a troca da senha.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ParametroSegurancaEntity.QtdHorasBloqueio">
+            <summary>
+            Quantidade de horas que o usuário permanecerá bloqueado em caso de sucessivas tentativas de login sem sucesso.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ParametroSegurancaEntity.QtdMinutosTimeout">
+            <summary>
+            Quantidade de minutos para a expiração da sessão do usuário.
+            </summary>
+        </member>
+        <member name="P:TopDown.TopAccess.Entities.ParametroSegurancaEntity.QtdTentativasBloqueio">
+            <summary>
+            Quantidade de vezes que o usuário pode tentar se autenticar, antes que o sistema bloqueie sua conta.
+            </summary>
+        </member>
+    </members>
+</doc>
