@@ -10,43 +10,52 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Brato.Entities.TestemunhaEntity>" %>
 <% var lstSexo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SexoEnum>();
    var lstEstadoCivil = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<EstadoCivilEnum>(); %>
-<span>*Nome:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.Nome, new { size = "60", MaxLength = "50" })%>
-</div>
-<span>*UF:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("UF")%>
-</div>
-<span>*Município:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("Municipio")%>
-</div>
-<span>*Bairro:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("Bairro")%>
-</div>
-<span>*Logradouro:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownList("Logradouro")%>
-</div>
-<span>Numero:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.Numero, new { size = "10", MaxLength = "7" })%>
-</div>
-<span>Complemento:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.IdComplemento.Descricao, new { size = "60", MaxLength = "50" })%>
-</div>
-<span>*Sexo:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownListFor(model => model.Pessoa.Sexo, lstSexo, "Selecione", null)%>
-</div>
-<span>*CPF:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Pessoa.Cpf, new { size = "20", MaxLength = "11" })%>
-</div>
-<br />
-<div class="formItem inteiro" id="divGrid" style="clear: both;">
-    <% Html.RenderPartial("GridControl"); %>
+<div class="formItems">
+    <div class="formItem doisquintos">
+        <span>*Nome</span>
+        <%= Html.TextBoxFor(model => model.Pessoa.Nome, new { size = "60", MaxLength = "50" })%>
+    </div>
+    <div class="formItem inteiro">
+        <div class="formItem oitavo">
+            <span>*UF</span>
+            <%= Html.DropDownList("UF")%>
+        </div>
+        <div class="formItem terco">
+            <span>*Município</span>
+            <%= Html.DropDownList("Municipio")%>
+        </div>
+        <div class="formItem doisQuintos">
+            <span>*Bairro</span>
+            <%= Html.DropDownList("Bairro")%>
+        </div>
+    </div>
+    <div class="formItem inteiro">
+        <div class="formItem tresQuintos">
+            <span>*Logradouro</span>
+            <%= Html.DropDownList("Logradouro")%>
+        </div>
+        <div class="formItem nono">
+            <span>Numero</span>
+            <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.Numero, new { size = "7", MaxLength = "7" })%>
+        </div>
+        <div class="formItem tresQuintos">
+            <span>Complemento</span>
+            <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.IdComplemento.Descricao, new { size = "60", MaxLength = "50" })%>
+        </div>
+    </div>
+    <div class="formItem inteiro">
+        <div class="formItem quarto">
+            <span>*Sexo</span>
+            <%= Html.DropDownListFor(model => model.Pessoa.Sexo, lstSexo, "Selecione", null)%>
+        </div>
+        <div class="formItem quarto">
+            <span>CPF</span>
+            <%= Html.TextBoxFor(model => model.Pessoa.Cpf, new { size = "20", MaxLength = "11" })%>
+        </div>
+    </div>
+    <br />
+    <br style="clear: both;" />
+    <div class="formItem inteiro" id="divGridTestemunha" style="clear: both; margin-top: 5%;">
+        <% Html.RenderPartial("GridControl"); %>
+    </div>
 </div>

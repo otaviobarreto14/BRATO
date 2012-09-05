@@ -38,17 +38,19 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <%var lstBatalhao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<BatalhaoEnum>(); %>
-    <span>Matrícula:</span>
-    <div class="formItem inteiro">
-        <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
-    </div>
-    <span>Nome:</span>
-    <div class="formItem inteiro">
-        <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
-    </div>
-    <span>Batalhão:</span>
-    <div class="formItem inteiro">
-        <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null) %>
+    <div class="formItems ">
+        <div class="formItem quinto">
+            <span>Matrícula</span>
+            <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
+        </div>
+        <div class="formItem doisTercos">
+            <span>Nome</span>
+            <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
+        </div>
+        <div class="formItem oitavo">
+            <span>Batalhão</span>
+            <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null) %>
+        </div>
     </div>
     <div class="formItem quarto">
         <a href="#" id="buscar" class="ui-state-default ui-corner-all" style="float: left;">

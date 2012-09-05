@@ -7,43 +7,51 @@
         Msg de Validação = Verificar Dados Informados                       
 --%>
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Brato.Entities.VeiculoEntity>" %>
-<span>*Nome do Proprietário:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.NomeProprietario, new { size = "60", MaxLength = "50" })%>
-</div>
-<span>*Tipo de Veículo:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownListFor(model => model.TipoVeiculo, null)%>
-</div>
-<span>*Fabricante:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownListFor(model => model.Fabricante, null)%>
-</div>
-<span>*Modelo:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownListFor(model => model.Modelo, null)%>
-</div>
-<span>*Ano:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Ano, new { size = "8", MaxLength = "4" })%>
-</div>
-<span>*Cor:</span>
-<div class="formItem inteiro">
-    <%= Html.DropDownListFor(model => model.Cor, null)%>
-</div>
-<span>*Placa:</span>
-<div class="formItem inteiro">
-    <%= Html.TextBoxFor(model => model.Placa, new { size = "10", MaxLength = "7" })%>
-</div>
-<span>Impacto(s):</span>
-<div class="formItem inteiro">
-    <%= Html.CheckBox("Impacto")%>
-</div>
-<span>Avaria(s):</span>
-<div class="formItem inteiro">
-    <%= Html.CheckBox("Avaria")%>
-</div>
-<br />
-<div class="formItem inteiro" id="divGrid" style="clear: both;">
-    <% Html.RenderPartial("GridControl"); %>
+<div class="formItems">
+    <div class="formItem doisquintos">
+        <span>*Nome do Proprietário</span>
+        <%= Html.TextBoxFor(model => model.NomeProprietario, new { size = "60", MaxLength = "50" })%>
+    </div>
+    <div class="formItem inteiro">
+        <div class="formItem terco">
+            <span>*Tipo de Veículo</span>
+            <%= Html.DropDownListFor(model => model.TipoVeiculo, null)%>
+        </div>
+        <div class="formItem terco">
+            <span>*Fabricante</span>
+            <%= Html.DropDownListFor(model => model.Fabricante, null)%>
+        </div>
+        <div class="formItem terco">
+            <span>*Modelo</span>
+            <%= Html.DropDownListFor(model => model.Modelo, null)%>
+        </div>
+    </div>
+    <div class="formItem inteiro">
+        <div class="formItem oitavo">
+            <span>*Ano</span>
+            <%= Html.TextBoxFor(model => model.Ano, new { size = "8", MaxLength = "4" })%>
+        </div>
+        <div class="formItem quarto">
+            <span>*Cor</span>
+            <%= Html.DropDownListFor(model => model.Cor, null)%>
+        </div>
+        <div class="formItem setimo">
+            <span>*Placa</span>
+            <%= Html.TextBoxFor(model => model.Placa, new { size = "10", MaxLength = "7" })%>
+        </div>
+    </div>
+    <div class="formItem inteiro">
+        <div class="formItem metade">
+            <span>Impacto(s)</span><%= Html.CheckBox("Impacto")%>
+        </div>
+        <div class="formItem metade">
+            <span>Avaria(s)</span>
+            <%= Html.CheckBox("Avaria")%>
+        </div>
+    </div>
+    <br />
+    <br style="clear: both;" />
+    <div class="formItem inteiro" id="divGridVeiculo" style="clear: both; margin-top: 5%;">
+        <% Html.RenderPartial("GridControl"); %>
+    </div>
 </div>

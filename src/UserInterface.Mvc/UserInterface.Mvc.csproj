@@ -40,6 +40,7 @@
     <Compile Include="Controllers\AcessoController.cs" />
     <Compile Include="Controllers\BratController.cs" />
     <Compile Include="Controllers\ControllersInstaller.cs" />
+    <Compile Include="Controllers\CroquiFotoController.cs" />
     <Compile Include="Controllers\MotoristaController.cs" />
     <Compile Include="Controllers\PolicialController.cs" />
     <Compile Include="Controllers\RelatorioController.cs" />
@@ -588,6 +589,7 @@
     <Content Include="Scripts\validation\validation.js" />
     <Content Include="Scripts\validation\validation.pt-br.js" />
     <Content Include="Views\Acesso\Login.aspx" />
+    <Content Include="Views\CroquiFoto\IncCroquiFoto.ascx" />
     <Content Include="Views\Motorista\GridControl.ascx" />
     <Content Include="Views\Brat\IncBrat.aspx" />
     <Content Include="Views\Policial\ConPolicial.aspx" />

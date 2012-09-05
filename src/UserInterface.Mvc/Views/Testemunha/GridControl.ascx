@@ -1,19 +1,19 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<dynamic>" %>
 <script type="text/javascript">
     $(function () {
+        var parentGrid = $("#grid").parents('div[id="divGridTestemunha"]');
+        var nameWidth = parentGrid.width() / 100 * 45;
         $("#gridTestemunha").jqGrid({
             url: '',
             colNames: [
                 'Nome',
-                'Sexo',
-                'Data Nascimento',
-                'Estado Civil'
+                'CPF',
+                'Sexo'
             ],
             colModel: [
-                { name: 'Nome'},
-                { name: 'Sexo' },
-                { name: 'DtNasc' },
-                { name: 'EstadoCivil' }
+                { name: 'Nome' },
+                { name: 'Cpf' },
+                { name: 'Sexo' }
             ],
             sortname: 'Nome'
         }).navGrid(
