@@ -46,9 +46,15 @@
                 <div class="formItem inteiro">
                     <%= Html.HiddenFor(model => model.Matricula, null)%>
                 </div>
-                <div class="formItem nono" style="margin-left: 700px">
-                    <span>Número do BRAT:</span>
-                    <%= Html.LabelFor(model => model.NumBrat, "000000-1")%>
+                <div class="formItem inteiro" style="float: left;">
+                    <div class="formItem doisTercos">
+                    </div>
+                    <div class="formItem sexto">
+                    </div>
+                    <div class="formItem sexto" style="float: left;">
+                        <span>Número do BRAT:</span>
+                        <%= Html.LabelFor(model => model.NumBrat, "000000-1")%>
+                    </div>
                 </div>
                 <div class="formItem inteiro">
                     <div class="formItem oitavo">
