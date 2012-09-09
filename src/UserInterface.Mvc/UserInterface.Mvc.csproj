@@ -597,15 +597,15 @@
     <Content Include="Views\Relatorio\RelGerencial.aspx" />
     <Content Include="Views\Relatorio\RelAnalitico.aspx" />
     <Content Include="Views\Shared\Menu.ascx" />
+    <Content Include="Views\Testemunha\GridControl.ascx" />
+    <Content Include="Views\Testemunha\IncTestemunha.ascx" />
     <Content Include="Views\Veiculo\GridControl.ascx" />
     <Content Include="Views\Veiculo\IncVeiculo.ascx" />
-    <Content Include="Views\Testemunha\GridControl.ascx" />
     <Content Include="Views\Vitima\IncVitima.ascx" />
     <Content Include="Views\Motorista\IncMotorista.ascx" />
     <Content Include="Views\Brat\Index.aspx" />
     <Content Include="Views\Policial\GridControl.ascx" />
     <Content Include="Views\Vitima\GridControl.ascx" />
-    <Content Include="Views\Testemunha\IncTestemunha.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

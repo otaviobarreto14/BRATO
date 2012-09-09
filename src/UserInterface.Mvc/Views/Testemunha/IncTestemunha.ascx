@@ -1,13 +1,4 @@
-﻿<%--
-        ESTAS MSGS ESTÃO NO TCC I, EM CASO DE MUDANÇA EFETUAR A MESMA NO ARQUIVO DO PROJETO
-        Como chegar nesta Tela = Principal/Cadastrar Brat
-        Título da Tela = Cadastrar Brat
-        Msg de Sucesso = BRAT Cadastrado com Sucesso
-        Msg de Cancelamento = Cadastro Cancelado
-        Msg de Validação = Verificar Dados Informados  
-        DEVE HAVER NO MINIMO 2 TESTEMUNHAS             
---%>
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Brato.Entities.TestemunhaEntity>" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Brato.Entities.TestemunhaEntity>" %>
 <% var lstSexo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SexoEnum>();
    var lstEstadoCivil = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<EstadoCivilEnum>(); %>
 <div class="formItems">
@@ -55,7 +46,7 @@
     </div>
     <br />
     <br style="clear: both;" />
-    <div class="formItem inteiro" id="divGridTestemunha" style="clear: both; margin-top: 5%;">
+    <div class="clear" id="divGridTestemunha" style="clear: both; margin-top: 5%;">
         <% Html.RenderPartial("GridControl"); %>
     </div>
 </div>

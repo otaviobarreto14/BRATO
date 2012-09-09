@@ -5,9 +5,9 @@
 <script src="/Scripts/jquery.jqGrid-default.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
-        var parentGrid = $("#grid").parents('div[id="divGrid"]');
+        var parentGrid = $("#gridP").parents('div[id="divGrid"]');
         var nameWidth = parentGrid.width() / 100 * 45;
-        $("#grid").jqGrid({
+        $("#gridP").jqGrid({
             url: '',
             colNames: [
                 'Nome',
@@ -23,9 +23,10 @@
                 { name: 'Perfil' },
                 { name: 'Status' }
             ],
-            sortname: 'Nome'
+            sortname: 'Nome',
+            pager: "#pagerP"
         }).navGrid(
-            "#pager",
+            "#pagerP",
             {
                 editfunc: function (selrow) {
                     window.location = '<%= Url.Action("Edit")%>/' + selrow;
@@ -34,7 +35,7 @@
                     window.location = '<%= Url.Action("New")%>';
                 }
             }
-        ).navButtonAdd('#pager', {
+        ).navButtonAdd('#pagerP', {
             caption: "",
             title: "Ativar/Desativar Policial",
             buttonicon: "ui-icon-locked",
@@ -46,7 +47,7 @@
         });
     });
 </script>
-<table id="grid">
+<table id="gridP">
 </table>
-<div id="pager">
+<div id="pagerP">
 </div>

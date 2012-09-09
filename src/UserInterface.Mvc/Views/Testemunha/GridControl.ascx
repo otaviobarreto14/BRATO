@@ -15,7 +15,8 @@
                 { name: 'Cpf' },
                 { name: 'Sexo' }
             ],
-            sortname: 'Nome'
+            sortname: 'Nome',
+            pager: "#pagerTestemunha"
         }).navGrid(
             "#pagerTestemunha",
             {

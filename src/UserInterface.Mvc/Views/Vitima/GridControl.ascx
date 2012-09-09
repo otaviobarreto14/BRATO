@@ -19,7 +19,8 @@
                 { name: 'TipoFerimento'},
                 { name: 'Sexo'}
             ],
-            sortname: 'Nome'
+            sortname: 'Nome',
+            pager: "#pagerVitima"
         }).navGrid(
             "#pagerVitima",
             {
