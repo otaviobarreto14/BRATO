@@ -20,6 +20,26 @@
             $('#tabs').tabs();
         });
     </script>
+    <style type="text/css">
+        #botao
+        {
+            padding: 0px 20px;
+            text-decoration: none;
+            position: relative;
+            font-size: 18px;
+            width: 100px;
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('#botao').hover(
+					function () { $(this).addClass('ui-state-hover'); },
+					function () { $(this).removeClass('ui-state-hover'); }
+				);
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <%
@@ -124,10 +144,7 @@
             <% Html.RenderAction("IncCroquiFoto", "CroquiFoto"); %>
         </div>
     </div>
-    <center>
-        <input type="button" id="AddBrat" value="Incluir Brat" style="width: 120px; height: 24px;
-            text-align: center" />
-        <input type="button" id="CancelarBrat" value="Cancelar" style="width: 120px; height: 24px;
-            text-align: center" />
-    </center>
+    <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
+        Incluir Brat</a> <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
+            Cancelar</a>
 </asp:Content>

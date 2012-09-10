@@ -8,7 +8,7 @@
 --%>
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Brato.Entities.VitimaEntity>" %>
 <% var lstSexo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SexoEnum>();
-   var lstTipoAcidente = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoAcidenteEnum>(); %>
+   var lstFerimento = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<FerimentosEnum>(); %>
 <div class="formItems">
     <div class="formItem doisquintos">
         <span>*Nome</span>
@@ -57,7 +57,7 @@
         </div>
         <div class="formItem quarto">
             <span>*Ferimentos</span>
-            <%= Html.DropDownListFor(model => model.TipoFerimento, lstTipoAcidente, "Selecione", null)%>
+            <%= Html.DropDownListFor(model => model.TipoFerimento, lstFerimento, "Selecione", null)%>
         </div>
     </div>
     <div class="formItem inteiro">

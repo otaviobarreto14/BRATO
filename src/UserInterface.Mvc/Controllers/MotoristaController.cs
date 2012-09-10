@@ -18,8 +18,7 @@ namespace Brato.UserInterface.Controllers
             ViewData["Bairro"] = (new List<SelectListItem>());
             ViewData["Logradouro"] = (new List<SelectListItem>());
             ViewData["UfExpedicaoCnh"] = (new List<SelectListItem>());
-            ViewData["CategoriaCnh"] = (new List<SelectListItem>());
-            
+           // ViewData["CategoriaCnh"] = (new List<SelectListItem>());   É UM ENUM
             return View();
         }
 
