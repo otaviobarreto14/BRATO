@@ -19,8 +19,8 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-    <div class="formItems" style="margin-left: 30%; margin-right: 30%; margin-top: 10%;
-        width: 20%; height: 5%;">
+    <div class="formItems" style="margin-left: 36%; margin-right: 30%; margin-top: 10%;
+        width: 20%; height: 10%;">
         <div class="formItem inteiro" id="divBuscarPorCpf">
             <span>Informe o CPF:</span>
             <div class="formItem inteiro">
