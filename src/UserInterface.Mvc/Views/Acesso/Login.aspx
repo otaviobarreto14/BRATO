@@ -13,13 +13,13 @@
     <style type="text/css">
         #login
         {
-            padding: 0px 20px;
-            text-decoration: none;
-            position: relative;
-            font-size: 18px;
-            width: 100px;
-            text-align: center;
+            font-size: 15px;
             margin: 5px;
+            padding: 0 10px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: 60%;
         }
     </style>
     <script type="text/javascript">

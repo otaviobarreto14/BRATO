@@ -12,9 +12,28 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.UserInterface.Models.ConsultarBratModel>" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
+    <style type="text/css">
+        .botao
+        {
+            font-size: 15px;
+            margin: 5px;
+            padding: 0 10px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: 60%;
+        }
+    </style>
     <script type="text/javascript">
         $(function () {
+            $('.botao').hover(
+					function () { $(this).addClass('ui-state-hover'); },
+					function () { $(this).removeClass('ui-state-hover'); }
+				);
 
+            $("#cancelar").click(function () {
+                $("input[type='text']").val("");
+            });
         });
     </script>
 </asp:Content>
@@ -23,7 +42,7 @@
         width: 20%; height: 10%;">
         <div class="formItem inteiro" id="divBuscarPorCpf">
             <span>Informe o CPF:</span>
-            <div class="formItem inteiro">
+            <div class="formItem doisTercos">
                 <%= Html.TextBoxFor(model => model.Cpf) %>
             </div>
         </div>
@@ -34,9 +53,17 @@
         </div>
         <div class="formItem inteiro" id="divBuscarPorBrat">
             <span>Informe o número do BRAT:</span>
-            <div class="formItem inteiro">
+            <div class="formItem doisTercos">
                 <%= Html.TextBoxFor(model => model.NumeroBrat) %>
             </div>
+        </div>
+        <div class="formItem inteiro">
+            <div class="formItem metade">
+                <a href="#" id="consultar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                    Consultar</a></div>
+            <div class="formItem metade">
+                <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                    Cancelar</a></div>
         </div>
     </div>
 </asp:Content>
