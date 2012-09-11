@@ -29,8 +29,13 @@
             <ul class="sub_menu">
                 <li><a href="">Relatório de Acidentes</a>
                     <ul class="sub_menu">
-                        <li><a href="/Relatorio/RelAnalitico/">Analítico</a></li>
-                        <li><a href="/Relatorio/RelGerencial/">Gerencial</a></li>
+                        <li><a href="/Relatorio/RelAnalitico/">Estatísticos</a></li>
+                        <li><a href="/Relatorio/RelGerencial/">Gerenciais</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Relatório de Policiais</a>
+                    <ul class="sub_menu">
+                        <li><a href="/Relatorio/RelPolicial/">Policiais Cadastrados</a></li>
                     </ul>
                 </li>
             </ul>

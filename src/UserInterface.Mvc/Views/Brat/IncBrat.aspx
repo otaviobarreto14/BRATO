@@ -4,7 +4,10 @@
         Título da Tela = Cadastrar Brat
         Msg de Sucesso = BRAT Cadastrado com Sucesso
         Msg de Cancelamento = Cadastro Cancelado
-        Msg de Validação = Verificar Dados Informados                      
+        Msg de Validação = Verificar Dados Informados   
+        
+        AO SELECIONAR "SALVAR DADOS" EXIBIR NA TELA EM MODO DE RELATÓRIO PARA VALIDAÇÃO, APOS "CONFIRMAR DADOS" EXIBIR MSG DE SUCESSO
+        CASO SELECIONE "CORRIGIR DADOS" VOLTA A TELA DE INCLUSÃO                
 --%>
 
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.Entities.BratEntity>" %>
@@ -145,6 +148,6 @@
         </div>
     </div>
     <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
-        Incluir Brat</a> <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
-            Cancelar</a>
+        Salvar Dados</a> <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
+            Cancelar Dados</a>
 </asp:Content>

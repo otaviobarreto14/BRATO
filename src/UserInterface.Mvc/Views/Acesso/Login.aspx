@@ -1,4 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.Entities.PolicialEntity>" %>
+﻿<%--
+        ESTAS MSGS ESTÃO NO TCC I, EM CASO DE MUDANÇA EFETUAR A MESMA NO ARQUIVO DO PROJETO
+        Como chegar nesta Tela = Principal/Login
+        Título da Tela = Login
+        Msg de Sucesso = Não Aplicável
+        Msg de Cancelamento = Login Cancelado
+        Msg de Dados Não Encontrados = Usuário e/ou Senha Inválido(s)    
+--%>
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.Entities.PolicialEntity>" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
     <style type="text/css">

@@ -1,4 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.UserInterface.Models.RelatorioModel>" %>
+﻿<%--
+        ESTAS MSGS ESTÃO NO TCC I, EM CASO DE MUDANÇA EFETUAR A MESMA NO ARQUIVO DO PROJETO
+        Como chegar nesta Tela = Principal/Relatório/Relatório de Acidentes/Estatísticos
+        Título da Tela = Relatório Estatísticos
+        Msg de Sucesso = Não Aplicável
+        Msg de Cancelamento = Relatório Cancelado        
+        Msg de Dados Não Encontrados = Sem Dados para Geração                 
+--%>
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Common.Master" Inherits="System.Web.Mvc.ViewPage<Brato.UserInterface.Models.RelatorioModel>" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
     <script type="text/javascript">

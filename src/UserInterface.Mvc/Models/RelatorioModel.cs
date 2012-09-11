@@ -50,6 +50,7 @@ namespace Brato.UserInterface.Models
         public string NomePolicial { get; set; }
         public string MatriculaPolicial { get; set; }
         public BatalhaoEnum BatalhaoPolicial { get; set; }
+        public bool QtdBrat { get; set; }
         #endregion
 
     }

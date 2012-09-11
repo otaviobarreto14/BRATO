@@ -594,6 +594,7 @@
     <Content Include="Views\Brat\IncBrat.aspx" />
     <Content Include="Views\Policial\ConPolicial.aspx" />
     <Content Include="Views\Policial\IncPolicial.aspx" />
+    <Content Include="Views\Relatorio\RelPolicial.aspx" />
     <Content Include="Views\Relatorio\RelGerencial.aspx" />
     <Content Include="Views\Relatorio\RelAnalitico.aspx" />
     <Content Include="Views\Shared\Menu.ascx" />
