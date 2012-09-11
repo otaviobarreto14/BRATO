@@ -17,7 +17,7 @@ namespace Brato.Entities
         #region " Propriedades publicas da classe "
 
         [Required(ErrorMessage = "O campo 'Descricao' ? obrigat?rio.")]
-        [StringLength(150, ErrorMessage = "O campo 'Descricao' suporta no m?ximo 150 caracteres.")]
+        [StringLength(50, ErrorMessage = "O campo 'Descricao' suporta no m?ximo 150 caracteres.")]
         [DisplayName("Descricao")]
         public virtual string Descricao { get; set; }
         

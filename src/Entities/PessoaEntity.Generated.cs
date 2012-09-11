@@ -17,16 +17,16 @@ namespace Brato.Entities
         #region " Propriedades publicas da classe "
 
         [Required(ErrorMessage = "O campo 'Nome' ? obrigat?rio.")]
-        [StringLength(150, ErrorMessage = "O campo 'Nome' suporta no m?ximo 150 caracteres.")]
+        [StringLength(50, ErrorMessage = "O campo 'Nome' suporta no m?ximo 150 caracteres.")]
         [DisplayName("Nome")]
         public virtual string Nome { get; set; }
         
-        [StringLength(33, ErrorMessage = "O campo 'Cpf' suporta no m?ximo 33 caracteres.")]
+        [StringLength(11, ErrorMessage = "O campo 'Cpf' suporta no m?ximo 33 caracteres.")]
         [DisplayName("Cpf")]
         public virtual string Cpf { get; set; }
         
         [Required(ErrorMessage = "O campo 'Sexo' ? obrigat?rio.")]
-        [StringLength(3, ErrorMessage = "O campo 'Sexo' suporta no m?ximo 3 caracteres.")]
+        [StringLength(1, ErrorMessage = "O campo 'Sexo' suporta no m?ximo 3 caracteres.")]
         [DisplayName("Sexo")]
         public virtual string Sexo { get; set; }
         

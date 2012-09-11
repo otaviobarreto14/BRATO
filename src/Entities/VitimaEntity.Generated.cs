@@ -24,7 +24,7 @@ namespace Brato.Entities
         [DisplayName("TipoFerimento")]
         public virtual System.UInt16 TipoFerimento { get; set; }
 
-        [StringLength(150, ErrorMessage = "O campo 'Remocao' suporta no m?ximo 150 caracteres.")]
+        [StringLength(50, ErrorMessage = "O campo 'Remocao' suporta no m?ximo 150 caracteres.")]
         [DisplayName("Remocao")]
         public virtual string Remocao { get; set; }
 

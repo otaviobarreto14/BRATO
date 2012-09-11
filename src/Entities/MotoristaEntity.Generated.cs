@@ -25,7 +25,7 @@ namespace Brato.Entities
         public virtual System.UInt16 EstadoCivil { get; set; }
         
         [Required(ErrorMessage = "O campo 'Cnh' ? obrigat?rio.")]
-        [StringLength(48, ErrorMessage = "O campo 'Cnh' suporta no m?ximo 48 caracteres.")]
+        [StringLength(16, ErrorMessage = "O campo 'Cnh' suporta no m?ximo 48 caracteres.")]
         [DisplayName("Cnh")]
         public virtual string Cnh { get; set; }
         
@@ -34,12 +34,12 @@ namespace Brato.Entities
         public virtual System.UInt32 CategoriaCnh { get; set; }
         
         [Required(ErrorMessage = "O campo 'UfExpedicaoCnh' ? obrigat?rio.")]
-        [StringLength(6, ErrorMessage = "O campo 'UfExpedicaoCnh' suporta no m?ximo 6 caracteres.")]
+        [StringLength(2, ErrorMessage = "O campo 'UfExpedicaoCnh' suporta no m?ximo 6 caracteres.")]
         [DisplayName("UfExpedicaoCnh")]
         public virtual string UfExpedicaoCnh { get; set; }
         
         [Required(ErrorMessage = "O campo 'ProntuarioCnh' ? obrigat?rio.")]
-        [StringLength(48, ErrorMessage = "O campo 'ProntuarioCnh' suporta no m?ximo 48 caracteres.")]
+        [StringLength(16, ErrorMessage = "O campo 'ProntuarioCnh' suporta no m?ximo 48 caracteres.")]
         [DisplayName("ProntuarioCnh")]
         public virtual string ProntuarioCnh { get; set; }
         

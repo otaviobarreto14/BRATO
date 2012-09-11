@@ -45,7 +45,6 @@ namespace Brato.Entities
         public virtual System.UInt16 Circunstancia { get; set; }
         
         [Required(ErrorMessage = "O campo 'Descricao' ? obrigat?rio.")]
-        [StringLength(65535, ErrorMessage = "O campo 'Descricao' suporta no m?ximo 65535 caracteres.")]
         [DisplayName("Descricao")]
         public virtual string Descricao { get; set; }
         

@@ -17,7 +17,7 @@ namespace Brato.Entities
         #region " Propriedades publicas da classe "
 
         [Required(ErrorMessage = "O campo 'NomeProprietario' ? obrigat?rio.")]
-        [StringLength(150, ErrorMessage = "O campo 'NomeProprietario' suporta no m?ximo 150 caracteres.")]
+        [StringLength(50, ErrorMessage = "O campo 'NomeProprietario' suporta no m?ximo 150 caracteres.")]
         [DisplayName("NomeProprietario")]
         public virtual string NomeProprietario { get; set; }
         
@@ -26,7 +26,7 @@ namespace Brato.Entities
         public virtual System.UInt16 TipoVeiculo { get; set; }
         
         [Required(ErrorMessage = "O campo 'Placa' ? obrigat?rio.")]
-        [StringLength(21, ErrorMessage = "O campo 'Placa' suporta no m?ximo 21 caracteres.")]
+        [StringLength(7, ErrorMessage = "O campo 'Placa' suporta no m?ximo 21 caracteres.")]
         [DisplayName("Placa")]
         public virtual string Placa { get; set; }
         

@@ -16,7 +16,7 @@ namespace Brato.Entities
 
         #region " Propriedades publicas da classe "
 
-        [StringLength(21, ErrorMessage = "O campo 'Numero' suporta no m?ximo 21 caracteres.")]
+        [StringLength(7, ErrorMessage = "O campo 'Numero' suporta no m?ximo 21 caracteres.")]
         [DisplayName("Numero")]
         public virtual string Numero { get; set; }
         
