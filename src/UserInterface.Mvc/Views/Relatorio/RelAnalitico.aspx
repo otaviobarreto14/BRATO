@@ -15,6 +15,31 @@
             $(".accordion").accordion({ header: "h3", collapsible: true, active: 2 });
         });
     </script>
+    <style type="text/css">
+        .botao
+        {
+            font-size: 15px;
+            margin: 5px;
+            padding: 5px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: 70%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('.botao').hover(
+					function () { $(this).addClass('ui-state-hover'); },
+					function () { $(this).removeClass('ui-state-hover'); }
+				);
+
+            $("#cancelar").click(function () {
+                $("input[type='text']").val("");
+                $("select ").val("Todos");
+            });
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <%
@@ -27,12 +52,17 @@
         var lstSinalizacao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SinalizacaoEnum>();
         var lstTipoAcidente = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoAcidenteEnum>();
     %>
+    <div class="clear" style="position: fixed; margin-top: 2%; margin-left: 70%;">
+        <a href="#" id="GerRelatorio" class="ui-state-default ui-corner-all botao" style="float: inherit;">
+            Gerar Relatório</a> <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao"
+                style="float: inherit;">Cancelar</a></div>
+    <br><br><br>
     <div class="accordion">
         <div>
             <h3>
                 <a href="#">Localidade</a></h3>
-            <div id="divLocalidade">
-                <div class="formItems" style="margin: 0px;">
+            <div id="divLocalidade" style="display: block;">
+                <div class="formItems" style="margin: 0px; width: 97.5%">
                     <div class="formItem inteiro">
                         <div class="formItem ">
                             <span>UF</span>
@@ -40,15 +70,15 @@
                         </div>
                         <div class="formItem ">
                             <span>Municipio</span>
-                            <%= Html.TextBoxFor(model => model.Município, new { size = "25", MaxLength = "50" })%>
+                            <%= Html.TextBoxFor(model => model.Município, new { size = "35", MaxLength = "50" })%>
                         </div>
                         <div class="formItem ">
                             <span>Bairro</span>
-                            <%= Html.TextBoxFor(model => model.Bairro, new {size="25", MaxLength="50"})%>
+                            <%= Html.TextBoxFor(model => model.Bairro, new {size="30", MaxLength="50"})%>
                         </div>
                         <div class="formItem ">
                             <span>Logradouro</span>
-                            <%= Html.TextBoxFor(model => model.Logradouro, new { size = "50", MaxLength = "30" })%>
+                            <%= Html.TextBoxFor(model => model.Logradouro, new { size = "50", MaxLength = "50" })%>
                         </div>
                     </div>
                 </div>
@@ -59,47 +89,54 @@
         <div>
             <h3>
                 <a href="#">Acidente</a></h3>
-            <div id="divAcidente">
-                <span>Condições do Tempo:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.CondicaoTempo, lstCondTempo, "Todos", null)%>
-                </div>
-                <span>Sinalização:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.Sinalizacao, lstSinalizacao, "Todos", null)%>
-                </div>
-                <span>Tipo do Acidente:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.TipoAcidente, lstTipoAcidente, "Todos", null)%>
-                </div>
-                <span>Circunstância:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.Circunstancia, lstCirc, "Todos", null)%>
+            <div id="divAcidente" style="display: block;">
+                <div class="formItems" style="margin: 0px; width: 97.5%">
+                    <div class="formItem inteiro">
+                        <div class="formItem quinto">
+                            <span>Condições do Tempo</span>
+                            <%= Html.DropDownListFor(model => model.CondicaoTempo, lstCondTempo, "Todos", null)%>
+                        </div>
+                        <div class="formItem quinto">
+                            <span>Sinalização</span>
+                            <%= Html.DropDownListFor(model => model.Sinalizacao, lstSinalizacao, "Todos", null)%>
+                        </div>
+                        <div class="formItem quinto">
+                            <span>Tipo do Acidente</span>
+                            <%= Html.DropDownListFor(model => model.TipoAcidente, lstTipoAcidente, "Todos", null)%>
+                        </div>
+                        <div class="formItem quinto">
+                            <span>Circunstância</span>
+                            <%= Html.DropDownListFor(model => model.Circunstancia, lstCirc, "Todos", null)%>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="accordion">
         <div>
             <h3>
                 <a href="#">Vítima</a></h3>
-            <div id="divVitimas">
-                <span>Com Vitima(s):</span>
-                <div class="formItem inteiro">
-                    <%= Html.CheckBoxFor(model => model.ComVitimas)%>
-                </div>
-                <span>Idade:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.IdadeVitima, new { size = "15", MaxLength = "15" })%>
-                </div>
-                <span>Sexo:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.SexoVitima, lstSexo, "Todos", null)%>
-                </div>
-                <span>Ferimentos:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.FerimentosVitima, lstFerimentos, "Todos", null)%>
+            <div id="divVitimas" style="display: block;">
+                <div class="formItems" style="margin: 0px; width: 97.5%">
+                    <div class="formItem inteiro">
+                        <div class="formItem nono">
+                            <span>Com Vitima(s)</span>
+                            <%= Html.CheckBoxFor(model => model.ComVitimas)%>
+                        </div>
+                        <div class="formItem ">
+                            <span>Idade</span>
+                            <%= Html.TextBoxFor(model => model.IdadeVitima, new { size = "4", MaxLength = "3" })%>
+                        </div>
+                        <div class="formItem setimo">
+                            <span>Sexo</span>
+                            <%= Html.DropDownListFor(model => model.SexoVitima, lstSexo, "Todos", null)%>
+                        </div>
+                        <div class="formItem sexto">
+                            <span>Ferimentos</span>
+                            <%= Html.DropDownListFor(model => model.FerimentosVitima, lstFerimentos, "Todos", null)%>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,18 +145,22 @@
         <div>
             <h3>
                 <a href="#">Veículo</a></h3>
-            <div id="divVeiculo">
-                <span>Tipo de Veículo:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.TipoVeiculo)%>
-                </div>
-                <span>Fabricante:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.Fabricante)%>
-                </div>
-                <span>Modelo:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.Modelo)%>
+            <div id="divVeiculo" style="display: block;">
+                <div class="formItems" style="margin: 0px; width: 97.5%">
+                    <div class="formItem inteiro">
+                        <div class="formItem ">
+                            <span>Tipo de Veículo</span>
+                            <%= Html.TextBoxFor(model => model.TipoVeiculo, new { size = "30", MaxLength = "30" })%>
+                        </div>
+                        <div class="formItem ">
+                            <span>Fabricante</span>
+                            <%= Html.TextBoxFor(model => model.Fabricante, new { size = "30", MaxLength = "30" })%>
+                        </div>
+                        <div class="formItem ">
+                            <span>Modelo</span>
+                            <%= Html.TextBoxFor(model => model.Modelo, new { size = "30", MaxLength = "30" })%>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,22 +169,26 @@
         <div>
             <h3>
                 <a href="#">Motorista</a></h3>
-            <div id="divMotorista">
-                <span>Idade:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.IdadeMotorista, new { size = "15", MaxLength = "15" })%>
-                </div>
-                <span>Sexo:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.SexoMotorista, lstSexo, "Todos", null)%>
-                </div>
-                <span>Estado Civil:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.EstadoCivilMotorista, lstEstCivil, "Todos", null)%>
-                </div>
-                <span>Categoria CNH:</span>
-                <div class="formItem inteiro">
-                    <%= Html.DropDownListFor(model => model.CategoriaCnh, lstCatCnh, "Todos", null)%>
+            <div id="divMotorista" style="display: block;">
+                <div class="formItems" style="margin: 0px; width: 97.5%">
+                    <div class="formItem inteiro">
+                        <div class="formItem ">
+                            <span>Idade</span>
+                            <%= Html.TextBoxFor(model => model.IdadeMotorista, new { size = "4", MaxLength = "3" })%>
+                        </div>
+                        <div class="formItem setimo">
+                            <span>Sexo</span>
+                            <%= Html.DropDownListFor(model => model.SexoMotorista, lstSexo, "Todos", null)%>
+                        </div>
+                        <div class="formItem setimo">
+                            <span>Estado Civil</span>
+                            <%= Html.DropDownListFor(model => model.EstadoCivilMotorista, lstEstCivil, "Todos", null)%>
+                        </div>
+                        <div class="formItem setimo">
+                            <span>Categoria CNH</span>
+                            <%= Html.DropDownListFor(model => model.CategoriaCnh, lstCatCnh, "Todos", null)%>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
