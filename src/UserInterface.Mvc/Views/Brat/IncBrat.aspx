@@ -55,7 +55,8 @@
         var lstSinalizacao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SinalizacaoEnum>();
         var lstTipoAcidente = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoAcidenteEnum>();
     %>
-    <div id="tabs" style="left: 8.5%; width: 78%; margin: 2%; overflow: auto;">
+    <div id="tabs" style="left: 8.5%; width: 78%; height: 70%; margin: 2%; overflow: auto;
+        position: fixed;">
         <ul>
             <li><a href="#tabBrat">Informações do Acidente</a></li>
             <li><a href="#tabMotoristas">Motoristas</a></li>
@@ -127,7 +128,7 @@
                 </div>
                 <div class="formItem inteiro" style="margin-bottom: 5%;">
                     <span>*Descrição do Acidente</span>
-                    <%= Html.TextAreaFor(model => model.Descricao, null)%>
+                    <%= Html.TextAreaFor(model => model.Descricao, new { @rows = 10})%>
                 </div>
             </div>
         </div>
@@ -147,7 +148,8 @@
             <% Html.RenderAction("IncCroquiFoto", "CroquiFoto"); %>
         </div>
     </div>
-    <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
-        Salvar Dados</a> <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
-            Cancelar Dados</a>
+    <div class="clear" style="position: fixed; margin-top: 74%; margin-left: 56.6%;">
+        <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
+            Salvar Dados</a> <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
+                Cancelar Dados</a></div>
 </asp:Content>

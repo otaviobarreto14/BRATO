@@ -33,7 +33,8 @@
                 },
                 addfunc: function (selrow) {
                     window.location = '<%= Url.Action("New")%>';
-                }
+                },
+                del : false,            
             }
         ).navButtonAdd('#pagerP', {
             caption: "",

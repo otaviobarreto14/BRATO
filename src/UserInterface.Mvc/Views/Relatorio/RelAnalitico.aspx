@@ -32,21 +32,25 @@
             <h3>
                 <a href="#">Localidade</a></h3>
             <div id="divLocalidade">
-                <span>UF:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.UF, new { size = "15", MaxLength = "2" })%>
-                </div>
-                <span>Municipio:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.Município, new { size = "15", MaxLength = "15" })%>
-                </div>
-                <span>Bairro:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.Bairro, new {size="15", MaxLength="15"})%>
-                </div>
-                <span>Logradouro:</span>
-                <div class="formItem inteiro">
-                    <%= Html.TextBoxFor(model => model.Logradouro, new { size = "15", MaxLength = "15" })%>
+                <div class="formItems" style="margin: 0px;">
+                    <div class="formItem inteiro">
+                        <div class="formItem ">
+                            <span>UF</span>
+                            <%= Html.TextBoxFor(model => model.UF, new { size = "1", MaxLength = "2" })%>
+                        </div>
+                        <div class="formItem ">
+                            <span>Municipio</span>
+                            <%= Html.TextBoxFor(model => model.Município, new { size = "25", MaxLength = "50" })%>
+                        </div>
+                        <div class="formItem ">
+                            <span>Bairro</span>
+                            <%= Html.TextBoxFor(model => model.Bairro, new {size="25", MaxLength="50"})%>
+                        </div>
+                        <div class="formItem ">
+                            <span>Logradouro</span>
+                            <%= Html.TextBoxFor(model => model.Logradouro, new { size = "50", MaxLength = "30" })%>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

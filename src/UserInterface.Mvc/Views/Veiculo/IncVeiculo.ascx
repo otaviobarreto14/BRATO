@@ -47,6 +47,13 @@
         <div class="formItem metade">
             <span>Avaria(s)</span>
             <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBox("Avaria")%>
         </div>
     </div>
     <br />

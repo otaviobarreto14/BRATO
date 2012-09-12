@@ -3,7 +3,7 @@
         datatype: "json",
         mtype: "POST",
         height: '100%',
-        rowList: [20, 40, 80, 160],
+        rowList: [4],
         jsonReader: {
             repeatitems: false,
             id: "Id",

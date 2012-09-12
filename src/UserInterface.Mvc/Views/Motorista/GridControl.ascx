@@ -2,7 +2,9 @@
 <script type="text/javascript">
     $(function () {
         var parentGrid = $("#gridMotorista").parents('div[id="divGridMotorista"]');
-        var nameWidth = parentGrid.width() / 100 * 45;
+        var percent = parentGrid.width() / 100;
+        var nameWidth = percent * 45;
+
         $("#gridMotorista").jqGrid({
             url: '',
             colNames: [
@@ -13,11 +15,11 @@
                 'Sexo'
             ],
             colModel: [
-                { name: 'Nome'},
+                { name: 'Nome', width: '100px' },
                 { name: 'Cnh' },
                 { name: 'DataNasc' },
                 { name: 'EstadoCivil' },
-                { name: 'Sexo' }
+                { name: 'Sexo', width: '50px' }
             ],
             sortname: 'Nome',
             pager: "#pagerMotorista"
