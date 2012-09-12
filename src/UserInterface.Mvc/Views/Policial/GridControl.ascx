@@ -4,11 +4,29 @@
 <script src="/Scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
 <script src="/Scripts/jquery.jqGrid-default.js" type="text/javascript"></script>
 <script type="text/javascript">
+    function AlterarPolicial()
+    {
+        var selrow = 0;
+        selrow = $("#gridP").getGridParam('selrow');
+        if (selrow == null) {
+            $.jgrid.viewModal("#alertmod", { gbox: "#gbox_grid", jqm: true });
+            $("#jqg_alrt").focus();
+        }
+        else {
+            $.ajax({
+                url: '<%= Url.Action("AlterarStatusPolicial") %>/',
+                data: { 'matricula': selrow },
+                type: 'post',
+                cache: false
+            });
+        }
+        $("#gridP").trigger("reloadGrid");
+    }
     $(function () {
         var parentGrid = $("#gridP").parents('div[id="divGrid"]');
         var nameWidth = parentGrid.width() / 100 * 45;
         $("#gridP").jqGrid({
-            url: '',
+            url: '<%= Url.Action("GetPagedInJson") %>',
             colNames: [
                 'Nome',
                 'Matricula',
@@ -19,12 +37,15 @@
             colModel: [
                 { name: 'Nome', width: nameWidth },
                 { name: 'Matricula' },
-                { name: 'Batalhao' },
-                { name: 'Perfil' },
-                { name: 'Status' }
+                { name: 'BatalhaoFormatted', index: 'Batalhao' },
+                { name: 'IdPerfil.Descricao' },
+                { name: 'StatusFormatted' }
             ],
             sortname: 'Nome',
-            pager: "#pagerP"
+            pager: "#pagerP",
+            jsonReader: {
+                id: "Matricula"
+            }
         }).navGrid(
             "#pagerP",
             {
@@ -39,10 +60,9 @@
         ).navButtonAdd('#pagerP', {
             caption: "",
             title: "Ativar/Desativar Policial",
-            buttonicon: "ui-icon-locked",
+            buttonicon: "ui-icon-gear",
             onClickButton: function () {
-                //TODO:Bloquear ou Desbloquear Policial
-                alert("Bloqueia Policial");
+                AlterarPolicial();
             },
             position: "first"
         });

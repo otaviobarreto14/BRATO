@@ -16,20 +16,20 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
     <style type="text/css">
-        #buscar
+        .botao
         {
-            padding: 0px 20px;
-            text-decoration: none;
-            position: relative;
-            font-size: 18px;
-            width: 100px;
-            text-align: center;
+            font-size: 15px;
             margin: 5px;
+            padding: 5px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: 5%;
         }
     </style>
     <script type="text/javascript">
         $(function () {
-            $('#buscar').hover(
+            $('.botao').hover(
 					function () { $(this).addClass('ui-state-hover'); },
 					function () { $(this).removeClass('ui-state-hover'); }
 				);
@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="formItem quarto">
-        <a href="#" id="buscar" class="ui-state-default ui-corner-all" style="float: left;">
+        <a href="#" id="buscar" class="ui-state-default ui-corner-all botao" style="float: left;">
             Buscar</a>
     </div>
     <br style="clear: both;" />

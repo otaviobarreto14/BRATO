@@ -14,7 +14,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
     <style type="text/css">
-        #botao
+        .botao
         {
             padding: 0px 20px;
             text-decoration: none;
@@ -27,10 +27,18 @@
     </style>
     <script type="text/javascript">
         $(function () {
-            $('#botao').hover(
+            $('.botao').hover(
 					function () { $(this).addClass('ui-state-hover'); },
 					function () { $(this).removeClass('ui-state-hover'); }
 				);
+
+            $("#btnSalvar").click(function () {
+                $("#mainForm").submit();
+            });
+            $("#btnCancelar").click(function () {
+                $("input[type='text']").val('');
+            });
+
         });
     </script>
 </asp:Content>
@@ -39,11 +47,13 @@
         var lstBatalhao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<BatalhaoEnum>();
         var lstPerfil = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<PerfilEnum>();
     %>
+    <% using (Html.BeginForm("Salvar", "Policial", FormMethod.Post, new { id = "mainForm" }))
+       { %>
     <div class="formItems">
         <div class="formItem inteiro">
             <div class="formItem quarto">
                 <span>*Matrícula</span>
-                <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
+                <%= Html.TextBoxFor(model => model.Matricula, new { size = "15", MaxLength = "15" })%>
             </div>
         </div>
         <div class="formItem inteiro">
@@ -59,7 +69,7 @@
         <div class="formItem inteiro">
             <div class="formItem quarto">
                 <span>*Perfil</span>
-                <%= Html.DropDownListFor(model => model.IdPerfil, lstPerfil, "Selecione", null)%>
+                <%= Html.DropDownListFor(model => model.IdPerfil.IdPerfil, lstPerfil, "Selecione", null)%>
             </div>
             <div class="formItem quarto">
                 <span>*Senha</span>
@@ -69,15 +79,14 @@
                 <span>*Confirmar Senha</span><%= Html.Password("ConfSenha")%>
             </div>
             <div class="formItem quarto">
-                <%= Html.HiddenFor(model => model.Status) %>
+                <%= Html.HiddenFor(model => model.Status)%>
             </div>
         </div>
-
         <div class="formItem inteiro">
-            <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: left;">
-                Salvar Dados</a> 
-            <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: left;">
-                Cancelar Dados</a>
+            <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: left;">Salvar
+                Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                    Cancelar Dados</a>
         </div>
     </div>
+    <%} %>
 </asp:Content>

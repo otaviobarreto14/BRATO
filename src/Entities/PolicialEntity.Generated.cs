@@ -20,21 +20,21 @@ namespace Brato.Entities
         [StringLength(60, ErrorMessage = "O campo 'Nome' suporta no m?ximo 180 caracteres.")]
         [DisplayName("Nome")]
         public virtual string Nome { get; set; }
-        
+
         [Required(ErrorMessage = "O campo 'Batalhao' ? obrigat?rio.")]
         [DisplayName("Batalhao")]
-        public virtual System.UInt16 Batalhao { get; set; }
-        
+        public virtual BatalhaoEnum Batalhao { get; set; }
+
         [Required(ErrorMessage = "O campo 'Senha' ? obrigat?rio.")]
         [StringLength(8, ErrorMessage = "O campo 'Senha' suporta no m?ximo 24 caracteres.")]
         [DisplayName("Senha")]
         public virtual string Senha { get; set; }
-        
+
         [Required(ErrorMessage = "O campo 'Status' ? obrigat?rio.")]
         [StringLength(1, ErrorMessage = "O campo 'Status' suporta no m?ximo 3 caracteres.")]
         [DisplayName("Status")]
         public virtual string Status { get; set; }
-        
+
         #endregion
 
         #region " Relacionamentos "

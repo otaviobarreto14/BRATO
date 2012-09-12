@@ -95,8 +95,7 @@ namespace Brato.Entities
         [Description("40º Batalhão")]
         _40BPM = 38,
         [Description("41º Batalhão")]
-        _41BPM = 39				
-
+        _41BPM = 39
     }
 
     public enum PerfilEnum

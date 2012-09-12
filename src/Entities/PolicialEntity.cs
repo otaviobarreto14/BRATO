@@ -7,7 +7,19 @@ namespace Brato.Entities
     {
         public PolicialEntity()
             : base()
-        { 
+        {
+        }
+
+        public virtual string BatalhaoFormatted { get { return EnumHelper.GetEnumDescription(Batalhao); } }
+        public virtual string StatusFormatted
+        {
+            get
+            {
+                if (Status == "A")
+                    return "Ativo";
+                else
+                    return "Inativo";
+            }
         }
     }
 }

@@ -56,14 +56,14 @@
             <div class="formItem doisTercos">
                 <%= Html.TextBoxFor(model => model.NumeroBrat) %>
             </div>
-    </div>
-    <div class="formItem inteiro">
-        <div class="formItem metade">
-            <a href="#" id="consultar" class="ui-state-default ui-corner-all botao" style="float: left;">
-                Consultar</a></div>
-        <div class="formItem metade">
-            <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao" style="float: left;">
-                Cancelar</a></div>
-    </div>
+        </div>
+        <div class="formItem inteiro">
+            <div class="formItem metade">
+                <a href="#" id="consultar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                    Consultar</a></div>
+            <div class="formItem metade">
+                <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                    Cancelar</a></div>
+        </div>
     </div>
 </asp:Content>
