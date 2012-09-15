@@ -10,7 +10,17 @@ namespace Brato.Entities
         {
         }
 
-        public virtual string BatalhaoFormatted { get { return EnumHelper.GetEnumDescription(Batalhao); } }
+        public virtual string BatalhaoFormatted
+        {
+            get
+            {
+                if (Batalhao != 0)
+                    return EnumHelper.GetEnumDescription(Batalhao);
+                else
+                    return "";
+            }
+        }
+
         public virtual string StatusFormatted
         {
             get

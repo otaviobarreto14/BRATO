@@ -28,6 +28,7 @@ namespace Brato.UserInterface.Controllers
 
         public ActionResult IncPolicial()
         {
+            ViewData["Retorno"] = "";
             return View();
         }
 
@@ -38,9 +39,33 @@ namespace Brato.UserInterface.Controllers
 
         public ActionResult Salvar(PolicialEntity entity)
         {
+            ModelState.Remove("IdPerfil.Descricao");
+            ModelState.Remove("IdPerfil.IdPerfil");
+            ModelState.Remove("Status");
+
+            if (entity == null)
+                ModelState.AddModelError("Entity", "Entidade é nula.");
+
+            if (entity.IdPerfil == null || entity.IdPerfil.IdPerfil == 0)
+                ModelState.AddModelError("Perfil", "O campo é obrigatório");
+
+            if (entity == null)
+                ModelState.AddModelError("Entity", "Entidade é nula.");
+
+            if (rules.FindAll(p => p.Matricula == entity.Matricula).ToList().Any())
+                ModelState.AddModelError("Matricula", "Matricula Já Cadastrada");
+
+            if (!ModelState.IsValid)
+            {
+                ViewData["Retorno"] = "Erro";
+                return View("IncPolicial", entity);
+            }
+
             entity.Status = "A";
             rules.Create(entity);
-            return View("IncPolicial", entity);
+            ViewData["Retorno"] = "Erro";
+
+            return View("IncPolicial", new PolicialEntity());
         }
 
         public JsonResult GetPagedInJson(int page, int rows, string sidx, string sord)

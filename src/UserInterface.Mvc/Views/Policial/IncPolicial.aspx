@@ -27,12 +27,27 @@
     </style>
     <script type="text/javascript">
         $(function () {
+            var retorno = '<%= ViewData["Retorno"].ToString() %>'
+            if (retorno == "Sucesso") {
+                jAlert("Policial Cadastrado com Sucesso");
+                $("input[type='text']").val('');
+                $("select").val('');
+            }
             $('.botao').hover(
 					function () { $(this).addClass('ui-state-hover'); },
 					function () { $(this).removeClass('ui-state-hover'); }
 				);
 
             $("#btnSalvar").click(function () {
+                //                $.ajax({
+                //                    url: '/Policial/Salvar/',
+                //                    data: $("#mainForm").serialize(),
+                //                    type: "post",
+                //                    cache: false,
+                //                    success: function (Data) {
+                //                        jAlert(Data.Mensagem);
+                //                    }
+                //                });
                 $("#mainForm").submit();
             });
             $("#btnCancelar").click(function () {
@@ -44,12 +59,14 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <%
+        var validationSummary = Html.ValidationSummary("Ocorreram os seguintes erros:");
         var lstBatalhao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<BatalhaoEnum>();
         var lstPerfil = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<PerfilEnum>();
     %>
     <% using (Html.BeginForm("Salvar", "Policial", FormMethod.Post, new { id = "mainForm" }))
-       { %>
+       {  %>
     <div class="formItems">
+        <% Response.Write(validationSummary); %>
         <div class="formItem inteiro">
             <div class="formItem quarto">
                 <span>*Matrícula</span>
@@ -83,9 +100,9 @@
             </div>
         </div>
         <div class="formItem inteiro">
-            <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: left;">Salvar
-                Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao" style="float: left;">
-                    Cancelar Dados</a>
+            <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                Salvar Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao"
+                    style="float: left;">Cancelar Dados</a>
         </div>
     </div>
     <%} %>
