@@ -45,14 +45,14 @@
     <%
         var lstBatalhao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<BatalhaoEnum>();
     %>
-    <div class="clear" style="position: fixed; margin-top: 2%; margin-left: 70%;">
+    <div class="clear" style="position: fixed; margin-top: 2%; margin-left: 68%;">
         <a href="#" id="GerRelatorio" class="ui-state-default ui-corner-all botao" style="float: inherit;">
             Gerar Relatório</a> <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao"
                 style="float: inherit;">Cancelar</a></div>
     <br>
     <br>
     <br>
-    <div class="accordion">
+    <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
                 <a href="#">Policial</a></h3>

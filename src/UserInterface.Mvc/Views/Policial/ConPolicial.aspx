@@ -62,7 +62,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <%var lstBatalhao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<BatalhaoEnum>(); %>
     <div class="clear" style="position: fixed; margin-top: 8%; margin-left: 8.5%; margin-right: 2%">
-        <div class="accordion">
+        <div class="accordion" style="display: inline-table;">
             <div>
                 <h3>
                     <a href="#">Consulta de Policial</a></h3>
@@ -88,11 +88,11 @@
                     </div>
                     <br style="clear: both;" />
                     <br style="clear: both;" />
-                    <div class="formItem inteiro" id="divGrid" style="clear: both;">
-                        <% Html.RenderPartial("GridControl"); %>
-                    </div>
                 </div>
             </div>
+        </div>
+        <div class="formItem inteiro" id="divGrid" style="clear: both;">
+            <% Html.RenderPartial("GridControl"); %>
         </div>
     </div>
 </asp:Content>

@@ -52,12 +52,14 @@
         var lstSinalizacao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<SinalizacaoEnum>();
         var lstTipoAcidente = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoAcidenteEnum>();
     %>
-    <div class="clear" style="position: fixed; margin-top: 2%; margin-left: 70%;">
+    <div class="clear" style="position: fixed; margin-top: 2%; margin-left: 68%;">
         <a href="#" id="GerRelatorio" class="ui-state-default ui-corner-all botao" style="float: inherit;">
             Gerar Relatório</a> <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao"
                 style="float: inherit;">Cancelar</a></div>
-    <br><br><br>
-    <div class="accordion">
+    <br>
+    <br>
+    <br>
+    <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
                 <a href="#">Localidade</a></h3>
@@ -85,7 +87,7 @@
             </div>
         </div>
     </div>
-    <div class="accordion">
+    <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
                 <a href="#">Acidente</a></h3>
@@ -113,7 +115,7 @@
             </div>
         </div>
     </div>
-    <div class="accordion">
+    <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
                 <a href="#">Vítima</a></h3>
@@ -141,7 +143,7 @@
             </div>
         </div>
     </div>
-    <div class="accordion">
+    <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
                 <a href="#">Veículo</a></h3>
@@ -165,7 +167,7 @@
             </div>
         </div>
     </div>
-    <div class="accordion">
+    <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
                 <a href="#">Motorista</a></h3>

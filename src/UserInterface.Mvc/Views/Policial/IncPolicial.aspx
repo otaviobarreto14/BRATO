@@ -71,11 +71,11 @@
     <% using (Html.BeginForm("Salvar", "Policial", FormMethod.Post, new { id = "mainForm" }))
        {  %>
     <div class="clear" style="position: fixed; margin-top: 10%; margin-left: 15%;">
-        <div class="accordion ">
-            <div>
+        <div class="accordion">
+            <div style="margin-right: -7.1%;">
                 <h3>
                     <a href="#">Cadastro de Policial</a></h3>
-                <div class="formItems">
+                <div class="formItems" style="display: inline-table;">
                     <% Response.Write(validationSummary); %>
                     <div class="formItem inteiro">
                         <div class="formItem quarto">

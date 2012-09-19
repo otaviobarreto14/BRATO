@@ -26,6 +26,11 @@
     </style>
     <script type="text/javascript">
         $(function () {
+            $(".accordion").accordion({ header: "h3" });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
             $('.botao').hover(
 					function () { $(this).addClass('ui-state-hover'); },
 					function () { $(this).removeClass('ui-state-hover'); }
@@ -38,32 +43,38 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-    <div class="formItems" style="margin-left: 36%; margin-right: 30%; margin-top: 10%;
-        width: 20%; height: 10%;">
-        <div class="formItem inteiro" id="divBuscarPorCpf" style="margin-left: 29px;">
-            <span>Informe o CPF:</span>
-            <div class="formItem doisTercos">
-                <%= Html.TextBoxFor(model => model.Cpf) %>
+    <div class="formItems" style="margin-left: 34%; margin-right: 30%; margin-top: 10%;
+        width: 30%; height: 10%;">
+        <div class="accordion" style="display:inline-table;">
+            <h3>
+                <a href="#">Consultar BRAT</a></h3>
+            <div>
+                <div class="formItem inteiro" id="divBuscarPorCpf">
+                    <span style="margin-left: 18%;">Informe o CPF</span>
+                    <div class="formItem doisTercos" style="margin-left: 18%;">
+                        <%= Html.TextBoxFor(model => model.Cpf) %>
+                    </div>
+                </div>
+                <div class="formItem inteiro">
+                </div>
+                <span class="clear" style="margin-left: 45%;">Ou</span>
+                <div class="formItem inteiro">
+                </div>
+                <div class="formItem inteiro" id="divBuscarPorBrat" >
+                    <span style="margin-left: 18%;">Informe o número do BRAT</span>
+                    <div class="formItem doisTercos" style="margin-left: 18%;">
+                        <%= Html.TextBoxFor(model => model.NumeroBrat) %>
+                    </div>
+                </div>
+                <div class="formItem inteiro" style="margin-left: 6%;">
+                    <div class="formItem metade">
+                        <a href="#" id="consultar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                            Consultar</a></div>
+                    <div class="formItem metade">
+                        <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao" style="float: left;">
+                            Cancelar</a></div>
+                </div>
             </div>
-        </div>
-        <div class="formItem inteiro">
-        </div>
-        <span class="clear" style="margin-left: 41%;">Ou</span>
-        <div class="formItem inteiro">
-        </div>
-        <div class="formItem inteiro" id="divBuscarPorBrat" style="margin-left: 29px;">
-            <span>Informe o número do BRAT:</span>
-            <div class="formItem doisTercos">
-                <%= Html.TextBoxFor(model => model.NumeroBrat) %>
-            </div>
-        </div>
-        <div class="formItem inteiro">
-            <div class="formItem metade">
-                <a href="#" id="consultar" class="ui-state-default ui-corner-all botao" style="float: left;">
-                    Consultar</a></div>
-            <div class="formItem metade">
-                <a href="#" id="cancelar" class="ui-state-default ui-corner-all botao" style="float: left;">
-                    Cancelar</a></div>
         </div>
     </div>
 </asp:Content>
