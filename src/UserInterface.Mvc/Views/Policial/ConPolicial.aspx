@@ -24,40 +24,75 @@
             position: relative;
             text-align: center;
             text-decoration: none;
-            width: 5%;
+            width: 45%;
         }
     </style>
+    <script type="text/javascript">
+        $(function () {
+            $(".accordion").accordion({ header: "h3" });
+        });
+    </script>
     <script type="text/javascript">
         $(function () {
             $('.botao').hover(
 					function () { $(this).addClass('ui-state-hover'); },
 					function () { $(this).removeClass('ui-state-hover'); }
 				);
+
+            $("#btnSalvar").click(function () {
+                //                $.ajax({
+                //                    url: '/Policial/Salvar/',
+                //                    data: $("#mainForm").serialize(),
+                //                    type: "post",
+                //                    cache: false,
+                //                    success: function (Data) {
+                //                        jAlert(Data.Mensagem);
+                //                    }
+                //                });
+                //$("#mainForm").submit();
+            });
+
+            $("#btnCancelar").click(function () {
+                $("input[type='text']").val('');
+                $("select ").val("Selecione");
+            });
         });
     </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <%var lstBatalhao = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<BatalhaoEnum>(); %>
-    <div class="formItems ">
-        <div class="formItem quinto">
-            <span>Matrícula</span>
-            <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
+    <div class="clear" style="position: fixed; margin-top: 8%; margin-left: 8.5%; margin-right: 2%">
+        <div class="accordion">
+            <div>
+                <h3>
+                    <a href="#">Consulta de Policial</a></h3>
+                <div class="formItems" style="width: inherit; height: 259px;">
+                    <div class="clear" style="position: fixed; margin-top: 4%; margin-left: 45.5%;">
+                        <a href="#" id="btnBuscar" class="ui-state-default ui-corner-all botao" style="float: inherit;">
+                            Buscar Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao"
+                                style="float: inherit;">Cancelar Dados</a>
+                    </div>
+                    <div class="formItem inteiro">
+                        <div class="formItem oitavo">
+                            <span>Matrícula</span>
+                            <%= Html.TextBoxFor(model => model.Matricula, new {size="15", MaxLength="15"})%>
+                        </div>
+                        <div class="formItem metade">
+                            <span>Nome</span>
+                            <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
+                        </div>
+                        <div class="formItem oitavo">
+                            <span>Batalhão</span>
+                            <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null) %>
+                        </div>
+                    </div>
+                    <br style="clear: both;" />
+                    <br style="clear: both;" />
+                    <div class="formItem inteiro" id="divGrid" style="clear: both;">
+                        <% Html.RenderPartial("GridControl"); %>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="formItem doisTercos">
-            <span>Nome</span>
-            <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
-        </div>
-        <div class="formItem oitavo">
-            <span>Batalhão</span>
-            <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null) %>
-        </div>
-    </div>
-    <div class="formItem quarto">
-        <a href="#" id="buscar" class="ui-state-default ui-corner-all botao" style="float: left;">
-            Buscar</a>
-    </div>
-    <br style="clear: both;" />
-    <div class="formItem inteiro" id="divGrid" style="clear: both;">
-        <% Html.RenderPartial("GridControl"); %>
     </div>
 </asp:Content>

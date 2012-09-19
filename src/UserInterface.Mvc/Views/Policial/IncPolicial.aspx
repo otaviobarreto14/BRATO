@@ -16,15 +16,20 @@
     <style type="text/css">
         .botao
         {
-            padding: 0px 20px;
-            text-decoration: none;
-            position: relative;
-            font-size: 18px;
-            width: 100px;
-            text-align: center;
+            font-size: 15px;
             margin: 5px;
+            padding: 5px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: 18%;
         }
     </style>
+    <script type="text/javascript">
+        $(function () {
+            $(".accordion").accordion({ header: "h3" });
+        });
+    </script>
     <script type="text/javascript">
         $(function () {
             var retorno = '<%= ViewData["Retorno"].ToString() %>'
@@ -52,8 +57,8 @@
             });
             $("#btnCancelar").click(function () {
                 $("input[type='text']").val('');
+                $("select ").val("Selecione");
             });
-
         });
     </script>
 </asp:Content>
@@ -65,44 +70,52 @@
     %>
     <% using (Html.BeginForm("Salvar", "Policial", FormMethod.Post, new { id = "mainForm" }))
        {  %>
-    <div class="formItems">
-        <% Response.Write(validationSummary); %>
-        <div class="formItem inteiro">
-            <div class="formItem quarto">
-                <span>*Matrícula</span>
-                <%= Html.TextBoxFor(model => model.Matricula, new { size = "15", MaxLength = "15" })%>
+    <div class="clear" style="position: fixed; margin-top: 10%; margin-left: 15%;">
+        <div class="accordion ">
+            <div>
+                <h3>
+                    <a href="#">Cadastro de Policial</a></h3>
+                <div class="formItems">
+                    <% Response.Write(validationSummary); %>
+                    <div class="formItem inteiro">
+                        <div class="formItem quarto">
+                            <span>*Matrícula</span>
+                            <%= Html.TextBoxFor(model => model.Matricula, new { size = "15", MaxLength = "15" })%>
+                        </div>
+                    </div>
+                    <div class="formItem inteiro">
+                        <div class="formItem doisTercos">
+                            <span>*Nome</span>
+                            <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
+                        </div>
+                        <div class="formItem quarto">
+                            <span>*Batalhão</span>
+                            <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null)%>
+                        </div>
+                    </div>
+                    <div class="formItem inteiro">
+                        <div class="formItem quarto">
+                            <span>*Perfil</span>
+                            <%= Html.DropDownListFor(model => model.IdPerfil.IdPerfil, lstPerfil, "Selecione", null)%>
+                        </div>
+                        <div class="formItem quarto">
+                            <span>*Senha</span>
+                            <%= Html.PasswordFor(model => model.Senha, new { size = "20", MaxLength = "8" })%>
+                        </div>
+                        <div class="formItem quarto">
+                            <span>*Confirmar Senha</span><%= Html.Password("ConfSenha")%>
+                        </div>
+                        <div class="formItem quarto">
+                            <%= Html.HiddenFor(model => model.Status)%>
+                        </div>
+                    </div>
+                    <div class="clear" style="margin-top: 25%; margin-left: 35%;">
+                        <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: inherit;">
+                            Salvar Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao"
+                                style="float: inherit;">Cancelar Dados</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="formItem inteiro">
-            <div class="formItem doisTercos">
-                <span>*Nome</span>
-                <%= Html.TextBoxFor(model => model.Nome, new { size = "60", MaxLength = "60" })%>
-            </div>
-            <div class="formItem quarto">
-                <span>*Batalhão</span>
-                <%= Html.DropDownListFor(model => model.Batalhao, lstBatalhao, "Selecione", null)%>
-            </div>
-        </div>
-        <div class="formItem inteiro">
-            <div class="formItem quarto">
-                <span>*Perfil</span>
-                <%= Html.DropDownListFor(model => model.IdPerfil.IdPerfil, lstPerfil, "Selecione", null)%>
-            </div>
-            <div class="formItem quarto">
-                <span>*Senha</span>
-                <%= Html.PasswordFor(model => model.Senha, new { size = "20", MaxLength = "8" })%>
-            </div>
-            <div class="formItem quarto">
-                <span>*Confirmar Senha</span><%= Html.Password("ConfSenha")%>
-            </div>
-            <div class="formItem quarto">
-                <%= Html.HiddenFor(model => model.Status)%>
-            </div>
-        </div>
-        <div class="formItem inteiro">
-            <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: left;">
-                Salvar Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao"
-                    style="float: left;">Cancelar Dados</a>
         </div>
     </div>
     <%} %>
