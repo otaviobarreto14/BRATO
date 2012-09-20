@@ -34,8 +34,9 @@
 					function () { $(this).removeClass('ui-state-hover'); }
 				);
 
-            $("#cancelar").click(function () {
+            $("#btnCancelar").click(function () {
                 $("input[type='text']").val("");
+                $("input[type='password']").val("");
             });
         });
     </script>
