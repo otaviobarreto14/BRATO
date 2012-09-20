@@ -26,7 +26,7 @@
     </style>
     <script type="text/javascript">
         $(function () {
-            $(".accordion").accordion({ header: "h3" });
+            $(".accordion").accordion({ header: "h3", icons: { "headerSelected": "ui-icon-search"} });
         });
     </script>
     <script type="text/javascript">
