@@ -24,23 +24,29 @@
         });
     </script>
     <style type="text/css">
-        #botao
+        .botao
         {
-            padding: 0px 20px;
-            text-decoration: none;
-            position: relative;
-            font-size: 18px;
-            width: 100px;
-            text-align: center;
+            font-size: 15px;
             margin: 5px;
+            padding: 5px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: 18%;
         }
     </style>
     <script type="text/javascript">
         $(function () {
-            $('#botao').hover(
+            $('.botao').hover(
 					function () { $(this).addClass('ui-state-hover'); },
 					function () { $(this).removeClass('ui-state-hover'); }
 				);
+
+            $("#btnCancelar").click(function () {
+                $("input[type='text']").val('');
+                $("select ").val("Selecione");
+                $("textarea").val('');
+            });
         });
     </script>
 </asp:Content>
@@ -56,7 +62,7 @@
         var lstTipoAcidente = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoAcidenteEnum>();
     %>
     <div id="tabs" style="left: 8.5%; width: 78%; height: 70%; margin: 2%; overflow: auto;
-        position: fixed;">
+        position: fixed; display: inline-table;">
         <ul>
             <li><a href="#tabBrat">Informações do Acidente</a></li>
             <li><a href="#tabMotoristas">Motoristas</a></li>
@@ -148,8 +154,8 @@
             <% Html.RenderAction("IncCroquiFoto", "CroquiFoto"); %>
         </div>
     </div>
-    <div class="clear" style="position: fixed; margin-top: 74%; margin-left: 56.6%;">
-        <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
-            Salvar Dados</a> <a href="#" id="botao" class="ui-state-default ui-corner-all" style="float: inherit;">
-                Cancelar Dados</a></div>
+    <div class="clear" style="position: fixed; margin-top: 75%; margin-left: 56.6%;">
+        <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: inherit;">
+            Salvar Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao"
+                style="float: inherit;">Cancelar Dados</a></div>
 </asp:Content>

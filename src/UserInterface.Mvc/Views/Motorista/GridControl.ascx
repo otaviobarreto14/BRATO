@@ -15,11 +15,11 @@
                 'Sexo'
             ],
             colModel: [
-                { name: 'Nome', width: '100px' },
+                { name: 'Nome', },
                 { name: 'Cnh' },
                 { name: 'DataNasc' },
                 { name: 'EstadoCivil' },
-                { name: 'Sexo', width: '50px' }
+                { name: 'Sexo' }
             ],
             sortname: 'Nome',
             pager: "#pagerMotorista"
