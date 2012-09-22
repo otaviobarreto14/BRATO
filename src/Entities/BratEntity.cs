@@ -7,7 +7,7 @@ namespace Brato.Entities
     {
         public BratEntity()
             : base()
-        { 
+        {
         }
 
         public virtual string DataAcidenteFormatted
@@ -17,5 +17,10 @@ namespace Brato.Entities
                 return DataAcidente.ToString("dd/MM/yyyy");
             }
         }
+
+        public virtual UfEntity UF { get; set; }
+        public virtual MunicipioEntity Municipio { get; set; }
+        public virtual BairroEntity Bairro { get; set; }
+        public virtual LogradouroEntity Logradouro { get; set; }
     }
 }

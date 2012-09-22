@@ -7,7 +7,14 @@ namespace Brato.Entities
     {
         public PessoaEntity()
             : base()
-        { 
+        {
         }
+
+        public virtual UfEntity UF { get; set; }
+        public virtual MunicipioEntity Municipio { get; set; }
+        public virtual BairroEntity Bairro { get; set; }
+        public virtual LogradouroEntity Logradouro { get; set; }
+        public virtual string Complemento { get; set; }
+        public virtual string Numero { get; set; }
     }
 }

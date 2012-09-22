@@ -16,15 +16,15 @@ namespace Brato.Entities
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'DataNasc' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'DataNasc' é obrigatório.")]
         [DisplayName("DataNasc")]
         public virtual DateTime DataNasc { get; set; }
 
-        [Required(ErrorMessage = "O campo 'TipoFerimento' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'TipoFerimento' é obrigatório.")]
         [DisplayName("TipoFerimento")]
         public virtual System.UInt16 TipoFerimento { get; set; }
 
-        [StringLength(50, ErrorMessage = "O campo 'Remocao' suporta no m?ximo 150 caracteres.")]
+        [StringLength(50, ErrorMessage = "O campo 'Remocao' suporta no máximo 150 caracteres.")]
         [DisplayName("Remocao")]
         public virtual string Remocao { get; set; }
 

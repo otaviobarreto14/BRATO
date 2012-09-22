@@ -41,6 +41,7 @@
     <Compile Include="Controllers\BratController.cs" />
     <Compile Include="Controllers\ControllersInstaller.cs" />
     <Compile Include="Controllers\CroquiFotoController.cs" />
+    <Compile Include="Controllers\EnderecoController.cs" />
     <Compile Include="Controllers\MotoristaController.cs" />
     <Compile Include="Controllers\PolicialController.cs" />
     <Compile Include="Controllers\RelatorioController.cs" />
