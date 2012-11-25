@@ -16,42 +16,42 @@ namespace Brato.Entities
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'NumBrat' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'NumBrat' ? obrigat?rio.")]
         [DisplayName("NumBrat")]
         public virtual System.UInt32 NumBrat { get; set; }
         
-        [Required(ErrorMessage = "O campo 'DataAcidente' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'DataAcidente' ? obrigat?rio.")]
         [DisplayName("DataAcidente")]
         public virtual DateTime DataAcidente { get; set; }
         
-        [Required(ErrorMessage = "O campo 'HoraAcidente' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'HoraAcidente' ? obrigat?rio.")]
         [DisplayName("HoraAcidente")]
-        public virtual string HoraAcidente { get; set; }
+        public virtual System.TimeSpan HoraAcidente { get; set; }
         
-        [Required(ErrorMessage = "O campo 'CondTempo' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'CondTempo' ? obrigat?rio.")]
         [DisplayName("CondTempo")]
         public virtual System.UInt16 CondTempo { get; set; }
         
-        [Required(ErrorMessage = "O campo 'TipoSinalizacao' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'TipoSinalizacao' ? obrigat?rio.")]
         [DisplayName("TipoSinalizacao")]
         public virtual System.UInt16 TipoSinalizacao { get; set; }
         
-        [Required(ErrorMessage = "O campo 'TipoAcidente' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'TipoAcidente' ? obrigat?rio.")]
         [DisplayName("TipoAcidente")]
         public virtual System.UInt16 TipoAcidente { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Circunstancia' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'Circunstancia' ? obrigat?rio.")]
         [DisplayName("Circunstancia")]
         public virtual System.UInt16 Circunstancia { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Descricao' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'Descricao' ? obrigat?rio.")]
         [DisplayName("Descricao")]
         public virtual string Descricao { get; set; }
         
         [DisplayName("FotoAcidente")]
         public virtual System.SByte? FotoAcidente { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Croqui' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'Croqui' ? obrigat?rio.")]
         [DisplayName("Croqui")]
         public virtual System.Byte[] Croqui { get; set; }
         

@@ -17,7 +17,6 @@
     <script src="/Scripts/grid.locale-pt-br.js" type="text/javascript"></script>
     <script src="/Scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
     <script src="/Scripts/jquery.jqGrid-default.js" type="text/javascript"></script>
-    <script src="/Scripts/jquery.jqDropDownList-1.0.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
             // Tabs
@@ -35,24 +34,10 @@
             text-decoration: none;
             width: 18%;
         }
-        .btnContinua
-        {
-            font-size: 15px;
-            padding: 5px;
-            text-align: center;
-            text-decoration: none;
-            width: 18%;
-        }
     </style>
     <script type="text/javascript">
         $(function () {
-            $("#Matricula_Matricula").val("1223123");
-            $("#tabs").tabs({ disabled: [1, 2, 3, 4, 5] });
             $('.botao').hover(
-					function () { $(this).addClass('ui-state-hover'); },
-					function () { $(this).removeClass('ui-state-hover'); }
-				);
-            $('.btnContinua').hover(
 					function () { $(this).addClass('ui-state-hover'); },
 					function () { $(this).removeClass('ui-state-hover'); }
 				);
@@ -61,139 +46,6 @@
                 $("input[type='text']").val('');
                 $("select ").val("Selecione");
                 $("textarea").val('');
-            });
-
-            $('.ddlUf').jqDropDownList({
-                url: '<%= Url.Action("ObterUfs", "Endereco")%>',
-                textField: 'Uf',
-                valueField: 'Uf'
-            });
-
-            $('.ddlMunicipio').jqDropDownList({
-                url: '<%= Url.Action("ObterMunicipios", "Endereco")%>',
-                textField: 'Descricao',
-                valueField: 'IdMunicipio'
-            });
-
-            $('.ddlBairro').jqDropDownList({
-                url: '<%= Url.Action("ObterBairros", "Endereco")%>',
-                textField: 'Descricao',
-                valueField: 'IdBairro'
-            });
-
-            $('.ddlLogradouro').jqDropDownList({
-                url: '<%= Url.Action("ObterLogradouros", "Endereco")%>',
-                textField: 'Descricao',
-                valueField: 'IdLogradouro'
-            });
-
-            $("#continuarBrat").click(function () {
-                $.ajax({
-                    url: '/Brat/SalvarDadosBrat/',
-                    data: $("#formBrat").serialize(),
-                    type: "post",
-                    cache: false,
-                    success: function (Data) {
-                        $("#grid").trigger("reloadGrid");
-                        if (Data.Sucesso == false) {
-                            jAlert(Data.Erros);
-                        }
-                        else {
-                            $(".Brat_IdBrat").val(Data.IdBrat);
-                            $("#tabs").tabs("enable", 1);
-                            $("#tabs").tabs("select", 1);
-                        }
-                    }
-                });
-
-                $("#tabs").tabs("enable", 1);
-                $("#tabs").tabs("select", 1);
-            });
-
-            $("#continuarMotorista").click(function () {
-                $.ajax({
-                    url: '/Motorista/SalvarMotorista/',
-                    data: $("#formMotorista").serialize(),
-                    type: "post",
-                    cache: false,
-                    success: function (Data) {
-                        $("#grid").trigger("reloadGrid");
-                        if (Data.Sucesso == false) {
-                            jAlert(Data.Erros);
-                        }
-                        else {
-                            $("#tabs").tabs("enable", 2);
-                            $("#tabs").tabs("select", 2);
-                        }
-                    }
-                });
-
-                $("#tabs").tabs("enable", 2);
-                $("#tabs").tabs("select", 2);
-            });
-
-            $("#continuarVeiculo").click(function () {
-                $.ajax({
-                    url: '/Veiculo/SalvarVeiculo/',
-                    data: $("#formVeiculo").serialize(),
-                    type: "post",
-                    cache: false,
-                    success: function (Data) {
-                        $("#grid").trigger("reloadGrid");
-                        if (Data.Sucesso == false) {
-                            jAlert(Data.Erros);
-                        }
-                        else {
-                            $("#tabs").tabs("enable", 3);
-                            $("#tabs").tabs("select", 3);
-                        }
-                    }
-                });
-
-                $("#tabs").tabs("enable", 3);
-                $("#tabs").tabs("select", 3);
-            });
-
-            $("#continuarVitima").click(function () {
-                $.ajax({
-                    url: '/Vitima/SalvarVitima/',
-                    data: $("#formVitima").serialize(),
-                    type: "post",
-                    cache: false,
-                    success: function (Data) {
-                        $("#grid").trigger("reloadGrid");
-                        if (Data.Sucesso == false) {
-                            jAlert(Data.Erros);
-                        }
-                        else {
-                            $("#tabs").tabs("enable", 4);
-                            $("#tabs").tabs("select", 4);
-                        }
-                    }
-                });
-                $("#tabs").tabs("enable", 4);
-                $("#tabs").tabs("select", 4);
-            });
-
-            $("#continuarTestemunha").click(function () {
-                $.ajax({
-                    url: '/Testemunha/SalvarTestemunha/',
-                    data: $("#formTestemunha").serialize(),
-                    type: "post",
-                    cache: false,
-                    success: function (Data) {
-                        $("#grid").trigger("reloadGrid");
-                        if (Data.Sucesso == false) {
-                            jAlert(Data.Erros);
-                        }
-                        else {
-                            $("#tabs").tabs("enable", 5);
-                            $("#tabs").tabs("select", 5);
-                        }
-                    }
-                });
-                $("#tabs").tabs("enable", 5);
-                $("#tabs").tabs("select", 5);
             });
         });
     </script>
@@ -221,9 +73,8 @@
         </ul>
         <div id="tabBrat">
             <div class="formItems">
-                <form id="formBrat">
                 <div class="formItem inteiro">
-                    <%= Html.HiddenFor(model => model.Matricula.Matricula, null)%>
+                    <%= Html.HiddenFor(model => model.Matricula, null)%>
                 </div>
                 <div class="formItem inteiro" style="float: left;">
                     <div class="formItem doisTercos">
@@ -238,28 +89,21 @@
                 <div class="formItem inteiro">
                     <div class="formItem oitavo">
                         <span>*UF</span>
-                        <select name="UF.Uf" id="ddlUf" class="ddlUf">
-                        </select>
+                        <%= Html.DropDownList("UF")%>
                     </div>
                     <div class="formItem terco">
                         <span>*Município</span>
-                        <select name="Municipio.IdMunicipio" id="ddlMunicipio" class="ddlMunicipio">
-                            <option value="0" selected="selected">Selecione</option>
-                        </select>
+                        <%= Html.DropDownList("Municipio")%>
                     </div>
                     <div class="formItem doisQuintos">
                         <span>*Bairro</span>
-                        <select name="Bairro.IdBairro" id="ddlBairro" class="ddlBairro">
-                            <option value="0" selected="selected">Selecione</option>
-                        </select>
+                        <%= Html.DropDownList("Bairro")%>
                     </div>
                 </div>
                 <div class="formItem inteiro">
                     <div class="formItem tresQuintos">
                         <span>*Logradouro</span>
-                        <select name="Logradouro.IdLogradouro" id="ddlLogradouro" class="ddlBairro">
-                            <option value="0" selected="selected">Selecione</option>
-                        </select>
+                        <%= Html.DropDownList("Logradouro")%>
                     </div>
                     <div class="formItem ">
                         <span>*Data do Acidente</span>
@@ -292,11 +136,6 @@
                     <span>*Descrição do Acidente</span>
                     <%= Html.TextAreaFor(model => model.Descricao, new { @rows = 10})%>
                 </div>
-                </form>
-                <div class="formItem inteiro">
-                    <a href="#" id="continuarBrat" class="ui-state-default ui-corner-all btnContinua"
-                        style="float: inherit;">Continuar</a>
-                </div>
             </div>
         </div>
         <div id="tabMotoristas">
@@ -316,9 +155,7 @@
         </div>
     </div>
     <div class="clear" style="position: fixed; margin-top: 75%; margin-left: 56.6%;">
-        <div class="clear">
-            <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: inherit;">
-                Salvar Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao"
-                    style="float: inherit;">Cancelar Dados</a></div>
-    </div>
+        <a href="#" id="btnSalvar" class="ui-state-default ui-corner-all botao" style="float: inherit;">
+            Salvar Dados</a> <a href="#" id="btnCancelar" class="ui-state-default ui-corner-all botao"
+                style="float: inherit;">Cancelar Dados</a></div>
 </asp:Content>

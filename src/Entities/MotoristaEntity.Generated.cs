@@ -16,34 +16,34 @@ namespace Brato.Entities
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'DataNasc' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'DataNasc' ? obrigat?rio.")]
         [DisplayName("DataNasc")]
         public virtual DateTime DataNasc { get; set; }
         
-        [Required(ErrorMessage = "O campo 'EstadoCivil' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'EstadoCivil' ? obrigat?rio.")]
         [DisplayName("EstadoCivil")]
         public virtual System.UInt16 EstadoCivil { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Cnh' é obrigatório.")]
-        [StringLength(16, ErrorMessage = "O campo 'Cnh' suporta no máximo 48 caracteres.")]
+        [Required(ErrorMessage = "O campo 'Cnh' ? obrigat?rio.")]
+        [StringLength(16, ErrorMessage = "O campo 'Cnh' suporta no m?ximo 48 caracteres.")]
         [DisplayName("Cnh")]
         public virtual string Cnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'CategoriaCnh' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'CategoriaCnh' ? obrigat?rio.")]
         [DisplayName("CategoriaCnh")]
         public virtual System.UInt32 CategoriaCnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'UfExpedicaoCnh' é obrigatório.")]
-        [StringLength(2, ErrorMessage = "O campo 'UfExpedicaoCnh' suporta no máximo 6 caracteres.")]
+        [Required(ErrorMessage = "O campo 'UfExpedicaoCnh' ? obrigat?rio.")]
+        [StringLength(2, ErrorMessage = "O campo 'UfExpedicaoCnh' suporta no m?ximo 6 caracteres.")]
         [DisplayName("UfExpedicaoCnh")]
         public virtual string UfExpedicaoCnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'ProntuarioCnh' é obrigatório.")]
-        [StringLength(16, ErrorMessage = "O campo 'ProntuarioCnh' suporta no máximo 48 caracteres.")]
+        [Required(ErrorMessage = "O campo 'ProntuarioCnh' ? obrigat?rio.")]
+        [StringLength(16, ErrorMessage = "O campo 'ProntuarioCnh' suporta no m?ximo 48 caracteres.")]
         [DisplayName("ProntuarioCnh")]
         public virtual string ProntuarioCnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'ValidadeExameChn' é obrigatório.")]
+        [Required(ErrorMessage = "O campo 'ValidadeExameChn' ? obrigat?rio.")]
         [DisplayName("ValidadeExameChn")]
         public virtual DateTime ValidadeExameChn { get; set; }
         

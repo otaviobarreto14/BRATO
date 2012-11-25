@@ -11,8 +11,6 @@
    var lstEstadoCivil = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<EstadoCivilEnum>();
    var lstCatCnh = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<CategoriaCNH>(); %>
 <div class="formItems">
-    <form id="formMotorista">
-    <input type="hidden" name="Brat.IdBrat" class="Brat_IdBrat" />
     <div class="formItem doisquintos">
         <span>*Nome</span>
         <%= Html.TextBoxFor(model => model.Pessoa.Nome, new { size = "60", MaxLength = "50" })%>
@@ -20,36 +18,29 @@
     <div class="formItem inteiro">
         <div class="formItem oitavo">
             <span>*UF</span>
-            <select name="Pessoa.UF.Uf" id="ddlUf" class="ddlUf">
-            </select>
+            <%= Html.DropDownList("UF")%>
         </div>
         <div class="formItem terco">
             <span>*Município</span>
-            <select name="Pessoa.Municipio.IdMunicipio" id="ddlMunicipio" class="ddlMunicipio">
-                <option value="0" selected="selected">Selecione</option>
-            </select>
+            <%= Html.DropDownList("Municipio")%>
         </div>
         <div class="formItem doisQuintos">
             <span>*Bairro</span>
-            <select name="Pessoa.Bairro.IdBairro" id="ddlBairro" class="ddlBairro">
-                <option value="0" selected="selected">Selecione</option>
-            </select>
+            <%= Html.DropDownList("Bairro")%>
         </div>
     </div>
     <div class="formItem inteiro">
         <div class="formItem tresQuintos">
             <span>*Logradouro</span>
-            <select name="Pessoa.Logradouro.IdLogradouro" id="ddlLogradouro" class="ddlLogradouro">
-                <option value="0" selected="selected">Selecione</option>
-            </select>
+            <%= Html.DropDownList("Logradouro")%>
         </div>
         <div class="formItem nono">
             <span>Numero</span>
-            <%= Html.TextBoxFor(model => model.Pessoa.Numero, new { size = "7", MaxLength = "7" })%>
+            <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.Numero, new { size = "7", MaxLength = "7" })%>
         </div>
         <div class="formItem tresQuintos">
             <span>Complemento</span>
-            <%= Html.TextBoxFor(model => model.Pessoa.Complemento, new { size = "60", MaxLength = "50" })%>
+            <%= Html.TextBoxFor(model => model.Pessoa.IdEndereco.IdComplemento.Descricao, new { size = "60", MaxLength = "50" })%>
         </div>
     </div>
     <div class="formItem inteiro">
@@ -81,8 +72,7 @@
         </div>
         <div class="formItem oitavo">
             <span>*UF Exp. CNH</span>
-            <select name="UfExpedicaoCnh" id="ddlUfExpedicao" class="ddlUf">
-            </select>
+            <%= Html.DropDownListFor(model => model.UfExpedicaoCnh, null)%>
         </div>
         <div class="formItem setimo">
             <span>*Categoria CNH</span>
@@ -97,10 +87,5 @@
     <br style="clear: both;" />
     <div class="formItem inteiro" id="divGridMotorista" style="clear: both; margin-top: 5%;">
         <% Html.RenderPartial("GridControl"); %>
-    </div>
-    </form>
-    <div class="formItem inteiro">
-        <a href="#" id="continuarMotorista" class="ui-state-default ui-corner-all btnContinua"
-            style="float: inherit;">Continuar</a>
     </div>
 </div>
