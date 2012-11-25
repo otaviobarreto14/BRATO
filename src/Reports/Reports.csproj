@@ -60,12 +60,23 @@
     <Compile Include="RelGerencialReport.Designer.cs">
       <DependentUpon>RelGerencialReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportBinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="RelGerencialReport.resx">
       <DependentUpon>RelGerencialReport.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessRules\BusinessRules.csproj">
+      <Project>{FBE5066D-C1D8-4C05-AED1-4F693562BCE7}</Project>
+      <Name>BusinessRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{8CC7AAA4-B2E9-4269-BFD7-7C77A67C3346}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
