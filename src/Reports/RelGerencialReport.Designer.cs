@@ -83,7 +83,7 @@
             this.lblNumVitimas.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblNumVitimas.SizeF = new System.Drawing.SizeF(82.00003F, 16F);
             this.lblNumVitimas.StylePriority.UseBorders = false;
-            this.lblNumVitimas.Text = "Nº de Vitimas";
+            this.lblNumVitimas.Text = "2";
             // 
             // lblTipoSinalizacao
             // 
@@ -93,7 +93,7 @@
             this.lblTipoSinalizacao.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblTipoSinalizacao.SizeF = new System.Drawing.SizeF(115F, 16F);
             this.lblTipoSinalizacao.StylePriority.UseBorders = false;
-            this.lblTipoSinalizacao.Text = "Tipo de Sinalização";
+            this.lblTipoSinalizacao.Text = "Boa";
             // 
             // lblNumTestemunhas
             // 
@@ -103,7 +103,7 @@
             this.lblNumTestemunhas.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblNumTestemunhas.SizeF = new System.Drawing.SizeF(109F, 16F);
             this.lblNumTestemunhas.StylePriority.UseBorders = false;
-            this.lblNumTestemunhas.Text = "Nº de Testemunhas";
+            this.lblNumTestemunhas.Text = "2";
             // 
             // lblNumVeiculos
             // 
@@ -113,7 +113,7 @@
             this.lblNumVeiculos.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblNumVeiculos.SizeF = new System.Drawing.SizeF(87F, 16F);
             this.lblNumVeiculos.StylePriority.UseBorders = false;
-            this.lblNumVeiculos.Text = "Nº de Veiculos";
+            this.lblNumVeiculos.Text = "3";
             // 
             // lblData
             // 
@@ -123,7 +123,7 @@
             this.lblData.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblData.SizeF = new System.Drawing.SizeF(60.83334F, 16F);
             this.lblData.StylePriority.UseBorders = false;
-            this.lblData.Text = "Data";
+            this.lblData.Text = "08/11/12";
             // 
             // lblNumBrat
             // 
@@ -133,7 +133,7 @@
             this.lblNumBrat.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblNumBrat.SizeF = new System.Drawing.SizeF(76.83334F, 16F);
             this.lblNumBrat.StylePriority.UseBorders = false;
-            this.lblNumBrat.Text = " Brat";
+            this.lblNumBrat.Text = "1005";
             // 
             // lblCondTempo
             // 
@@ -143,7 +143,7 @@
             this.lblCondTempo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblCondTempo.SizeF = new System.Drawing.SizeF(107.0418F, 16F);
             this.lblCondTempo.StylePriority.UseBorders = false;
-            this.lblCondTempo.Text = "Cond. do Tempo";
+            this.lblCondTempo.Text = "Chuva";
             // 
             // lblHora
             // 
@@ -153,7 +153,7 @@
             this.lblHora.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblHora.SizeF = new System.Drawing.SizeF(60.83334F, 16F);
             this.lblHora.StylePriority.UseBorders = false;
-            this.lblHora.Text = "Hora";
+            this.lblHora.Text = "13:35";
             // 
             // TopMargin
             // 
@@ -309,7 +309,7 @@
             this.xrLabel8,
             this.lblTotalAcidentes,
             this.xrLabel19});
-            this.ReportFooter.HeightF = 32.29167F;
+            this.ReportFooter.HeightF = 32.99998F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // lblDataExecucao
@@ -318,8 +318,9 @@
             this.lblDataExecucao.LocationFloat = new DevExpress.Utils.PointFloat(138.0418F, 15.99998F);
             this.lblDataExecucao.Name = "lblDataExecucao";
             this.lblDataExecucao.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblDataExecucao.SizeF = new System.Drawing.SizeF(108.0418F, 16F);
+            this.lblDataExecucao.SizeF = new System.Drawing.SizeF(140.0418F, 16F);
             this.lblDataExecucao.StylePriority.UseBorders = false;
+            this.lblDataExecucao.Text = "26/11/2012 - 11:49:37";
             // 
             // xrLabel8
             // 
@@ -339,6 +340,7 @@
             this.lblTotalAcidentes.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblTotalAcidentes.SizeF = new System.Drawing.SizeF(108.0418F, 16F);
             this.lblTotalAcidentes.StylePriority.UseBorders = false;
+            this.lblTotalAcidentes.Text = "1";
             // 
             // xrLabel19
             // 
