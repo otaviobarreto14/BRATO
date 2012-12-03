@@ -110,7 +110,7 @@
             this.xrLabel2.SizeF = new System.Drawing.SizeF(699F, 23F);
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "Relatório Gerencial de Acidentes de Trânsito";
+            this.xrLabel2.Text = "Relatório Analítico de Acidentes de Trânsito";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLine1
