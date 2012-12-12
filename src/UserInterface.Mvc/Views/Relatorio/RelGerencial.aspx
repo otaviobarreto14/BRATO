@@ -38,6 +38,10 @@
                 $("input[type='text']").val("");
                 $("select ").val("Todos");
             });
+
+            $("#GerRelatorio").click(function () {
+                $("#mainForm").submit();
+            });
         });
     </script>
 </asp:Content>
@@ -60,6 +64,8 @@
     <br>
     <br>
     <br>
+    <% using (Html.BeginForm("FiltrarRelatórioGerencial", "Relatorio", FormMethod.Post, new { id = "mainForm" }))
+       { %>
     <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
@@ -220,4 +226,5 @@
             </div>
         </div>
     </div>
+    <%} %>
 </asp:Content>

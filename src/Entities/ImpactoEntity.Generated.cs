@@ -10,7 +10,7 @@ namespace Brato.Entities
         #region " Identificador da classe "
 
         [EntityId]
-        public virtual System.UInt32 IdImpacto { get; set; }
+        public virtual int IdImpacto { get; set; }
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdImpacto == default(System.UInt32);
+            return IdImpacto == default(int);
         }
     }
 }

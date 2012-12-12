@@ -28,13 +28,27 @@ namespace Brato.UserInterface.Controllers
 
         public ActionResult IncPolicial()
         {
-            ViewData["Retorno"] = "";
-            return View();
+            var policial = RulesManager.CreateByEntity<PolicialEntity>().FindAll(p => p.Matricula == User.Identity.Name && p.Status == "A").FirstOrDefault();
+            if (policial == null)
+                return RedirectToAction("Login", "Acesso");
+            else
+            {
+
+                ViewData["Retorno"] = "";
+                return View();
+            }
         }
 
         public ActionResult ConPolicial()
         {
-            return View();
+            var policial = RulesManager.CreateByEntity<PolicialEntity>().FindAll(p => p.Matricula == User.Identity.Name && p.Status == "A").FirstOrDefault();
+            if (policial == null)
+                return RedirectToAction("Login", "Acesso");
+            else
+            {
+
+                return View();
+            }
         }
 
         public ActionResult Salvar(PolicialEntity entity)

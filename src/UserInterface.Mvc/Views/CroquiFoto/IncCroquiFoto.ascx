@@ -32,9 +32,5 @@
             <span>Foto do Acidente:</span>
             <input type="file" name="FotoAcidente" id="FotoAcidente"/>
         </div>
-        <div class="formItem inteiro">
-            <span>Croqui do Acidente:</span>
-            <%= Html.TextAreaFor(model => model.Croqui, null)%>
-        </div>
     </div>
 </div>

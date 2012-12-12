@@ -204,9 +204,68 @@ namespace Brato.Entities
         _Fatal = 3
     }
 
+    public enum CorEnum
+    {
+        [Description("Preto")]
+        _Preto = 1,
+        [Description("Branco")]
+        _Branco = 2,
+        [Description("Vermelho")]
+        _Vermelho = 3,
+        [Description("Verde")]
+        _Verde = 4,
+        [Description("Azul")]
+        _Azul = 5,
+        [Description("Amarelo")]
+        _Amarelo = 6,
+        [Description("Prata")]
+        _Prata = 7,
+        [Description("Roxo")]
+        _Roxo = 8,
+        [Description("Rosa")]
+        _Rosa = 9
+    }
+
+    public enum TipoVeiculoEnum
+    {
+        [Description("Automóvel")]
+        _Automovel = 1,
+        [Description("Motocicleta")]
+        _Motocicleta = 2,
+        [Description("Ônibus")]
+        _Onibus = 3,
+        [Description("Carga")]
+        _Carga = 4
+    }
+
+    public enum FabricanteVeiculoEnum
+    {
+        [Description("FIAT")]
+        _Fiat = 1
+    }
+
+    public enum ModeloVeiculoEnum
+    {
+        [Description("Uno")]
+        _Fiat = 1,
+        [Description("Pálio")]
+        _Volkswagem = 2,
+        [Description("Idea")]
+        _Ford = 3,
+        [Description("Weekend")]
+        _Chevrolet = 4,
+        [Description("Punto")]
+        _Renault = 5,
+        [Description("Bravo")]
+        _Citroen = 6,
+        [Description("500")]
+        _Peugeot = 7,
+        [Description("Outro")]
+        _Outros = 8
+    }
     public class EnumHelper
     {
-        
+
         public static IEnumerable<KeyValuePair<int, string>> GetList<T>()
         {
             var arrayValues = (int[])(Enum.GetValues(typeof(T)).Cast<int>());

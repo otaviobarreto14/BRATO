@@ -26,12 +26,12 @@ namespace Brato.Reports
             binder.BindText(lblHora, c => c.Hora);
             binder.BindText(lblCondTempo, c => c.CondTempo);
             binder.BindText(lblTipoSinalizacao, c => c.TipoSinalizacao);
-            binder.BindNumber(lblNumVitimas, c => c.NumVitimas);
-            binder.BindNumber(lblNumVeiculos, c => c.NumVeiculos);
-            binder.BindNumber(lblNumTestemunhas, c => c.NumTestemunha);
+            binder.BindText(lblNumVitimas, c => c.NumVitimas);
+            binder.BindText(lblNumVeiculos, c => c.NumVeiculos);
+            binder.BindText(lblNumTestemunhas, c => c.NumTestemunha);
 
             lblTotalAcidentes.Text = brats.Count.ToString();
-            lblDataExecucao.Text = string.Format("{0} - {1}:{2}:{3}", DateTime.Now.Date, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+            lblDataExecucao.Text = string.Format("{0} - {1}:{2}:{3}", DateTime.Now.ToShortDateString(), DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
 
 
         }

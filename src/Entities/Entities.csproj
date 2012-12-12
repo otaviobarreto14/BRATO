@@ -86,6 +86,8 @@
       <DependentUpon>ComplementoEntity.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\BratDTO.cs" />
+    <Compile Include="DTO\ChartDataDTO.cs" />
+    <Compile Include="DTO\RelAnaliticoDto.cs" />
     <Compile Include="EnderecoEntity.cs" />
     <Compile Include="EnderecoEntity.Generated.cs">
       <AutoGen>True</AutoGen>

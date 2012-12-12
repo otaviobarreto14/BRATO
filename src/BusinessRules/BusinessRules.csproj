@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataRules.cs" />
     <Compile Include="RulesInstaller.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,9 +9,9 @@ namespace Brato.Entities
     {
         #region " Identificador da classe "
 
-        public virtual System.UInt16 IdPerfil { get; set; }
+        public virtual int IdPerfil { get; set; }
 
-        public virtual System.UInt16 IdFuncao { get; set; }
+        public virtual int IdFuncao { get; set; }
 
         #endregion
 
@@ -29,7 +29,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdPerfil == default(System.UInt16);
+            return IdPerfil == default(int);
         }
     }
 }

@@ -48,6 +48,11 @@
             overflow: hidden;
             overflow-y: auto;
         }
+        #imgLogo
+        {
+            height: 100px;
+            width: 100%;
+        }
     </style>
     <script type="text/javascript">
         var BACKSPACE_KEY = 8;
@@ -76,10 +81,8 @@
 </head>
 <body>
     <div id="corpo">
-        <div class="controleAcesso inteiro" style="background-color: Gray; height: 15%;">
-            <h2>
-                BRATO - Boletim de Registro de Acidentes de Trânsito Online</h2>
-            RESERVADO PARA LOGO - Header
+        <div id="head" class="controleAcesso inteiro" style="height: 100px;">
+        <img id="imgLogo" src="../../Content/BRATO2100.jpg" alt="" />
         </div>
         <div class="menu" style="height: 5%">
             <% Html.RenderPartial("Menu"); %>

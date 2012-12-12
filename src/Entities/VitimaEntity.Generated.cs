@@ -10,21 +10,21 @@ namespace Brato.Entities
         #region " Identificador da classe "
 
         [EntityId]
-        public virtual System.UInt32 IdVitima { get; set; }
+        public virtual int IdVitima { get; set; }
 
         #endregion
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'DataNasc' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'DataNasc' é obrigatório.")]
         [DisplayName("DataNasc")]
         public virtual DateTime DataNasc { get; set; }
 
-        [Required(ErrorMessage = "O campo 'TipoFerimento' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'TipoFerimento' é obrigatório.")]
         [DisplayName("TipoFerimento")]
-        public virtual System.UInt16 TipoFerimento { get; set; }
+        public virtual int TipoFerimento { get; set; }
 
-        [StringLength(50, ErrorMessage = "O campo 'Remocao' suporta no m?ximo 150 caracteres.")]
+        [StringLength(50, ErrorMessage = "O campo 'Remocao' suporta no máximo 150 caracteres.")]
         [DisplayName("Remocao")]
         public virtual string Remocao { get; set; }
 
@@ -40,7 +40,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdVitima == default(System.UInt32);
+            return IdVitima == default(int);
         }
     }
 }

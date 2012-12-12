@@ -7,7 +7,14 @@
         Msg de Validação = Verificar Dados Informados                       
 --%>
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Brato.Entities.VeiculoEntity>" %>
+<%
+    var lstTipoVeiculo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<TipoVeiculoEnum>();
+    var lstFabricanteVeiculo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<FabricanteVeiculoEnum>();
+    var lstModeloVeiculo = Brato.UserInterface.WebUserInterfaceHelper.DropDownListHelper.CarregarDropDown<ModeloVeiculoEnum>();
+%>
 <div class="formItems">
+    <form id="formVeiculo">
+    <input type="hidden" name="Brat.IdBrat" class="Brat_IdBrat" />
     <div class="formItem doisquintos">
         <span>*Nome do Proprietário</span>
         <%= Html.TextBoxFor(model => model.NomeProprietario, new { size = "60", MaxLength = "50" })%>
@@ -15,15 +22,15 @@
     <div class="formItem inteiro">
         <div class="formItem terco">
             <span>*Tipo de Veículo</span>
-            <%= Html.DropDownListFor(model => model.TipoVeiculo, null)%>
+            <%= Html.DropDownListFor(model => model.TipoVeiculo, lstTipoVeiculo, "Selecione", null)%>
         </div>
         <div class="formItem terco">
             <span>*Fabricante</span>
-            <%= Html.DropDownListFor(model => model.Fabricante, null)%>
+            <%= Html.DropDownListFor(model => model.Fabricante, lstFabricanteVeiculo, "Selecione", null)%>
         </div>
         <div class="formItem terco">
             <span>*Modelo</span>
-            <%= Html.DropDownListFor(model => model.Modelo, null)%>
+            <%= Html.DropDownListFor(model => model.Modelo, lstModeloVeiculo, "Selecione", null)%>
         </div>
     </div>
     <div class="formItem inteiro">
@@ -33,7 +40,10 @@
         </div>
         <div class="formItem quarto">
             <span>*Cor</span>
-            <%= Html.DropDownListFor(model => model.Cor, null)%>
+            <select name="Cor">
+                <option value="0">Selecione</option>
+                <option value="1">Prata</option>
+            </select>
         </div>
         <div class="formItem setimo">
             <span>*Placa</span>
@@ -42,18 +52,12 @@
     </div>
     <div class="formItem inteiro">
         <div class="formItem metade">
-            <span>Impacto(s)</span><%= Html.CheckBox("Impacto")%>
+            <span>Impacto(s)</span>
+            <%= Html.CheckBoxFor(model => model.TemImpacto)%>
         </div>
         <div class="formItem metade">
             <span>Avaria(s)</span>
-            <%= Html.CheckBox("Avaria")%>
-            <%= Html.CheckBox("Avaria")%>
-            <%= Html.CheckBox("Avaria")%>
-            <%= Html.CheckBox("Avaria")%>
-            <%= Html.CheckBox("Avaria")%>
-            <%= Html.CheckBox("Avaria")%>
-            <%= Html.CheckBox("Avaria")%>
-            <%= Html.CheckBox("Avaria")%>
+            <%= Html.CheckBoxFor(model => model.TemAvarias)%>
         </div>
     </div>
     <br />
@@ -61,4 +65,9 @@
     <div class="formItem inteiro" id="divGridVeiculo" style="clear: both; margin-top: 5%;">
         <% Html.RenderPartial("GridControl"); %>
     </div>
+    <div class="formItem inteiro">
+        <a href="#" id="continuarVeiculo" class="ui-state-default ui-corner-all botao" style="float: inherit;">
+            Continuar</a>
+    </div>
+    </form>
 </div>

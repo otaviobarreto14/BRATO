@@ -10,7 +10,7 @@ namespace Brato.Entities
         #region " Identificador da classe "
 
         [EntityId]
-        public virtual System.UInt32 IdAvaria { get; set; }
+        public virtual int IdAvaria { get; set; }
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdAvaria == default(System.UInt32);
+            return IdAvaria == default(int);
         }
     }
 }

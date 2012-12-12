@@ -121,7 +121,7 @@
             this.lblData.LocationFloat = new DevExpress.Utils.PointFloat(76.83325F, 0F);
             this.lblData.Name = "lblData";
             this.lblData.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblData.SizeF = new System.Drawing.SizeF(60.83334F, 16F);
+            this.lblData.SizeF = new System.Drawing.SizeF(70.83333F, 16F);
             this.lblData.StylePriority.UseBorders = false;
             this.lblData.Text = "08/11/12";
             // 
@@ -148,10 +148,10 @@
             // lblHora
             // 
             this.lblHora.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.lblHora.LocationFloat = new DevExpress.Utils.PointFloat(137.6666F, 0F);
+            this.lblHora.LocationFloat = new DevExpress.Utils.PointFloat(147.6666F, 0F);
             this.lblHora.Name = "lblHora";
             this.lblHora.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblHora.SizeF = new System.Drawing.SizeF(60.83334F, 16F);
+            this.lblHora.SizeF = new System.Drawing.SizeF(50.83334F, 16F);
             this.lblHora.StylePriority.UseBorders = false;
             this.lblHora.Text = "13:35";
             // 
@@ -224,17 +224,17 @@
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(76.83333F, 0F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(60.83334F, 16F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(70.83325F, 16F);
             this.xrLabel4.StylePriority.UseBackColor = false;
             this.xrLabel4.Text = "Data";
             // 
             // xrLabel5
             // 
             this.xrLabel5.BackColor = System.Drawing.Color.LightGray;
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(137.6666F, 0F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(147.6666F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(60.83334F, 16F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(50.83336F, 16F);
             this.xrLabel5.StylePriority.UseBackColor = false;
             this.xrLabel5.Text = "Hora";
             // 
@@ -269,7 +269,7 @@
             this.xrLabel5,
             this.xrLabel6,
             this.xrLabel3});
-            this.GroupHeader1.HeightF = 16.66667F;
+            this.GroupHeader1.HeightF = 16.66668F;
             this.GroupHeader1.Name = "GroupHeader1";
             // 
             // xrLabel11

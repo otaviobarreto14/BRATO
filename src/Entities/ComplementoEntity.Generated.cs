@@ -10,14 +10,14 @@ namespace Brato.Entities
         #region " Identificador da classe "
 
         [EntityId]
-        public virtual System.UInt16 IdComplemento { get; set; }
+        public virtual int IdComplemento { get; set; }
 
         #endregion
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'Descricao' ? obrigat?rio.")]
-        [StringLength(50, ErrorMessage = "O campo 'Descricao' suporta no m?ximo 150 caracteres.")]
+        [Required(ErrorMessage = "O campo 'Descricao' é obrigatório.")]
+        [StringLength(50, ErrorMessage = "O campo 'Descricao' suporta no máximo 150 caracteres.")]
         [DisplayName("Descricao")]
         public virtual string Descricao { get; set; }
         
@@ -25,7 +25,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdComplemento == default(System.UInt16);
+            return IdComplemento == default(int);
         }
     }
 }

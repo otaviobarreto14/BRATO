@@ -38,13 +38,59 @@
                 $("input[type='text']").val("");
                 $("input[type='password']").val("");
             });
+            $("#btnLogin").click(function () {
+                $.ajax({
+                    url: '/Acesso/Logar/',
+                    data: $("#mainForm").serialize(),
+                    type: "post",
+                    cache: false,
+                    success: function (json) {
+                        if (json.Sucesso == true) {
+                            window.location = '/Brat/Index';
+                        }
+                        else {
+                            jAlert("Usuário ou senha inválidos");
+                        }
+                    }
+                });
+            });
+
+            $("#btnCancelarLogof").live("click", function () {
+                window.location = "/Brat/Index";
+            });
+            $("#btnLogoff").live("click", function () {
+                $("#mainForm").attr("action", "/Acesso/Logoff");
+                $("#mainForm").submit();
+            });
         });
     </script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+    <form id="mainForm" action="">
     <div class="formItems" style="margin-left: 34%; margin-right: 30%; margin-top: 10%;
         width: 30%; height: 10%;">
-        <div class="accordion" style="display: inline-table;">
+        <% if (!(string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name)))
+           {
+        %>
+        <div class="formItem inteiro" id="divLogoff">
+            <div class="formItem inteiro">
+                <span>O usuário
+                    <%= HttpContext.Current.User.Identity.Name%>
+                    já está logado. Deseja fazer LogOff?</span></div>
+            <div class="formItem inteiro">
+                <div class="formItem metade">
+                    <a href="#" id="btnLogoff" class="ui-state-default ui-corner-all botao" style="float: left;">
+                        LogOff</a></div>
+                <div class="formItem metade">
+                    <a href="#" id="btnCancelarLogof" class="ui-state-default ui-corner-all botao" style="float: left;">
+                        Cancelar</a></div>
+            </div>
+        </div>
+        <%
+           }
+           else
+           { %>
+        <div id="divLogin" class="accordion" style="display: inline-table;">
             <h3>
                 <a href="#">Login</a></h3>
             <div>
@@ -70,5 +116,7 @@
                 </div>
             </div>
         </div>
+        <%} %>
     </div>
+    </form>
 </asp:Content>

@@ -51,8 +51,18 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TopDown.TopFramework.Entities, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TopDown.TopFramework.Entities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BratReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BratReport.Designer.cs">
+      <DependentUpon>BratReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelAnaliticoReport.cs">
       <SubType>Component</SubType>
@@ -69,6 +79,9 @@
     <Compile Include="ReportBinder.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BratReport.resx">
+      <DependentUpon>BratReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="RelAnaliticoReport.resx">
       <DependentUpon>RelAnaliticoReport.cs</DependentUpon>

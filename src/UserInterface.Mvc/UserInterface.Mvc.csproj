@@ -48,11 +48,13 @@
     <Compile Include="Controllers\TestemunhaController.cs" />
     <Compile Include="Controllers\VeiculoController.cs" />
     <Compile Include="Controllers\VitimaController.cs" />
+    <Compile Include="Models\BratModel.cs" />
     <Compile Include="Models\ConsultarBratModel.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\ConsultarPolicialModel.cs" />
     <Compile Include="Models\RelatorioModel.cs" />
+    <Compile Include="Models\RetornoRelatorioModel.cs" />
     <Compile Include="WebUserInterfaceHelper\DropDownListHelper.cs" />
     <Compile Include="WebUserInterfaceHelper\HtmlHelper.cs" />
     <Compile Include="WebUserInterfaceHelper\XtraReportsModelBinder.cs" />
@@ -94,6 +96,7 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -138,6 +141,8 @@
       <Link>hibernate.cfg.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\BRATO1.jpg" />
+    <Content Include="Content\BRATO2.jpg" />
     <Content Include="Content\Styles\smothmenu.css" />
     <Content Include="Global.asax" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -610,6 +615,8 @@
     <Content Include="Scripts\validation\validation.js" />
     <Content Include="Scripts\validation\validation.pt-br.js" />
     <Content Include="Views\Acesso\Login.aspx" />
+    <Content Include="Views\Brat\VisualizarBrat2.aspx" />
+    <Content Include="Views\Brat\VisualizarBrat.aspx" />
     <Content Include="Views\CroquiFoto\IncCroquiFoto.ascx" />
     <Content Include="Views\Motorista\GridControl.ascx" />
     <Content Include="Views\Brat\IncBrat.aspx" />
@@ -619,6 +626,7 @@
     <Content Include="Views\Relatorio\RelPolicial.aspx" />
     <Content Include="Views\Relatorio\RelGerencial.aspx" />
     <Content Include="Views\Relatorio\RelAnalitico.aspx" />
+    <Content Include="Views\Relatorio\RetornoRelatorio.aspx" />
     <Content Include="Views\Shared\Menu.ascx" />
     <Content Include="Views\Testemunha\GridControl.ascx" />
     <Content Include="Views\Testemunha\IncTestemunha.ascx" />
@@ -669,12 +677,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessRules\BusinessRules.csproj">
-      <Project>{fab8d370-b82a-4d0e-ba3c-b15e9afa6e5a}</Project>
+      <Project>{FBE5066D-C1D8-4C05-AED1-4F693562BCE7}</Project>
       <Name>BusinessRules</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{8cc7aaa4-b2e9-4269-bfd7-7c77a67c3346}</Project>
       <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reports\Reports.csproj">
+      <Project>{32BA44A7-44F8-4647-8AB9-A1AE74C461AD}</Project>
+      <Name>Reports</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

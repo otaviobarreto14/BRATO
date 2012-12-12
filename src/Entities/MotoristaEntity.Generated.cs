@@ -10,40 +10,40 @@ namespace Brato.Entities
         #region " Identificador da classe "
 
         [EntityId]
-        public virtual System.UInt32 IdMotorista { get; set; }
+        public virtual int IdMotorista { get; set; }
 
         #endregion
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'DataNasc' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'DataNasc' é obrigatório.")]
         [DisplayName("DataNasc")]
         public virtual DateTime DataNasc { get; set; }
         
-        [Required(ErrorMessage = "O campo 'EstadoCivil' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'EstadoCivil' é obrigatório.")]
         [DisplayName("EstadoCivil")]
-        public virtual System.UInt16 EstadoCivil { get; set; }
+        public virtual int EstadoCivil { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Cnh' ? obrigat?rio.")]
-        [StringLength(16, ErrorMessage = "O campo 'Cnh' suporta no m?ximo 48 caracteres.")]
+        [Required(ErrorMessage = "O campo 'Cnh' é obrigatório.")]
+        [StringLength(16, ErrorMessage = "O campo 'Cnh' suporta no máximo 48 caracteres.")]
         [DisplayName("Cnh")]
         public virtual string Cnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'CategoriaCnh' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'CategoriaCnh' é obrigatório.")]
         [DisplayName("CategoriaCnh")]
-        public virtual System.UInt32 CategoriaCnh { get; set; }
+        public virtual int CategoriaCnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'UfExpedicaoCnh' ? obrigat?rio.")]
-        [StringLength(2, ErrorMessage = "O campo 'UfExpedicaoCnh' suporta no m?ximo 6 caracteres.")]
+        [Required(ErrorMessage = "O campo 'UfExpedicaoCnh' é obrigatório.")]
+        [StringLength(2, ErrorMessage = "O campo 'UfExpedicaoCnh' suporta no máximo 6 caracteres.")]
         [DisplayName("UfExpedicaoCnh")]
         public virtual string UfExpedicaoCnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'ProntuarioCnh' ? obrigat?rio.")]
-        [StringLength(16, ErrorMessage = "O campo 'ProntuarioCnh' suporta no m?ximo 48 caracteres.")]
+        [Required(ErrorMessage = "O campo 'ProntuarioCnh' é obrigatório.")]
+        [StringLength(16, ErrorMessage = "O campo 'ProntuarioCnh' suporta no máximo 48 caracteres.")]
         [DisplayName("ProntuarioCnh")]
         public virtual string ProntuarioCnh { get; set; }
         
-        [Required(ErrorMessage = "O campo 'ValidadeExameChn' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'ValidadeExameChn' é obrigatório.")]
         [DisplayName("ValidadeExameChn")]
         public virtual DateTime ValidadeExameChn { get; set; }
         
@@ -59,7 +59,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdMotorista == default(System.UInt32);
+            return IdMotorista == default(int);
         }
     }
 }

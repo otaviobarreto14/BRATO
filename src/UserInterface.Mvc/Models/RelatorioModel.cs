@@ -12,6 +12,7 @@ namespace Brato.UserInterface.Models
         {
 
         }
+
         #region Localidade
         public string UF { get; set; }
         public string Município { get; set; }

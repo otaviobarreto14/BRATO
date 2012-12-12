@@ -10,23 +10,23 @@ namespace Brato.Entities
         #region " Identificador da classe "
 
         [EntityId]
-        public virtual System.UInt32 IdPessoa { get; set; }
+        public virtual int IdPessoa { get; set; }
 
         #endregion
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'Nome' ? obrigat?rio.")]
-        [StringLength(50, ErrorMessage = "O campo 'Nome' suporta no m?ximo 150 caracteres.")]
+        [Required(ErrorMessage = "O campo 'Nome' é obrigatório.")]
+        [StringLength(50, ErrorMessage = "O campo 'Nome' suporta no máximo 150 caracteres.")]
         [DisplayName("Nome")]
         public virtual string Nome { get; set; }
         
-        [StringLength(11, ErrorMessage = "O campo 'Cpf' suporta no m?ximo 33 caracteres.")]
+        [StringLength(11, ErrorMessage = "O campo 'Cpf' suporta no máximo 33 caracteres.")]
         [DisplayName("Cpf")]
         public virtual string Cpf { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Sexo' ? obrigat?rio.")]
-        [StringLength(1, ErrorMessage = "O campo 'Sexo' suporta no m?ximo 3 caracteres.")]
+        [Required(ErrorMessage = "O campo 'Sexo' é obrigatório.")]
+        [StringLength(1, ErrorMessage = "O campo 'Sexo' suporta no máximo 3 caracteres.")]
         [DisplayName("Sexo")]
         public virtual string Sexo { get; set; }
         
@@ -40,7 +40,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdPessoa == default(System.UInt32);
+            return IdPessoa == default(int);
         }
     }
 }

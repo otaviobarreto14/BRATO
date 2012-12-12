@@ -10,39 +10,39 @@ namespace Brato.Entities
         #region " Identificador da classe "
 
         [EntityId]
-        public virtual System.UInt32 IdVeiculo { get; set; }
+        public virtual int IdVeiculo { get; set; }
 
         #endregion
 
         #region " Propriedades publicas da classe "
 
-        [Required(ErrorMessage = "O campo 'NomeProprietario' ? obrigat?rio.")]
-        [StringLength(50, ErrorMessage = "O campo 'NomeProprietario' suporta no m?ximo 150 caracteres.")]
+        [Required(ErrorMessage = "O campo 'NomeProprietario' é obrigatório.")]
+        [StringLength(50, ErrorMessage = "O campo 'NomeProprietario' suporta no máximo 150 caracteres.")]
         [DisplayName("NomeProprietario")]
         public virtual string NomeProprietario { get; set; }
         
-        [Required(ErrorMessage = "O campo 'TipoVeiculo' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'TipoVeiculo' é obrigatório.")]
         [DisplayName("TipoVeiculo")]
-        public virtual System.UInt16 TipoVeiculo { get; set; }
+        public virtual int TipoVeiculo { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Placa' ? obrigat?rio.")]
-        [StringLength(7, ErrorMessage = "O campo 'Placa' suporta no m?ximo 21 caracteres.")]
+        [Required(ErrorMessage = "O campo 'Placa' é obrigatório.")]
+        [StringLength(7, ErrorMessage = "O campo 'Placa' suporta no máximo 21 caracteres.")]
         [DisplayName("Placa")]
         public virtual string Placa { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Fabricante' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'Fabricante' é obrigatório.")]
         [DisplayName("Fabricante")]
-        public virtual System.UInt16 Fabricante { get; set; }
+        public virtual int Fabricante { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Modelo' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'Modelo' é obrigatório.")]
         [DisplayName("Modelo")]
-        public virtual System.UInt16 Modelo { get; set; }
+        public virtual int Modelo { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Ano' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'Ano' é obrigatório.")]
         [DisplayName("Ano")]
         public virtual int Ano { get; set; }
         
-        [Required(ErrorMessage = "O campo 'Cor' ? obrigat?rio.")]
+        [Required(ErrorMessage = "O campo 'Cor' é obrigatório.")]
         [DisplayName("Cor")]
         public virtual short Cor { get; set; }
         
@@ -56,7 +56,7 @@ namespace Brato.Entities
 
         public override bool IsNew()
         {
-            return IdVeiculo == default(System.UInt32);
+            return IdVeiculo == default(int);
         }
     }
 }

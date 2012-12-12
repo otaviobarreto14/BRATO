@@ -9,5 +9,7 @@ namespace Brato.Entities
             : base()
         { 
         }
+        public virtual bool TemAvarias { get; set; }
+        public virtual bool TemImpacto { get; set; }
     }
 }

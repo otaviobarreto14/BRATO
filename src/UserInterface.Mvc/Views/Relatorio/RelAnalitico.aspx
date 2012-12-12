@@ -38,6 +38,10 @@
                 $("input[type='text']").val("");
                 $("select ").val("Todos");
             });
+            $("#GerRelatorio").click(function () {
+                $("#mainForm").submit();
+            });
+
         });
     </script>
 </asp:Content>
@@ -59,6 +63,8 @@
     <br>
     <br>
     <br>
+    <% using (Html.BeginForm("FiltrarRelatórioEstatistico", "Relatorio", FormMethod.Post, new { id = "mainForm" }))
+       { %>
     <div class="accordion" style="display: inline-table;">
         <div>
             <h3>
@@ -76,7 +82,7 @@
                         </div>
                         <div class="formItem ">
                             <span>Bairro</span>
-                            <%= Html.TextBoxFor(model => model.Bairro, new {size="30", MaxLength="50"})%>
+                            <%= Html.TextBoxFor(model => model.Bairro, new { size = "30", MaxLength = "50" })%>
                         </div>
                         <div class="formItem ">
                             <span>Logradouro</span>
@@ -195,4 +201,5 @@
             </div>
         </div>
     </div>
+    <%} %>
 </asp:Content>
