@@ -5,4 +5,4 @@ Projeto de Conclusão de Curso - BRATO (Boletim de Registro de Acidente de Transi
 
 TODA E QUALQUER ALTERAÇÃO FEITA NOS FONTES DEVE SER REGISTRADA NESTE ARQUIVO:
 
-VERSÃO 1.0
+VERSÃO 1.1
